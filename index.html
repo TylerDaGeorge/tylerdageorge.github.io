@@ -11,64 +11,80 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#">Eden Industrial Systems</a>
+      <a class="logo" href="#" aria-label="Eden Industrial Systems home">
+        <span class="logo-mark">E</span>
+        <span>
+          <strong>Eden</strong>
+          <small>Industrial Systems</small>
+        </span>
+      </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#services">Services</a>
-        <a href="#work">Work</a>
+        <a href="#work">Projects</a>
         <a href="#process">Process</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a class="nav-button" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
+      <div class="hero-shell">
+        <div class="hero-copy">
           <p class="eyebrow">Fixture Design & Manufacturing Engineering</p>
-          <h1>Reduce setup time. Eliminate bottlenecks. Increase throughput.</h1>
+          <h1>Practical engineering. Real-world production results.</h1>
           <p class="hero-text">
-            Eden Industrial Systems designs custom fixtures, workholding, production tooling, and mechanical systems for manufacturers that need practical engineering support on the production floor.
+            Eden Industrial Systems designs custom fixtures, workholding, production tooling, and mechanical systems that reduce setup time, improve repeatability, and keep production moving.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="mailto:engineering@edenindustrialsystems.com">Contact Engineering</a>
-            <a class="button secondary" href="#work">View Example Work</a>
+            <a class="button secondary" href="#services">Our Services</a>
           </div>
         </div>
 
-        <aside class="hero-panel" aria-label="Project outcomes">
-          <p class="eyebrow">Typical Outcomes</p>
-          <ul>
-            <li>Faster setup and changeover</li>
-            <li>Improved part location and repeatability</li>
-            <li>Less operator adjustment</li>
-            <li>Clearer manufacturing documentation</li>
-          </ul>
-        </aside>
+        <figure class="hero-visual">
+          <img src="assets/engineering-placeholder.svg" alt="Engineering fixture and tooling illustration" />
+        </figure>
       </div>
     </section>
 
-    <section class="trust-strip" aria-label="Core capabilities">
-      <div class="container strip-grid">
-        <div>
-          <strong>Custom Fixture Design</strong>
-          <span>Machining, assembly, inspection, and workholding</span>
-        </div>
-        <div>
-          <strong>Manufacturing Engineering</strong>
-          <span>DFM, process improvement, and production support</span>
-        </div>
-        <div>
-          <strong>Custom Equipment</strong>
-          <span>Production aids, tooling, workstations, and mechanical systems</span>
-        </div>
+    <section class="outcome-strip" aria-label="Engineering outcomes">
+      <div class="container outcome-grid">
+        <article class="outcome-item">
+          <span class="outcome-icon">◎</span>
+          <div>
+            <h2>Engineered for Manufacturing</h2>
+            <p>Solutions designed for the shop floor and built to perform.</p>
+          </div>
+        </article>
+        <article class="outcome-item">
+          <span class="outcome-icon">↗</span>
+          <div>
+            <h2>Improve Quality & Throughput</h2>
+            <p>Smarter tooling that reduces variation and increases output.</p>
+          </div>
+        </article>
+        <article class="outcome-item">
+          <span class="outcome-icon">✓</span>
+          <div>
+            <h2>Reduce Risk & Downtime</h2>
+            <p>Anticipate production issues and design them out early.</p>
+          </div>
+        </article>
+        <article class="outcome-item">
+          <span class="outcome-icon">◷</span>
+          <div>
+            <h2>Clear Communication</h2>
+            <p>Practical documentation for fabrication, review, and use.</p>
+          </div>
+        </article>
       </div>
     </section>
 
     <section id="services" class="section">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading left-heading">
           <p class="eyebrow">Services</p>
           <h2>Engineering support for real manufacturing constraints.</h2>
           <p>
@@ -76,8 +92,9 @@
           </p>
         </div>
 
-        <div class="cards">
+        <div class="cards service-cards">
           <article class="card">
+            <span class="card-icon">C</span>
             <h3>Custom Fixture Design</h3>
             <p>
               Purpose-built fixtures that improve repeatability, reduce setup time, and make production easier for operators.
@@ -91,6 +108,7 @@
           </article>
 
           <article class="card">
+            <span class="card-icon">M</span>
             <h3>Manufacturing Engineering Support</h3>
             <p>
               Extra engineering bandwidth for teams solving production problems or improving existing processes.
@@ -104,6 +122,7 @@
           </article>
 
           <article class="card">
+            <span class="card-icon">E</span>
             <h3>Custom Equipment Design</h3>
             <p>
               Mechanical systems and production aids designed around the realities of your process, people, and floor space.
@@ -119,154 +138,103 @@
       </div>
     </section>
 
-    <section class="section muted results-section">
-      <div class="container results-grid">
-        <div>
-          <p class="eyebrow">Production Focus</p>
-          <h2>Designed around the outcomes that matter on the floor.</h2>
-          <p>
-            Every fixture, tool, and production aid is developed with the same practical goals in mind: faster setup, better consistency, lower operator effort, and a smoother path from design to fabrication.
-          </p>
-        </div>
-
-        <div class="stats-grid">
-          <article class="stat-card">
-            <strong>Setup Time</strong>
-            <span>Reduce changeover and repeat-job preparation.</span>
-          </article>
-          <article class="stat-card">
-            <strong>Repeatability</strong>
-            <span>Improve part location, clamping, and process control.</span>
-          </article>
-          <article class="stat-card">
-            <strong>Throughput</strong>
-            <span>Remove bottlenecks that slow production flow.</span>
-          </article>
-          <article class="stat-card">
-            <strong>Operator Effort</strong>
-            <span>Simplify manual steps and reduce adjustment time.</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="section">
+    <section id="work" class="section muted">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading left-heading">
           <p class="eyebrow">Example Work</p>
-          <h2>Project examples built around common production problems.</h2>
-          <p>
-            Fixture design, tooling, and production support for manufacturers that need practical solutions they can build and use.
-          </p>
+          <h2>Engineering that solves real production problems.</h2>
         </div>
 
-        <div class="work-list">
-          <article class="work-item">
-            <figure class="work-media">
-              <img src="assets/engineering-placeholder.svg" alt="Engineering project illustration for fixture design and manufacturing support" />
-            </figure>
-            <div class="work-content">
+        <div class="project-grid">
+          <article class="project-card large-project">
+            <img src="assets/engineering-placeholder.svg" alt="Machining fixture system illustration" />
+            <div class="project-copy">
               <p class="eyebrow">Fixture Design</p>
-              <h3>Machining fixture for faster setup.</h3>
-              <p>
-                Concept for locating and clamping a part more consistently so operators spend less time indicating, adjusting, and proving out repeat jobs.
-              </p>
-              <ul>
-                <li>Dedicated workholding concept</li>
-                <li>Improved part location</li>
-                <li>Manufacturing-ready drawings</li>
-              </ul>
+              <h3>Machining fixture system</h3>
+              <p>Flexible workholding concepts that improve part location, setup speed, and repeatability.</p>
             </div>
           </article>
 
-          <article class="work-item reverse">
-            <figure class="work-media">
-              <img src="assets/engineering-placeholder.svg" alt="Engineering project illustration for assembly tooling and workstations" />
-            </figure>
-            <div class="work-content">
-              <p class="eyebrow">Assembly Support</p>
-              <h3>Tooling that makes repeatable assembly easier.</h3>
-              <p>
-                Assembly nests, fixtures, and workstation improvements that reduce manual alignment and give operators a clearer process.
-              </p>
-              <ul>
-                <li>Operator-focused design</li>
-                <li>Reduced manual adjustment</li>
-                <li>Better process consistency</li>
-              </ul>
+          <article class="project-card text-project">
+            <div class="project-copy">
+              <p class="eyebrow">Manufacturing Support</p>
+              <h3>DFM and component redesign</h3>
+              <p>Review parts and assemblies for manufacturability, fabrication risk, and production efficiency.</p>
             </div>
           </article>
 
-          <article class="work-item">
-            <figure class="work-media">
-              <img src="assets/engineering-placeholder.svg" alt="Engineering project illustration for custom equipment and production aids" />
-            </figure>
-            <div class="work-content">
+          <article class="project-card text-project">
+            <div class="project-copy">
+              <p class="eyebrow">Assembly Tooling</p>
+              <h3>Repeatable assembly support</h3>
+              <p>Tooling and workstation concepts that reduce manual alignment and improve operator workflow.</p>
+            </div>
+          </article>
+
+          <article class="project-card large-project">
+            <img src="assets/engineering-placeholder.svg" alt="Custom equipment and production aid illustration" />
+            <div class="project-copy">
               <p class="eyebrow">Custom Equipment</p>
-              <h3>Production aid for a repeatable process.</h3>
-              <p>
-                Mechanical systems, material handling aids, and custom tools designed to remove friction from production operations.
-              </p>
-              <ul>
-                <li>Practical mechanical design</li>
-                <li>Fabrication-ready details</li>
-                <li>Vendor coordination support</li>
-              </ul>
+              <h3>Production aid design</h3>
+              <p>Mechanical systems and production tools designed to remove friction from manufacturing operations.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="process" class="section muted">
+    <section id="process" class="section process-section">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Process</p>
-          <h2>A straightforward path from problem to buildable solution.</h2>
+        <div class="section-heading left-heading">
+          <p class="eyebrow">Our Process</p>
+          <h2>Simple. Collaborative. Effective.</h2>
         </div>
 
-        <div class="process-grid">
+        <div class="process-line">
           <article class="process-step">
             <span>01</span>
-            <h3>Review the Problem</h3>
-            <p>Understand the part, process, constraints, pain points, and target outcome.</p>
+            <h3>Understand</h3>
+            <p>Review your goals, constraints, process, and production challenge.</p>
           </article>
           <article class="process-step">
             <span>02</span>
-            <h3>Develop the Concept</h3>
-            <p>Create a practical approach for the fixture, tooling, equipment, or process improvement.</p>
+            <h3>Design</h3>
+            <p>Develop practical, manufacturable concepts for review.</p>
           </article>
           <article class="process-step">
             <span>03</span>
-            <h3>Design & Document</h3>
-            <p>Build the CAD model, review manufacturability, and prepare drawings or documentation.</p>
+            <h3>Validate</h3>
+            <p>Refine the design for access, usability, fabrication, and use.</p>
           </article>
           <article class="process-step">
             <span>04</span>
-            <h3>Support Fabrication</h3>
-            <p>Help coordinate details with vendors or internal teams so the design becomes a usable tool.</p>
+            <h3>Deliver</h3>
+            <p>Prepare drawings, documentation, and vendor-ready details.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section about-section">
       <div class="container about-grid">
         <div>
-          <p class="eyebrow">About</p>
-          <h2>Manufacturing-first engineering support.</h2>
-        </div>
-        <div class="about-copy">
+          <p class="eyebrow">About Eden Industrial Systems</p>
+          <h2>Engineering with purpose.</h2>
           <p>
-            Eden Industrial Systems provides custom fixture design, manufacturing engineering support, and process improvement solutions for manufacturers seeking to increase throughput, improve quality, and reduce production costs.
+            Eden Industrial Systems provides fixture design, tooling, custom equipment, and manufacturing engineering support to help manufacturers build more efficiently.
           </p>
           <p>
             The work is grounded in practical manufacturing knowledge: how a tool is loaded, clamped, adjusted, machined, inspected, fabricated, and used by operators every day.
           </p>
+          <a class="button secondary" href="#contact">Start a Project</a>
+        </div>
+
+        <div class="capability-panel">
+          <p class="eyebrow">Core Capabilities</p>
           <div class="capability-tags" aria-label="Capabilities">
-            <span>CNC Machining</span>
-            <span>Workholding</span>
-            <span>DFM</span>
+            <span>Fixture Design</span>
+            <span>Tooling Design</span>
+            <span>DFM Reviews</span>
             <span>CAD Design</span>
             <span>Production Tooling</span>
             <span>Manufacturing Drawings</span>
@@ -275,25 +243,26 @@
       </div>
     </section>
 
-    <section id="contact" class="section contact-section">
-      <div class="container contact-box">
-        <p class="eyebrow">Contact Engineering</p>
-        <h2>Have a fixture, process, or production challenge?</h2>
-        <p>
-          Send a short description of the problem, part or process photos if available, and what outcome you are trying to improve.
-        </p>
-        <a class="button primary" href="mailto:engineering@edenindustrialsystems.com">engineering@edenindustrialsystems.com</a>
-        <p class="small">Response typically within one business day.</p>
+    <section id="contact" class="contact-band">
+      <div class="container contact-grid">
+        <div class="footer-brand">
+          <span class="logo-mark">E</span>
+          <div>
+            <strong>Eden</strong>
+            <small>Industrial Systems</small>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Contact</p>
+          <a href="mailto:engineering@edenindustrialsystems.com">engineering@edenindustrialsystems.com</a>
+        </div>
+        <div>
+          <p class="eyebrow">Serving Manufacturers</p>
+          <p>Fixture design, tooling, and manufacturing engineering support.</p>
+        </div>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 Eden Industrial Systems</p>
-      <p>Custom Fixture Design & Manufacturing Engineering Support</p>
-    </div>
-  </footer>
 
 </body>
 </html>
