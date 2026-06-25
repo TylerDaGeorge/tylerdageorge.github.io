@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eden Industrial Systems | Fixture Design & Manufacturing Engineering</title>
   <meta name="description" content="Eden Industrial Systems helps manufacturers reduce setup time, improve repeatability, and increase throughput with custom fixture design, workholding, production tooling, and manufacturing engineering support." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -29,9 +32,9 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero blueprint-bg">
       <div class="hero-shell">
-        <div class="hero-copy">
+        <div class="hero-copy reveal">
           <p class="eyebrow">Fixture Design & Manufacturing Engineering</p>
           <h1>Practical engineering. Real-world production results.</h1>
           <p class="hero-text">
@@ -43,7 +46,7 @@
           </div>
         </div>
 
-        <figure class="hero-visual">
+        <figure class="hero-visual reveal delay-1">
           <img src="assets/engineering-placeholder.svg" alt="Engineering fixture and tooling illustration" />
         </figure>
       </div>
@@ -51,29 +54,37 @@
 
     <section class="outcome-strip" aria-label="Engineering outcomes">
       <div class="container outcome-grid">
-        <article class="outcome-item">
-          <span class="outcome-icon">◎</span>
+        <article class="outcome-item reveal">
+          <span class="outcome-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path></svg>
+          </span>
           <div>
             <h2>Engineered for Manufacturing</h2>
             <p>Solutions designed for the shop floor and built to perform.</p>
           </div>
         </article>
-        <article class="outcome-item">
-          <span class="outcome-icon">↗</span>
+        <article class="outcome-item reveal delay-1">
+          <span class="outcome-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="M7 16l4-5 3 3 5-8"></path><path d="M15 6h4v4"></path></svg>
+          </span>
           <div>
             <h2>Improve Quality & Throughput</h2>
             <p>Smarter tooling that reduces variation and increases output.</p>
           </div>
         </article>
-        <article class="outcome-item">
-          <span class="outcome-icon">✓</span>
+        <article class="outcome-item reveal delay-2">
+          <span class="outcome-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z"></path><path d="M8.5 12l2.2 2.2 4.8-5"></path></svg>
+          </span>
           <div>
             <h2>Reduce Risk & Downtime</h2>
             <p>Anticipate production issues and design them out early.</p>
           </div>
         </article>
-        <article class="outcome-item">
-          <span class="outcome-icon">◷</span>
+        <article class="outcome-item reveal delay-3">
+          <span class="outcome-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M12 7v5l3 2"></path></svg>
+          </span>
           <div>
             <h2>Clear Communication</h2>
             <p>Practical documentation for fabrication, review, and use.</p>
@@ -82,9 +93,9 @@
       </div>
     </section>
 
-    <section id="services" class="section">
+    <section id="services" class="section blueprint-corner">
       <div class="container">
-        <div class="section-heading left-heading">
+        <div class="section-heading left-heading reveal">
           <p class="eyebrow">Services</p>
           <h2>Engineering support for real manufacturing constraints.</h2>
           <p>
@@ -93,8 +104,10 @@
         </div>
 
         <div class="cards service-cards">
-          <article class="card">
-            <span class="card-icon">C</span>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 8h9a5 5 0 0 1 0 10H5"></path><path d="M5 8v10"></path><path d="M14 11h5"></path><path d="M14 15h5"></path></svg>
+            </span>
             <h3>Custom Fixture Design</h3>
             <p>
               Purpose-built fixtures that improve repeatability, reduce setup time, and make production easier for operators.
@@ -107,8 +120,10 @@
             </ul>
           </article>
 
-          <article class="card">
-            <span class="card-icon">M</span>
+          <article class="card reveal delay-1">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 17h16"></path><path d="M6 17V9h4v8"></path><path d="M14 17V5h4v12"></path><path d="M3 21h18"></path></svg>
+            </span>
             <h3>Manufacturing Engineering Support</h3>
             <p>
               Extra engineering bandwidth for teams solving production problems or improving existing processes.
@@ -121,8 +136,10 @@
             </ul>
           </article>
 
-          <article class="card">
-            <span class="card-icon">E</span>
+          <article class="card reveal delay-2">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 7h14v10H5z"></path><path d="M8 7V4h8v3"></path><path d="M8 20h8"></path><path d="M10 17v3M14 17v3"></path></svg>
+            </span>
             <h3>Custom Equipment Design</h3>
             <p>
               Mechanical systems and production aids designed around the realities of your process, people, and floor space.
@@ -138,14 +155,14 @@
       </div>
     </section>
 
-    <section id="work" class="section muted">
+    <section id="work" class="section muted blueprint-bg-soft">
       <div class="container">
-        <div class="section-heading left-heading">
+        <div class="section-heading left-heading reveal">
           <p class="eyebrow">Example Work</p>
           <h2>Engineering that solves real production problems.</h2>
         </div>
 
-        <div class="project-grid">
+        <div class="project-grid reveal delay-1">
           <article class="project-card large-project">
             <img src="assets/engineering-placeholder.svg" alt="Machining fixture system illustration" />
             <div class="project-copy">
@@ -160,6 +177,7 @@
               <p class="eyebrow">Manufacturing Support</p>
               <h3>DFM and component redesign</h3>
               <p>Review parts and assemblies for manufacturability, fabrication risk, and production efficiency.</p>
+              <a href="#contact">Discuss a project →</a>
             </div>
           </article>
 
@@ -168,6 +186,7 @@
               <p class="eyebrow">Assembly Tooling</p>
               <h3>Repeatable assembly support</h3>
               <p>Tooling and workstation concepts that reduce manual alignment and improve operator workflow.</p>
+              <a href="#contact">Discuss a project →</a>
             </div>
           </article>
 
@@ -183,30 +202,30 @@
       </div>
     </section>
 
-    <section id="process" class="section process-section">
+    <section id="process" class="section process-section blueprint-corner">
       <div class="container">
-        <div class="section-heading left-heading">
+        <div class="section-heading left-heading reveal">
           <p class="eyebrow">Our Process</p>
           <h2>Simple. Collaborative. Effective.</h2>
         </div>
 
         <div class="process-line">
-          <article class="process-step">
+          <article class="process-step reveal">
             <span>01</span>
             <h3>Understand</h3>
             <p>Review your goals, constraints, process, and production challenge.</p>
           </article>
-          <article class="process-step">
+          <article class="process-step reveal delay-1">
             <span>02</span>
             <h3>Design</h3>
             <p>Develop practical, manufacturable concepts for review.</p>
           </article>
-          <article class="process-step">
+          <article class="process-step reveal delay-2">
             <span>03</span>
             <h3>Validate</h3>
             <p>Refine the design for access, usability, fabrication, and use.</p>
           </article>
-          <article class="process-step">
+          <article class="process-step reveal delay-3">
             <span>04</span>
             <h3>Deliver</h3>
             <p>Prepare drawings, documentation, and vendor-ready details.</p>
@@ -217,7 +236,7 @@
 
     <section id="about" class="section about-section">
       <div class="container about-grid">
-        <div>
+        <div class="reveal">
           <p class="eyebrow">About Eden Industrial Systems</p>
           <h2>Engineering with purpose.</h2>
           <p>
@@ -229,22 +248,22 @@
           <a class="button secondary" href="#contact">Start a Project</a>
         </div>
 
-        <div class="capability-panel">
+        <div class="capability-panel reveal delay-1">
           <p class="eyebrow">Core Capabilities</p>
           <div class="capability-tags" aria-label="Capabilities">
-            <span>Fixture Design</span>
-            <span>Tooling Design</span>
-            <span>DFM Reviews</span>
-            <span>CAD Design</span>
-            <span>Production Tooling</span>
-            <span>Manufacturing Drawings</span>
+            <span><svg viewBox="0 0 24 24"><path d="M5 8h9a5 5 0 0 1 0 10H5"></path><path d="M5 8v10"></path></svg>Fixture Design</span>
+            <span><svg viewBox="0 0 24 24"><path d="M14 4l6 6-9 9H5v-6l9-9z"></path><path d="M12 6l6 6"></path></svg>Tooling Design</span>
+            <span><svg viewBox="0 0 24 24"><path d="M12 3l8 4v10l-8 4-8-4V7l8-4z"></path><path d="M4 7l8 4 8-4"></path><path d="M12 11v10"></path></svg>DFM Reviews</span>
+            <span><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"></path><path d="M8 9h8M8 13h5"></path></svg>CAD Design</span>
+            <span><svg viewBox="0 0 24 24"><path d="M4 17h16"></path><path d="M6 17V9h4v8"></path><path d="M14 17V5h4v12"></path></svg>Production Tooling</span>
+            <span><svg viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H7z"></path><path d="M15 3v5h4"></path><path d="M10 13h6M10 17h6"></path></svg>Manufacturing Drawings</span>
           </div>
         </div>
       </div>
     </section>
 
     <section id="contact" class="contact-band">
-      <div class="container contact-grid">
+      <div class="container contact-grid reveal">
         <div class="footer-brand">
           <span class="logo-mark">E</span>
           <div>
