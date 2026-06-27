@@ -1,0 +1,93 @@
+.mobile-header-contact,
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  .header-inner {
+    gap: 16px;
+  }
+
+  .mobile-header-contact {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    border-radius: 4px;
+    background: var(--blue);
+    color: white;
+    box-shadow: 0 10px 22px rgba(6, 63, 143, 0.2);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .mobile-header-contact:hover {
+    background: var(--blue-dark);
+  }
+
+  .mobile-nav {
+    width: min(1140px, 91%);
+    margin: -6px auto 12px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding-bottom: 2px;
+  }
+
+  .mobile-nav a {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: linear-gradient(180deg, #ffffff, #f6f8fb);
+    color: var(--text);
+    box-shadow: 0 8px 18px rgba(6, 26, 56, 0.05);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .mobile-nav a:hover {
+    border-color: #b7c5d8;
+    color: var(--blue-bright);
+  }
+
+  .mobile-nav .mobile-nav-contact {
+    background: var(--dark);
+    border-color: var(--dark-2);
+    color: white;
+  }
+
+  .mobile-nav .mobile-nav-contact:hover {
+    color: white;
+    background: var(--blue-dark);
+  }
+}
+
+@media (max-width: 560px) {
+  .mobile-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mobile-nav a {
+    min-height: 38px;
+    font-size: 0.68rem;
+  }
+
+  .mobile-header-contact {
+    padding: 0 14px;
+    font-size: 0.72rem;
+  }
+}
