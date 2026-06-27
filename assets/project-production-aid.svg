@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Production aid design illustration</title>
+  <desc id="desc">A technical production aid concept with a rolling workstation, guide rails, lift points, material trays, and workflow arrows.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#dbeafe"/></linearGradient>
+    <pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse"><path d="M46 0H0v46" fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.55"/></pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="15" flood-color="#0f172a" flood-opacity="0.16"/></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)" opacity="0.75"/>
+  <g fill="none" stroke="#94a3b8" stroke-width="3" opacity="0.78">
+    <path d="M155 142h890v440H155z"/>
+    <path d="M220 190h220M220 235h170M850 190h150M850 235h110"/>
+    <path d="M175 635h850"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M278 505l322 118 345-145-330-116z" fill="#0f172a"/>
+    <path d="M278 430l322 118 345-145-330-116z" fill="#334155"/>
+    <path d="M278 430v75l322 118v-75z" fill="#111827"/>
+    <path d="M600 548v75l345-145v-75z" fill="#1e293b"/>
+    <path d="M390 390l180 66 222-94-186-64z" fill="#2563eb"/>
+    <path d="M390 390v56l180 66v-56z" fill="#1d4ed8"/>
+    <path d="M570 456v56l222-94v-56z" fill="#1e40af"/>
+    <path d="M465 317l118 42-118 48-118-44z" fill="#f97316"/>
+    <path d="M650 295l110 40-110 46-110-42z" fill="#f97316" opacity="0.92"/>
+    <g fill="#f8fafc">
+      <circle cx="405" cy="535" r="26"/><circle cx="775" cy="505" r="26"/><circle cx="483" cy="422" r="18"/><circle cx="675" cy="398" r="18"/>
+    </g>
+    <g fill="none" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round">
+      <path d="M392 356h250"/><path d="M420 333v46M612 333v46"/>
+      <path d="M765 370v92"/><path d="M735 386h60"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" opacity="0.9">
+    <path d="M230 315h210"/><path d="M440 315l-34-24M440 315l-34 24"/>
+    <path d="M935 315H760"/><path d="M760 315l34-24M760 315l34 24"/>
+    <path d="M350 667h500"/><path d="M850 667l-42-30M850 667l-42 30"/>
+  </g>
+  <g fill="#0f172a" font-family="Arial, Helvetica, sans-serif">
+    <text x="600" y="706" text-anchor="middle" font-size="34" font-weight="800">Production Aid Design</text>
+    <text x="600" y="746" text-anchor="middle" font-size="22" fill="#475569">Material handling - guided workflow - capacity support</text>
+  </g>
+</svg>
