@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Reduce CNC Setup Time Without Buying Another Machine | Eden Industrial Systems</title>
+  <meta name="description" content="A practical guide for manufacturers and CNC shops on reducing setup time through fixture design, workholding, preparation, documentation, repeatability, and operator workflow improvements." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-hero { padding: 78px 0; border-bottom: 1px solid var(--border); background: linear-gradient(180deg, #ffffff, #f6f8fb); }
+    .article-hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) 380px; gap: 48px; align-items: start; position: relative; z-index: 1; }
+    .article-summary-card, .aside-card, .article-callout { background: rgba(255,255,255,0.96); border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 14px 34px rgba(6,26,56,0.08); padding: 28px; }
+    .summary-list, .aside-list { display: grid; gap: 12px; list-style: none; }
+    .summary-list li, .aside-list li { display: grid; grid-template-columns: 18px 1fr; gap: 10px; color: var(--text-muted); font-size: 0.94rem; }
+    .summary-list li::before, .aside-list li::before { content: ""; width: 8px; height: 8px; margin-top: 0.56em; border-radius: 999px; background: var(--blue-bright); }
+    .article-layout { display: grid; grid-template-columns: minmax(0, 760px) 320px; gap: 52px; align-items: start; }
+    .article-content { font-size: 1.04rem; }
+    .article-content .lead { font-size: 1.22rem; line-height: 1.65; color: var(--text); font-weight: 600; }
+    .article-content h2 { margin-top: 44px; margin-bottom: 14px; font-size: clamp(1.65rem, 2.5vw, 2.25rem); line-height: 1.12; letter-spacing: -0.04em; }
+    .article-content h3 { margin-top: 28px; margin-bottom: 10px; font-size: 1.18rem; }
+    .article-content p, .article-content li { color: var(--text-muted); }
+    .article-content p + p { margin-top: 16px; }
+    .article-content ul, .article-content ol { margin: 18px 0 0; padding-left: 22px; }
+    .article-content li { margin: 10px 0; }
+    .article-aside { position: sticky; top: 112px; }
+    .aside-card + .aside-card { margin-top: 18px; }
+    .aside-card a { color: var(--blue); font-weight: 900; text-decoration: none; }
+    .article-callout { margin: 28px 0; border-left: 5px solid var(--blue); }
+    .article-cta { margin-top: 48px; padding: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--dark), var(--dark-2)); color: white; box-shadow: var(--shadow-strong); }
+    .article-cta h2 { margin-top: 0; color: white; }
+    .article-cta p { color: #dbe7f6; max-width: 680px; }
+    .article-cta .hero-actions { margin-top: 24px; }
+    .article-cta .button.secondary { color: white; background: transparent; border-color: rgba(255,255,255,0.72); }
+    .breadcrumb { display: inline-flex; gap: 8px; align-items: center; color: var(--text-muted); font-size: 0.9rem; font-weight: 800; text-decoration: none; margin-bottom: 22px; }
+    .breadcrumb:hover { color: var(--blue-bright); }
+    @media (max-width: 980px) { .article-hero-grid, .article-layout { grid-template-columns: 1fr; } .article-aside { position: static; } }
+    @media (max-width: 560px) { .article-hero { padding: 56px 0; } .article-summary-card, .aside-card, .article-callout, .article-cta { padding: 24px; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html" aria-label="Eden Industrial Systems home">
+        <span class="logo-mark">E</span>
+        <span><strong>Eden</strong><small>Industrial Systems</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#problems">Problems</a>
+        <a href="../index.html#solutions">Solutions</a>
+        <a href="../index.html#work">Projects</a>
+        <a href="../index.html#products">Products</a>
+        <a href="../index.html#resources">Resources</a>
+        <a class="nav-button" href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="article-hero blueprint-bg">
+      <div class="container article-hero-grid">
+        <div class="reveal">
+          <a class="breadcrumb" href="../index.html#resources">Back to Resources</a>
+          <p class="eyebrow">Setup Time</p>
+          <h1>How to Reduce CNC Setup Time Without Buying Another Machine</h1>
+          <p class="hero-text">Setup time is one of the easiest production losses to overlook. Before adding another machine, many shops can recover capacity by improving fixtures, preparation, workholding, documentation, and operator workflow.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="mailto:engineering@edenindustrialsystems.com">Discuss a Setup Problem</a>
+            <a class="button secondary" href="../index.html#solutions">See Engineering Support</a>
+          </div>
+        </div>
+        <aside class="article-summary-card reveal delay-1" aria-label="Article summary">
+          <p class="eyebrow">In This Guide</p>
+          <h2>Practical ways to recover machine capacity</h2>
+          <ul class="summary-list">
+            <li>Find where setup time actually disappears.</li>
+            <li>Use fixtures and workholding to make repeat jobs faster.</li>
+            <li>Prepare tools, programs, inspection, and material before the machine stops.</li>
+            <li>Standardize documentation so setups are less operator-dependent.</li>
+            <li>Know when custom tooling starts to make financial sense.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container article-layout">
+        <article class="article-content reveal">
+          <p class="lead">A new machine can increase capacity, but it is not always the first answer. If a machine spends too much of the week waiting for tools, fixtures, programs, first-piece inspection, or operator decisions, the shop may already have hidden capacity available.</p>
+
+          <h2>Where setup time usually disappears</h2>
+          <p>Setup loss is rarely one dramatic event. More often, it is a collection of small delays that repeat every job: searching for hardware, preparing tools, adjusting stops, proving out unclear programs, waiting on inspection, or re-learning how the last setup was completed.</p>
+          <p>Watch a real setup from the moment the previous job ends until the first acceptable part is approved. Separate the work into tasks that can happen before the machine stops, tasks that must happen at the machine, and tasks that can be simplified through better engineering.</p>
+
+          <h2>Prepare work before the machine stops</h2>
+          <p>The fastest setup is the one that does not happen at the spindle. Pull fixtures, verify revision levels, stage hardware, load programs, preset tools, and prepare inspection equipment before the current job ends. For repeat work, store the setup sheet, required hardware, fixture details, and inspection notes together so the next run begins with confirmation instead of discovery.</p>
+
+          <h2>Use fixture design to make repeat jobs repeatable</h2>
+          <p>A good fixture does more than hold the part. It controls location, improves access, gives the operator a clear loading method, and makes the correct setup easier than the wrong setup. Look for jobs where operators spend time indicating, nudging, aligning, or compensating for uncertain part location. Those are often good candidates for a dedicated fixture, soft jaw strategy, fixture plate, locating nest, or modular workholding approach.</p>
+
+          <h3>Fixture details that affect setup speed</h3>
+          <ul>
+            <li><strong>Positive location:</strong> clear datums, stops, pins, nests, or machined references help the part land in the same place.</li>
+            <li><strong>Accessible clamping:</strong> hardware should be reachable and should not block tools, probes, chips, or inspection features.</li>
+            <li><strong>Repeatable mounting:</strong> the fixture should return to the machine with known references and minimal adjustment.</li>
+            <li><strong>Operator feedback:</strong> the fixture should make incorrect loading visible or difficult.</li>
+          </ul>
+
+          <h2>Build workholding around locating, clamping, and access</h2>
+          <p>Workholding should be reviewed as a system. The part needs to locate consistently, clamp securely, allow tool access, and support inspection. The right improvement may be a dedicated soft jaw set, a fixture plate with repeatable stops, a nested plate for small parts, a family fixture, or a modular base that accepts job-specific details.</p>
+
+          <h2>Standardize documentation</h2>
+          <p>If setup knowledge lives only with one experienced operator, the process will be hard to repeat. Useful setup documentation can include photos of the loaded fixture, datum references, clamp sequence, tool list, offset notes, inspection sequence, revision information, and known watch-outs. The goal is not paperwork; the goal is to make the next setup easier and less dependent on memory.</p>
+
+          <h2>Reduce operator-dependent decisions</h2>
+          <p>Setup time grows when operators must make judgment calls under pressure. Which stop should be used? Which clamp goes first? Which surface is the datum? Where should first-piece inspection begin? Strong process design replaces repeated decisions with labeled fixture features, setup sequence, clear drawings, and inspection notes that match how the work is actually performed.</p>
+
+          <h2>Improve repeatability before chasing speed</h2>
+          <p>Reducing setup time should not mean rushing. A rushed setup can create scrap, inspection delays, or rework. A better target is repeatability: make the correct setup easier to repeat, then remove wasted motion after the process is stable. Repeatability also helps scheduling because recurring jobs become easier to plan.</p>
+
+          <h2>When custom tooling starts to make sense</h2>
+          <p>Custom tooling does not need to be complex to be useful. It makes sense when the same setup problem repeats, when variation creates scrap or inspection delays, when operators spend too much time aligning parts, or when a bottleneck operation limits throughput for the rest of the shop.</p>
+          <div class="article-callout">
+            <h3>Consider custom fixture or tooling support when:</h3>
+            <ul>
+              <li>The job repeats often enough that setup time is a recurring cost.</li>
+              <li>Part location depends on manual adjustment or operator feel.</li>
+              <li>First-piece approval takes longer than it should.</li>
+              <li>Inspection issues trace back to loading, clamping, or datum variation.</li>
+              <li>The team needs vendor-ready drawings, CAD, or fixture details to move faster.</li>
+            </ul>
+          </div>
+
+          <h2>A practical setup-time reduction checklist</h2>
+          <ol>
+            <li>Record one real setup from job end to first approved part.</li>
+            <li>Move preparation work away from machine-stopped time.</li>
+            <li>Stage fixtures, tools, hardware, material, programs, and inspection equipment before the setup begins.</li>
+            <li>Identify operator decisions that could be replaced by a fixture feature, drawing, setup sheet, or standard process.</li>
+            <li>Review workholding for clear location, secure clamping, tool access, chip clearance, and inspection access.</li>
+            <li>Prioritize repeat jobs and bottleneck machines first.</li>
+          </ol>
+
+          <section class="article-cta" aria-labelledby="setup-cta-heading">
+            <p class="eyebrow">Have a setup problem?</p>
+            <h2 id="setup-cta-heading">Turn the recurring delay into a buildable solution.</h2>
+            <p>Send the part, process, fixture, or workflow problem you are dealing with. Eden Industrial Systems can help review the bottleneck and develop practical fixture, tooling, documentation, or manufacturing engineering improvements.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="mailto:engineering@edenindustrialsystems.com">Email Engineering</a>
+              <a class="button secondary" href="../index.html#work">View Project Examples</a>
+            </div>
+          </section>
+        </article>
+
+        <aside class="article-aside reveal delay-1" aria-label="Related resource navigation">
+          <div class="aside-card">
+            <p class="eyebrow">Best Fit</p>
+            <h2>This guide is for teams dealing with:</h2>
+            <ul class="aside-list">
+              <li>Long changeovers on repeat CNC jobs.</li>
+              <li>Operator-dependent part location.</li>
+              <li>Workholding that takes too much adjustment.</li>
+              <li>First-piece inspection delays.</li>
+              <li>Unclear setup sheets or missing drawings.</li>
+            </ul>
+          </div>
+          <div class="aside-card">
+            <p class="eyebrow">Need Help?</p>
+            <h2>Discuss a production problem</h2>
+            <p>Eden Industrial Systems supports fixture design, tooling, process improvement, and manufacturing engineering projects.</p>
+            <p><a href="mailto:engineering@edenindustrialsystems.com">engineering@edenindustrialsystems.com</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-band">
+      <div class="container contact-grid reveal">
+        <div class="footer-brand"><span class="logo-mark">E</span><div><strong>Eden</strong><small>Industrial Systems</small></div></div>
+        <div><p class="eyebrow">Have a Production Problem?</p><a href="mailto:engineering@edenindustrialsystems.com">engineering@edenindustrialsystems.com</a></div>
+        <div><p class="eyebrow">Manufacturing Solutions</p><p>Custom fixtures, tooling, process improvements, and product development support.</p></div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
