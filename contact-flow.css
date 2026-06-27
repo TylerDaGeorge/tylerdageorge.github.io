@@ -1,0 +1,146 @@
+.contact-band {
+  padding: 56px 0;
+}
+
+.contact-flow-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 34px;
+  align-items: stretch;
+}
+
+.contact-primary,
+.contact-guidance-card {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.14);
+}
+
+.contact-primary {
+  padding: 34px;
+}
+
+.contact-primary .footer-brand {
+  margin-bottom: 26px;
+}
+
+.contact-primary h2 {
+  max-width: 560px;
+  color: white;
+  font-size: clamp(1.8rem, 3vw, 2.65rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+
+.contact-primary p {
+  max-width: 580px;
+  color: #dbe7f6;
+  margin-bottom: 22px;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 24px;
+  border-radius: 4px;
+  background: white;
+  color: var(--dark) !important;
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+.contact-email:hover {
+  transform: translateY(-1px);
+}
+
+.contact-guidance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.contact-guidance-card {
+  padding: 26px;
+}
+
+.contact-guidance-card .eyebrow {
+  color: #9cc2ff;
+}
+
+.contact-guidance-card h3 {
+  color: white;
+  font-size: 1.18rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.contact-guidance-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.contact-guidance-list li {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 10px;
+  color: #dbe7f6;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.contact-guidance-list li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-top: 0.55em;
+  border-radius: 999px;
+  background: #9cc2ff;
+}
+
+.contact-next-step {
+  grid-column: 1 / -1;
+  padding: 18px 20px;
+  border: 1px solid rgba(156, 194, 255, 0.35);
+  border-radius: 8px;
+  background: rgba(156, 194, 255, 0.09);
+  color: #dbe7f6;
+  font-size: 0.95rem;
+}
+
+.contact-next-step strong {
+  color: white;
+}
+
+@media (max-width: 920px) {
+  .contact-flow-grid,
+  .contact-guidance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-band {
+    padding: 44px 0;
+  }
+
+  .contact-primary,
+  .contact-guidance-card {
+    padding: 24px;
+  }
+
+  .contact-email {
+    width: 100%;
+    padding: 0 16px;
+    font-size: 0.82rem;
+  }
+}
