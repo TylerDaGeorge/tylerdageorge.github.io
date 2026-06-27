@@ -1,0 +1,71 @@
+.skip-link {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 999;
+  transform: translateY(-160%);
+  padding: 12px 16px;
+  border-radius: 6px;
+  background: var(--dark);
+  color: white;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--blue-bright);
+  outline-offset: 4px;
+}
+
+.logo:focus-visible,
+.nav a:focus-visible,
+.mobile-nav a:focus-visible,
+.mobile-header-contact:focus-visible,
+.button:focus-visible,
+.nav-button:focus-visible,
+.article-link:focus-visible,
+.case-study-link:focus-visible,
+.contact-email:focus-visible,
+.breadcrumb:focus-visible,
+.project-copy a:focus-visible,
+.contact-grid a:focus-visible,
+.contact-primary a:focus-visible,
+.aside-card a:focus-visible {
+  border-radius: 6px;
+  outline: 3px solid var(--blue-bright);
+  outline-offset: 4px;
+}
+
+.nav-button:focus-visible,
+.mobile-header-contact:focus-visible,
+.mobile-nav .mobile-nav-contact:focus-visible,
+.button.primary:focus-visible,
+.contact-email:focus-visible {
+  outline-color: #9cc2ff;
+}
+
+.card:focus-within,
+.project-card:focus-within,
+.article-card:focus-within,
+.capability-tags span:focus-within,
+.contact-guidance-card:focus-within,
+.aside-card:focus-within {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25), var(--shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+}
