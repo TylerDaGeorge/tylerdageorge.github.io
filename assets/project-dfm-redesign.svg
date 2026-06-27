@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">DFM and component redesign illustration</title>
+  <desc id="desc">A technical before-and-after redesign graphic showing a machined component, feature simplification, inspection notes, and manufacturability callouts.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#dbeafe"/></linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0v42" fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.55"/></pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.16"/></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)" opacity="0.75"/>
+  <g fill="none" stroke="#94a3b8" stroke-width="3" opacity="0.75">
+    <path d="M125 130h400v430H125zM675 130h400v430H675z"/>
+    <path d="M600 180v330" stroke-dasharray="12 14"/>
+    <path d="M525 340h115"/><path d="M615 308l35 32-35 32"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="800">
+    <text x="325" y="105" text-anchor="middle" font-size="28" fill="#475569">Before</text>
+    <text x="875" y="105" text-anchor="middle" font-size="28" fill="#063f8f">After DFM Review</text>
+  </g>
+  <g filter="url(#shadow)">
+    <g transform="translate(170 210)">
+      <path d="M50 210l180 70 170-74-184-66z" fill="#0f172a"/>
+      <path d="M50 145l180 70 170-74-184-66z" fill="#64748b"/>
+      <path d="M50 145v65l180 70v-65z" fill="#334155"/>
+      <path d="M230 215v65l170-74v-65z" fill="#475569"/>
+      <path d="M150 132l70 27 68-29-72-25z" fill="#ef4444" opacity="0.85"/>
+      <circle cx="145" cy="190" r="18" fill="#f8fafc"/>
+      <circle cx="270" cy="170" r="18" fill="#f8fafc"/>
+      <path d="M75 115h120M240 92h115" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(705 210)">
+      <path d="M50 210l180 70 170-74-184-66z" fill="#0f172a"/>
+      <path d="M50 145l180 70 170-74-184-66z" fill="#2563eb"/>
+      <path d="M50 145v65l180 70v-65z" fill="#1d4ed8"/>
+      <path d="M230 215v65l170-74v-65z" fill="#1e40af"/>
+      <path d="M140 135l92 35 82-36-96-34z" fill="#f97316" opacity="0.95"/>
+      <circle cx="145" cy="190" r="18" fill="#f8fafc"/>
+      <circle cx="270" cy="170" r="18" fill="#f8fafc"/>
+      <path d="M86 105h120M236 92h115" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round">
+    <path d="M760 565h260M760 605h200M760 645h235"/>
+    <path d="M184 565h260M184 605h190M184 645h230" stroke="#94a3b8"/>
+  </g>
+  <g fill="#0f172a" font-family="Arial, Helvetica, sans-serif">
+    <text x="600" y="720" text-anchor="middle" font-size="34" font-weight="800">DFM and Component Redesign</text>
+    <text x="600" y="758" text-anchor="middle" font-size="22" fill="#475569">Simpler features - clearer datums - lower fabrication risk</text>
+  </g>
+</svg>

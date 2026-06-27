@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Repeatable assembly tooling illustration</title>
+  <desc id="desc">A workstation-style assembly fixture with locating nests, alignment pins, clamp handles, and an operator workflow diagram.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#e0e7ff"/></linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0v44" fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.55"/></pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="15" flood-color="#0f172a" flood-opacity="0.16"/></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)" opacity="0.75"/>
+  <g fill="none" stroke="#94a3b8" stroke-width="3" opacity="0.78">
+    <path d="M170 150h860v430H170z"/>
+    <path d="M220 198h180M220 242h150M820 198h180M820 242h120"/>
+    <path d="M180 624h840"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M260 520l330 120 360-150-340-118z" fill="#0f172a"/>
+    <path d="M260 442l330 120 360-150-340-118z" fill="#334155"/>
+    <path d="M260 442v78l330 120v-78z" fill="#111827"/>
+    <path d="M590 562v78l360-150v-78z" fill="#1e293b"/>
+    <path d="M378 410l156 56 146-62-158-55z" fill="#2563eb"/>
+    <path d="M652 392l156 56 146-62-158-55z" fill="#2563eb" opacity="0.92"/>
+    <path d="M454 360l90 32-90 36-90-34z" fill="#f97316"/>
+    <path d="M725 343l96 34-96 39-96-36z" fill="#f97316"/>
+    <g fill="#f8fafc">
+      <circle cx="430" cy="470" r="18"/><circle cx="520" cy="504" r="18"/><circle cx="708" cy="466" r="18"/><circle cx="808" cy="426" r="18"/>
+    </g>
+    <g fill="none" stroke="#e2e8f0" stroke-width="8" stroke-linecap="round">
+      <path d="M382 384c42-64 108-66 154-6"/>
+      <path d="M666 366c44-62 108-64 152-4"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" opacity="0.9">
+    <path d="M235 330h155"/><path d="M390 330l-32-24M390 330l-32 24"/>
+    <path d="M965 330H810"/><path d="M810 330l32-24M810 330l32 24"/>
+    <path d="M485 252h230"/><path d="M715 252l-34-24M715 252l-34 24"/>
+  </g>
+  <g fill="#0f172a" font-family="Arial, Helvetica, sans-serif">
+    <text x="600" y="706" text-anchor="middle" font-size="34" font-weight="800">Repeatable Assembly Support</text>
+    <text x="600" y="746" text-anchor="middle" font-size="22" fill="#475569">Locating nests - alignment control - operator-friendly workflow</text>
+  </g>
+</svg>
