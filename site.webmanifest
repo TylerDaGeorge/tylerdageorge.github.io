@@ -1,0 +1,17 @@
+{
+  "name": "Eden Industrial Systems",
+  "short_name": "Eden Industrial",
+  "description": "Manufacturing solutions, custom fixtures, tooling, workholding, production improvement, and mechanical design support.",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#ffffff",
+  "theme_color": "#063f8f",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
