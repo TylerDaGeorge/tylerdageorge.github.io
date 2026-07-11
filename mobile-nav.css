@@ -4,21 +4,44 @@
 }
 
 @media (max-width: 880px) {
+  html {
+    scroll-padding-top: 78px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: min(100% - 32px, 1140px);
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
+
   .header-inner {
-    gap: 16px;
+    min-height: 68px;
+    gap: 12px;
+  }
+
+  .nav,
+  .mobile-nav {
+    display: none;
   }
 
   .mobile-header-contact {
-    min-height: 40px;
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0 16px;
-    border-radius: 4px;
+    padding: 0 15px;
+    border-radius: 6px;
     background: var(--blue);
     color: white;
-    box-shadow: 0 10px 22px rgba(6, 63, 143, 0.2);
-    font-size: 0.78rem;
+    box-shadow: 0 8px 18px rgba(6, 63, 143, 0.18);
+    font-size: 0.74rem;
     font-weight: 900;
     letter-spacing: 0.04em;
     text-decoration: none;
@@ -26,68 +49,283 @@
     white-space: nowrap;
   }
 
-  .mobile-header-contact:hover {
-    background: var(--blue-dark);
+  .hero-shell {
+    grid-template-columns: 1fr;
+    min-height: auto;
   }
 
-  .mobile-nav {
-    width: min(1140px, 91%);
-    margin: -6px auto 12px;
+  .hero-copy {
+    padding: 64px 24px 46px;
+  }
+
+  .hero-visual {
+    min-height: 300px;
+  }
+
+  .hero-visual::before {
+    inset: 16px;
+  }
+
+  h1 {
+    font-size: clamp(2.55rem, 12vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+    margin-bottom: 20px;
+  }
+
+  .hero-text {
+    max-width: 34rem;
+    margin-bottom: 26px;
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    display: block;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    min-height: 50px;
+  }
+
+  .section {
+    padding: 58px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 24px;
+  }
+
+  .section-heading h2,
+  .about-grid h2,
+  .problem-grid h2,
+  .product-grid h2,
+  .resource-grid h2 {
+    font-size: clamp(1.9rem, 8vw, 2.55rem);
+    line-height: 1.08;
+  }
+
+  .section-heading p,
+  .about-grid p,
+  .problem-grid p,
+  .product-grid p,
+  .resource-grid p {
+    font-size: 0.98rem;
+  }
+
+  .cards,
+  .project-grid,
+  .process-line,
+  .about-grid,
+  .contact-grid,
+  .contact-flow-grid,
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 24px;
+    border-radius: 10px;
+  }
+
+  .card h3 {
+    font-size: 1.25rem;
+  }
+
+  .project-grid {
+    gap: 18px;
+  }
+
+  .project-card,
+  .project-card:nth-child(2n),
+  .project-card:nth-last-child(-n + 2) {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .project-card img {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  .project-copy {
+    padding: 22px;
+  }
+
+  .process-line {
+    gap: 24px;
+  }
+
+  .process-line::before,
+  .blueprint-corner::after {
+    display: none;
+  }
+
+  .process-step {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    padding-bottom: 2px;
+    grid-template-columns: 52px 1fr;
+    gap: 14px;
+    padding: 0;
+    text-align: left;
   }
 
-  .mobile-nav a {
-    min-height: 40px;
+  .process-step span {
+    width: 46px;
+    height: 46px;
+    margin: 0;
+    font-size: 0.78rem;
+  }
+
+  .process-step h3,
+  .process-step p {
+    grid-column: 2;
+  }
+
+  .process-step h3 {
+    margin-top: -46px;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+  }
+
+  .process-step p {
+    margin-top: 4px;
+  }
+
+  .contact-band {
+    padding: 58px 0;
+  }
+
+  .contact-flow-grid {
+    display: block;
+  }
+
+  .contact-primary {
+    max-width: none;
+  }
+
+  .contact-primary h2 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    line-height: 1.06;
+  }
+
+  .contact-email {
     display: inline-flex;
+    width: 100%;
+    min-height: 50px;
     align-items: center;
     justify-content: center;
-    padding: 0 10px;
-    border: 1px solid var(--border);
+    padding: 12px 14px;
     border-radius: 6px;
-    background: linear-gradient(180deg, #ffffff, #f6f8fb);
-    color: var(--text);
-    box-shadow: 0 8px 18px rgba(6, 26, 56, 0.05);
-    font-size: 0.72rem;
-    font-weight: 900;
-    letter-spacing: 0.05em;
-    line-height: 1.1;
+    font-size: 0.8rem;
     text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+    overflow-wrap: anywhere;
   }
 
-  .mobile-nav a:hover {
-    border-color: #b7c5d8;
-    color: var(--blue-bright);
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
-  .mobile-nav .mobile-nav-contact {
-    background: var(--dark);
-    border-color: var(--dark-2);
-    color: white;
-  }
-
-  .mobile-nav .mobile-nav-contact:hover {
-    color: white;
-    background: var(--blue-dark);
+  .footer-inner a {
+    overflow-wrap: anywhere;
   }
 }
 
 @media (max-width: 560px) {
-  .mobile-nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .container {
+    width: min(100% - 24px, 1140px);
   }
 
-  .mobile-nav a {
-    min-height: 38px;
-    font-size: 0.68rem;
+  .header-inner {
+    min-height: 62px;
+  }
+
+  .logo {
+    gap: 9px;
+  }
+
+  .logo-mark {
+    width: 34px;
+    height: 34px;
+    border-width: 3px;
+    font-size: 0.95rem;
+  }
+
+  .logo strong,
+  .footer-brand strong {
+    font-size: 1.06rem;
+    letter-spacing: 0.055em;
+  }
+
+  .logo small,
+  .footer-brand small {
+    font-size: 0.56rem;
+    letter-spacing: 0.1em;
   }
 
   .mobile-header-contact {
-    padding: 0 14px;
-    font-size: 0.72rem;
+    min-height: 40px;
+    padding: 0 12px;
+    font-size: 0.68rem;
+  }
+
+  .hero-copy {
+    padding: 52px 18px 38px;
+  }
+
+  .hero-visual {
+    min-height: 230px;
+  }
+
+  .eyebrow {
+    font-size: 0.69rem;
+    letter-spacing: 0.075em;
+  }
+
+  h1 {
+    font-size: clamp(2.35rem, 13vw, 3.25rem);
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .card,
+  .project-copy {
+    padding: 20px;
+  }
+
+  .process-step {
+    grid-template-columns: 46px 1fr;
+    gap: 12px;
+  }
+
+  .process-step span {
+    width: 42px;
+    height: 42px;
+  }
+
+  .process-step h3 {
+    margin-top: -42px;
+    min-height: 42px;
+    font-size: 1.08rem;
+  }
+
+  .contact-band {
+    padding: 48px 0;
+  }
+
+  .footer-brand {
+    margin-bottom: 20px;
   }
 }
