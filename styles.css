@@ -1268,3 +1268,30 @@ body {
     padding: 0.8rem 1rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Lead-generation fixture redesign */
+.placeholder-visual{display:grid;place-items:center;gap:1rem;text-align:center}.placeholder-visual span,.image-placeholder{border:1px dashed rgba(99,112,131,.55);background:linear-gradient(135deg,#eef4fb,#fff);color:#415064;border-radius:18px;min-height:180px;display:grid;place-items:center;font-weight:900;text-transform:uppercase;letter-spacing:.06em}.icon-placeholder{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#eaf2ff;color:var(--blue);font-weight:900;margin-bottom:1rem}.benefit-card:hover .icon-placeholder{background:#fff2d8;color:#92400e}.deliverable-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.six-step{grid-template-columns:repeat(6,1fr)}.modern-projects{grid-template-columns:repeat(3,1fr);border:0;gap:20px;box-shadow:none}.modern-projects .project-card{border:1px solid var(--border);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}dl{display:grid;grid-template-columns:auto 1fr;gap:.35rem .75rem;margin:1rem 0}dt{font-weight:900;color:var(--text)}dd{color:var(--text-muted)}.page-hero{padding:clamp(4rem,8vw,7rem) 0;background:linear-gradient(135deg,var(--dark),var(--dark-2));color:#fff}.page-hero h1{color:#fff}.filter-bar{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}.filter-bar button{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;border-radius:999px;padding:.8rem 1rem;font-weight:800}.roi-panel,.rfq-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:2rem;align-items:start}.roi-form,.rfq-form{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;background:#fff;border:1px solid var(--border);border-radius:24px;padding:1.5rem;box-shadow:var(--shadow)}label{display:grid;gap:.4rem;font-weight:900}input,textarea{width:100%;border:1px solid var(--border);border-radius:12px;padding:.9rem;font:inherit}textarea{min-height:130px}.rfq-form label:has(textarea),.rfq-form button,.roi-form output{grid-column:1/-1}.timeline{display:grid;grid-template-columns:repeat(7,1fr);gap:1rem}.timeline article{background:#fff;border:1px solid var(--border);border-radius:18px;padding:1rem;box-shadow:0 10px 28px rgba(6,26,56,.06)}.timeline span{color:var(--blue);font-weight:900}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:2rem;padding:3rem 0}.site-footer a{display:block;color:#dbeafe;text-decoration:none;margin:.45rem 0}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1rem 0 2rem}@media(max-width:1040px){.deliverable-grid,.six-step,.modern-projects,.timeline,.footer-grid{grid-template-columns:repeat(2,1fr)}.roi-panel,.rfq-layout{grid-template-columns:1fr}}@media(max-width:700px){.deliverable-grid,.six-step,.modern-projects,.timeline,.footer-grid,.roi-form,.rfq-form,.gallery-grid{grid-template-columns:1fr}.placeholder-visual{padding:1rem}.page-hero{padding:3.5rem 0}.hero-shell{min-height:auto}.card{padding:24px}.nav-button,.mobile-header-contact{min-height:44px}}
+
+/* Mobile optimization pass */
+@media(max-width:880px){.container{width:min(94%,680px)}.header-inner{gap:12px}.mobile-header-contact{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:var(--blue);color:#fff;text-decoration:none;font-weight:900;padding:.75rem 1rem}.hero-copy{padding-block:4rem}.hero-text{font-size:1.05rem}.section-heading{text-align:left}.button{min-height:48px}.cards{gap:1rem}.process-step{background:#fff;border:1px solid var(--border);border-radius:18px;padding:1rem}}@media(max-width:480px){h1{font-size:2.35rem}.section{padding-block:3.5rem}.logo small{display:none}.logo strong{font-size:1.05rem}.footer-grid{padding:2rem 0}.image-placeholder{min-height:140px}}
+
+/* Final polish */
+:focus-visible{outline:3px solid var(--industrial-orange);outline-offset:3px}.card,.project-card,.timeline article,.rfq-form,.roi-form{backdrop-filter:saturate(120%)}.section-heading .eyebrow{margin-bottom:.35rem}.project-copy a,.card a{color:var(--blue);font-weight:900;text-decoration:none}.project-copy a:hover,.card a:hover{text-decoration:underline}.hero-visual strong{color:#fff;background:rgba(6,26,56,.72);padding:.6rem 1rem;border-radius:999px}.service-detail .image-placeholder{margin-bottom:1.25rem}.contact-band .button.primary{color:#111827}
