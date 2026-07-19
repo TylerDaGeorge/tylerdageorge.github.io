@@ -1,0 +1,67 @@
+/* Refined alternating process arrows. Loaded after homepage-revision.css. */
+.process-ring {
+  border-color: #dce5ee;
+  overflow: visible;
+}
+
+.process-ring::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: conic-gradient(from 215deg, transparent 0 16%, #0b72b9 16% 67%, transparent 67% 100%);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 12px), #000 calc(100% - 11px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 12px), #000 calc(100% - 11px));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.process-ring:nth-child(even)::before {
+  background: conic-gradient(from 35deg, transparent 0 16%, #2563eb 16% 67%, transparent 67% 100%);
+}
+
+.process-ring::after {
+  content: "";
+  position: absolute;
+  top: 71%;
+  right: -31px;
+  width: 38px;
+  height: 20px;
+  transform: translateY(-50%);
+  background: #0b72b9;
+  clip-path: polygon(0 31%, 58% 31%, 58% 0, 100% 50%, 58% 100%, 58% 69%, 0 69%);
+  border-radius: 2px;
+  box-shadow: 0 4px 10px rgba(11, 114, 185, .18);
+  z-index: 3;
+}
+
+.process-ring:nth-child(even)::after {
+  top: 29%;
+  background: #2563eb;
+}
+
+.process-ring:last-child::after {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .process-ring::after {
+    right: -28px;
+    width: 35px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .process-ring::before {
+    inset: -11px;
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 11px), #000 calc(100% - 10px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 11px), #000 calc(100% - 10px));
+  }
+
+  .process-ring::after {
+    right: -25px;
+    width: 31px;
+    height: 16px;
+  }
+}
