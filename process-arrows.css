@@ -1,55 +1,63 @@
-/* Refined alternating process arrows. Loaded after homepage-revision.css. */
+/* Alternating process arrows that follow each circle perimeter. Loaded after homepage-revision.css. */
 .process-ring {
   border-color: #dce5ee;
   overflow: visible;
 }
 
+/* The blue path is the arrow shaft: a thick arc that follows the ring itself. */
 .process-ring::before {
   content: "";
   position: absolute;
   inset: -12px;
   border-radius: 50%;
-  background: conic-gradient(from 215deg, transparent 0 16%, #0b72b9 16% 67%, transparent 67% 100%);
+  background: conic-gradient(
+    from 218deg,
+    transparent 0 14%,
+    #0b72b9 14% 68%,
+    transparent 68% 100%
+  );
   -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 12px), #000 calc(100% - 11px));
   mask: radial-gradient(farthest-side, transparent calc(100% - 12px), #000 calc(100% - 11px));
   pointer-events: none;
   z-index: 2;
 }
 
+/* Even stages wrap in the opposite direction along the lower perimeter. */
 .process-ring:nth-child(even)::before {
-  background: conic-gradient(from 35deg, transparent 0 16%, #2563eb 16% 67%, transparent 67% 100%);
+  background: conic-gradient(
+    from 38deg,
+    transparent 0 14%,
+    #2563eb 14% 68%,
+    transparent 68% 100%
+  );
 }
 
+/* Arrowhead attaches directly to the end of the perimeter arc—no straight connector bar. */
 .process-ring::after {
   content: "";
   position: absolute;
-  top: 71%;
-  right: -31px;
-  width: 38px;
-  height: 20px;
-  transform: translateY(-50%);
-  background: #0b72b9;
-  clip-path: polygon(0 31%, 58% 31%, 58% 0, 100% 50%, 58% 100%, 58% 69%, 0 69%);
-  border-radius: 2px;
-  box-shadow: 0 4px 10px rgba(11, 114, 185, .18);
+  right: -16px;
+  bottom: 17%;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 20px solid #0b72b9;
+  transform: rotate(42deg);
+  transform-origin: 0 50%;
+  filter: drop-shadow(0 3px 4px rgba(11, 114, 185, .16));
   z-index: 3;
 }
 
 .process-ring:nth-child(even)::after {
-  top: 29%;
-  background: #2563eb;
+  top: 17%;
+  bottom: auto;
+  border-left-color: #2563eb;
+  transform: rotate(-42deg);
 }
 
 .process-ring:last-child::after {
   display: none;
-}
-
-@media (max-width: 1100px) {
-  .process-ring::after {
-    right: -28px;
-    width: 35px;
-    height: 18px;
-  }
 }
 
 @media (max-width: 700px) {
@@ -60,8 +68,9 @@
   }
 
   .process-ring::after {
-    right: -25px;
-    width: 31px;
-    height: 16px;
+    right: -14px;
+    border-top-width: 11px;
+    border-bottom-width: 11px;
+    border-left-width: 17px;
   }
 }
