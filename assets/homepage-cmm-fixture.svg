@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" role="img" aria-labelledby="title desc">
+<title id="title">Three-station CMM inspection fixture</title>
+<desc id="desc">Web illustration based on Eden Industrial Systems' three-station aluminum inspection fixture with pull knobs and three loaded components.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#dce6f2"/></linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1f3f4"/><stop offset=".5" stop-color="#aeb7bf"/><stop offset="1" stop-color="#e8ebed"/></linearGradient>
+  <linearGradient id="side" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9da8b1"/><stop offset="1" stop-color="#737f89"/></linearGradient>
+  <radialGradient id="knob"><stop offset="0" stop-color="#5b6168"/><stop offset=".5" stop-color="#252a2f"/><stop offset="1" stop-color="#090b0d"/></radialGradient>
+  <linearGradient id="part" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5d6a1"/><stop offset=".55" stop-color="#c59a5d"/><stop offset="1" stop-color="#8e6839"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="150%" height="170%"><feDropShadow dx="0" dy="28" stdDeviation="24" flood-color="#061a38" flood-opacity=".32"/></filter>
+</defs>
+<rect width="1200" height="850" fill="url(#bg)"/>
+<g opacity=".22" stroke="#063f8f"><path d="M0 700h1200M0 640h1200M0 580h1200"/><path d="M160 0v850M320 0v850M480 0v850M640 0v850M800 0v850M960 0v850M1120 0v850"/></g>
+<g filter="url(#shadow)" transform="translate(70 90)">
+  <path d="M115 165L810 25l260 150-700 145z" fill="url(#metal)" stroke="#515b64" stroke-width="4"/>
+  <path d="M115 165v390l255 150V320z" fill="url(#side)" stroke="#515b64" stroke-width="4"/>
+  <path d="M370 320l700-145v390L370 705z" fill="url(#metal)" stroke="#515b64" stroke-width="4"/>
+  <path d="M115 555l255 150v70L115 625zM905 585l165-35v105l-165 35z" fill="#747f88" stroke="#515b64" stroke-width="4"/>
+  <g>
+    <ellipse cx="350" cy="180" rx="78" ry="43" fill="#65717a" stroke="#4b555e" stroke-width="4"/>
+    <ellipse cx="350" cy="166" rx="61" ry="35" fill="url(#part)" stroke="#76552e" stroke-width="5"/>
+    <ellipse cx="350" cy="161" rx="40" ry="22" fill="#503c29"/>
+    <ellipse cx="615" cy="126" rx="78" ry="43" fill="#65717a" stroke="#4b555e" stroke-width="4"/>
+    <ellipse cx="615" cy="112" rx="61" ry="35" fill="url(#part)" stroke="#76552e" stroke-width="5"/>
+    <ellipse cx="615" cy="107" rx="40" ry="22" fill="#503c29"/>
+    <ellipse cx="870" cy="75" rx="78" ry="43" fill="#65717a" stroke="#4b555e" stroke-width="4"/>
+    <ellipse cx="870" cy="61" rx="61" ry="35" fill="url(#part)" stroke="#76552e" stroke-width="5"/>
+    <ellipse cx="870" cy="56" rx="40" ry="22" fill="#503c29"/>
+  </g>
+  <g>
+    <circle cx="205" cy="350" r="78" fill="url(#knob)" stroke="#050607" stroke-width="5"/><circle cx="205" cy="350" r="27" fill="#090b0d" stroke="#555d65" stroke-width="5"/>
+    <circle cx="205" cy="530" r="78" fill="url(#knob)" stroke="#050607" stroke-width="5"/><circle cx="205" cy="530" r="27" fill="#090b0d" stroke="#555d65" stroke-width="5"/>
+    <circle cx="450" cy="555" r="78" fill="url(#knob)" stroke="#050607" stroke-width="5"/><circle cx="450" cy="555" r="27" fill="#090b0d" stroke="#555d65" stroke-width="5"/>
+  </g>
+  <g fill="url(#part)" stroke="#76552e" stroke-width="4"><path d="M860 335l60-12 20 165-42 80-38-68z"/><path d="M884 337l15-3 8 186-12 25-11-25z"/></g>
+  <path d="M825 290h135v65H825z" fill="#15191d" opacity=".9"/>
+</g>
+</svg>
