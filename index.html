@@ -77,42 +77,65 @@
     </div>
   </section>
 
-  <section class="process-showcase">
-    <div class="container process-showcase-shell">
-      <div class="process-showcase-heading">
-        <h2>The Process</h2>
+  <section class="process-showcase" aria-labelledby="process-title">
+    <div class="container">
+      <header class="process-showcase-heading">
+        <h2 id="process-title">The Process</h2>
         <p>Every project moves through a defined series of review, approval, and release stages so decisions stay clear and the final design is ready to manufacture.</p>
+      </header>
+      <div class="process-diagram-scroll" tabindex="0" aria-label="Scrollable seven-stage project process diagram">
+        <ol class="process-diagram">
+          <li class="process-step process-step-bottom">
+            <div class="process-description"><span>Step 01</span><p>Review the part files, machine, production volume, current setup, and manufacturing bottleneck.</p></div>
+            <div class="process-diamond">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 11h6M9 15h6"/></svg>
+              <strong>Problem Review</strong>
+            </div>
+          </li>
+          <li class="process-step process-step-top">
+            <div class="process-description"><span>Step 02</span><p>Develop fixture and automation concepts around locating, clamping, access, and operator use.</p></div>
+            <div class="process-diamond">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8.5 14.5A6 6 0 1 1 15.5 14.5C14.5 15.3 14 16 14 18h-4c0-2-.5-2.7-1.5-3.5z"/></svg>
+              <strong>Concept Generation</strong>
+            </div>
+          </li>
+          <li class="process-step process-step-bottom">
+            <div class="process-description"><span>Step 03</span><p>Review concepts with the customer and approve the preferred direction before detailed CAD begins.</p></div>
+            <div class="process-diamond">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+              <strong>Direction Approval</strong>
+            </div>
+          </li>
+          <li class="process-step process-step-top">
+            <div class="process-description"><span>Step 04</span><p>Complete CAD, purchased component selection, tolerances, drawings, and manufacturing details.</p></div>
+            <div class="process-diamond">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/></svg>
+              <strong>Finalize Design</strong>
+            </div>
+          </li>
+          <li class="process-step process-step-bottom">
+            <div class="process-description"><span>Step 05</span><p>Review the completed fixture for functionality, manufacturability, access, and repeatability before release.</p></div>
+            <div class="process-diamond">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6l1 2h3v15H5V6h3zM8 12l3 3 5-6"/></svg>
+              <strong>Design Approval</strong>
+            </div>
+          </li>
+          <li class="process-step process-step-top">
+            <div class="process-description"><span>Step 06</span><p>Deliver build-ready models, drawings, BOMs, and documentation required for fabrication and assembly.</p></div>
+            <div class="process-diamond">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V9l5 3V8l5 3V5l8 4v12zM7 17h2M12 17h2M17 17h2"/></svg>
+              <strong>Release to Manufacturing</strong>
+            </div>
+          </li>
+          <li class="process-step process-step-bottom">
+            <div class="process-description"><span>Step 07</span><p>Provide the completed fixture design package and support manufacturing and future revisions.</p></div>
+            <div class="process-diamond">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7l8-4 8 4v10l-8 4-8-4zM4 7l8 4 8-4M12 11v10"/></svg>
+              <strong>Deliver</strong>
+            </div>
+          </li>
+        </ol>
       </div>
-      <ol class="process-zigzag" aria-label="Eden Industrial Systems project process">
-        <li class="process-stage stage-bottom">
-          <div class="process-detail"><span>Step 01</span><p>Review the part files, machine, production volume, current setup, and the bottleneck to solve.</p></div>
-          <div class="process-node"><div class="process-chevron" aria-hidden="true"></div><div class="process-node-copy"><strong>Problem<br>Review</strong></div></div>
-        </li>
-        <li class="process-stage stage-top">
-          <div class="process-detail"><span>Step 02</span><p>Develop fixture and automation concepts around access, locating, clamping, and operator use.</p></div>
-          <div class="process-node"><div class="process-chevron" aria-hidden="true"></div><div class="process-node-copy"><strong>Concept<br>Generation</strong></div></div>
-        </li>
-        <li class="process-stage stage-bottom">
-          <div class="process-detail"><span>Step 03</span><p>Compare the concepts, choose the best direction, and approve the project scope before detailing.</p></div>
-          <div class="process-node"><div class="process-chevron" aria-hidden="true"></div><div class="process-node-copy"><strong>Direction<br>Approval</strong></div></div>
-        </li>
-        <li class="process-stage stage-top">
-          <div class="process-detail"><span>Step 04</span><p>Complete detailed CAD, purchased-component selection, tolerances, and manufacturing decisions.</p></div>
-          <div class="process-node"><div class="process-chevron" aria-hidden="true"></div><div class="process-node-copy"><strong>Finalize<br>Design</strong></div></div>
-        </li>
-        <li class="process-stage stage-bottom">
-          <div class="process-detail"><span>Step 05</span><p>Review the final design for fit, function, probe or tool access, operator use, and manufacturability.</p></div>
-          <div class="process-node"><div class="process-chevron" aria-hidden="true"></div><div class="process-node-copy"><strong>Design<br>Approval</strong></div></div>
-        </li>
-        <li class="process-stage stage-top">
-          <div class="process-detail"><span>Step 06</span><p>Release build-ready models, drawings, and component information for fabrication and prove-out.</p></div>
-          <div class="process-node"><div class="process-chevron" aria-hidden="true"></div><div class="process-node-copy"><strong>Release to<br>Manufacturing</strong></div></div>
-        </li>
-        <li class="process-stage stage-bottom">
-          <div class="process-detail"><span>Step 07</span><p>Deliver the final engineering package and support the handoff into production.</p></div>
-          <div class="process-node"><div class="process-chevron" aria-hidden="true"></div><div class="process-node-copy"><strong>Deliver</strong></div></div>
-        </li>
-      </ol>
     </div>
   </section>
 
