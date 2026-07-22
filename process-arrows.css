@@ -91,23 +91,9 @@
 }
 
 .process-connector {
-  position: relative;
   width: 2px;
   height: 46px;
   background: #8aa8c5;
-}
-
-.process-connector::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -4px;
-  width: 8px;
-  height: 8px;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background: #0b72b9;
-  box-shadow: 0 0 0 4px rgba(11, 114, 185, .10);
 }
 
 .process-diamond {
