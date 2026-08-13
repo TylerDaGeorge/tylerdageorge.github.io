@@ -40,7 +40,7 @@ The product sits on a workbench or dedicated Eden stainless-steel base and creat
 
 Keep the initial navigation extremely simple.
 
-**Products | Applications | Technology | Resources | About | Request a Quote**
+**Home | Products | Contact | Request a Quote**
 
 As the product line expands, "Products" can eventually contain multiple workstation sizes and configurations.
 
