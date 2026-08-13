@@ -1,5 +1,6 @@
-Eden Cleanroom Systems — Website Plan  
-1\. Website Objective
+# Eden Cleanroom Systems — Website Plan
+
+## 1. Website Objective
 
 Position Eden Cleanroom Systems as a manufacturer of **compact, localized clean-air systems for critical processes**.
 
@@ -7,720 +8,1052 @@ The central value proposition:
 
 > **Clean the process, not the entire room.**
 
-Instead of requiring customers to build or upgrade an entire cleanroom, Eden provides self-contained HEPA-filtered work zones that create controlled environments directly where sensitive work happens.
+Instead of requiring customers to build or upgrade an entire cleanroom, Eden provides localized HEPA-filtered work zones that create controlled environments directly where sensitive work happens.
 
-The website should make the product immediately understandable, establish technical credibility, and drive visitors toward **requesting a quote or discussing an application**.
+The website should:
 
----
+- Make the product immediately understandable.
+- Establish technical and manufacturing credibility.
+- Explain why localized clean air can be preferable to controlling an entire room.
+- Present Eden's products clearly.
+- Drive qualified visitors toward requesting a quote.
+- Keep the overall site simple and focused.
 
-2\. Initial Product Positioning  
-Product Category
-
-**Localized Clean-Air Workstations**
-
-Potential terminology:
-
-* Tabletop Clean Zone  
-* Clean Process Chamber  
-* HEPA Workstation  
-* Controlled Environment Workstation  
-* Localized Clean-Air Chamber
-
-Recommended initial product name:
-
-Eden Clean Process Chamber
-
-**A compact HEPA-filtered environment for critical processes.**
-
-The product sits on a workbench or dedicated Eden stainless-steel base and creates a downward flow of filtered air through an enclosed work area.
+The website should not become a large collection of pages at launch.
 
 ---
 
-3\. Primary Website Navigation
+# 2. Primary Website Structure
 
-Keep the initial navigation extremely simple.
+The website will have four primary pages:
+
+1. **Home**
+2. **Products**
+3. **Contact**
+4. **Request a Quote**
+
+Primary navigation:
 
 **Home | Products | Contact | Request a Quote**
 
-As the product line expands, "Products" can eventually contain multiple workstation sizes and configurations.
+`Request a Quote` should be visually emphasized as the primary navigation CTA.
+
+Do not create separate top-level pages for:
+
+- Applications
+- Technology
+- Resources
+- About
+- Industries
+
+Relevant information from those categories should instead be incorporated into the Home and Products pages.
+
+The goal is a small, focused website rather than a large corporate site.
 
 ---
 
-4\. Homepage  
-Hero
+# 3. Product Positioning
 
-Headline
+## Primary Product Category
 
-Clean Air. Right Where You Need It.
+**Localized Clean-Air Workstations**
 
-Supporting Copy
+The initial flagship product is:
 
-Create a controlled, HEPA-filtered work zone without building an entire cleanroom.
+# Eden Clean Process Chamber
 
-Eden Clean Process Chambers provide localized clean air for sensitive manufacturing, assembly, inspection, packaging, and laboratory processes.
+**A compact HEPA-filtered environment for critical processes.**
 
-Primary CTA
+The system creates a localized clean-air work zone around sensitive manufacturing, assembly, inspection, packaging, and laboratory operations.
 
-**Explore the Clean Process Chamber**
+The chamber may sit on an existing workbench or be paired with a dedicated Eden stainless-steel workstation.
 
-Secondary CTA
+The initial airflow concept is:
 
-**Discuss Your Application**
+**Room Air → Prefilter → Blower → HEPA Filter → Supply Plenum ↓ Work Zone ↓ Exhaust**
 
-Hero Visual
-
-Large three-quarter product rendering showing:
-
-* stainless enclosure  
-* transparent sides/front  
-* overhead HEPA module  
-* work surface  
-* downward airflow
-
-Use subtle arrows to communicate the airflow path.
+Filtered air enters from above, moves vertically through the work area, and exits through engineered openings near the bottom of the enclosure.
 
 ---
 
-Problem Section
+# 4. Core Brand Positioning
 
-You may not need another cleanroom.
+Eden should not position itself primarily as a stainless-steel furniture company.
 
-Many critical processes occupy only a small portion of the manufacturing floor.
+The broader positioning should be:
 
-Controlling an entire room can require significant infrastructure, maintenance, and operating expense.
+> **Eden builds clean environments around processes.**
 
-Eden takes a different approach.
+Supporting idea:
 
-**Create the clean environment around the process itself.**
+> **Clean the process, not the entire room.**
 
-Visual:
+The existing stainless workstation/table products remain relevant, but they should support the clean-air product ecosystem rather than define the company.
 
-**Entire Cleanroom**
+Long term, Eden should be capable of offering:
 
-Large controlled space → high infrastructure requirements
-
-vs.
-
-**Eden Localized Clean Zone**
-
-Controlled process area → compact footprint
-
----
-
-Product Introduction
-
-Meet the Eden Clean Process Chamber
-
-A self-contained clean-air workstation designed to create a localized controlled environment around critical operations.
-
-Potential feature callouts:
-
-* HEPA-filtered supply air  
-* Vertical airflow  
-* Stainless-steel construction  
-* Clear enclosure panels  
-* Variable-speed blower  
-* Integrated lighting  
-* Compact footprint  
-* Replaceable filtration  
-* Configurable chamber sizes
-
-CTA:
-
-**View Product**
+- Localized clean-air chambers
+- Clean-air workstations
+- Stainless cleanroom workstations
+- Integrated chamber/workstation systems
+- Replacement filters
+- Accessories
+- Custom clean-air systems
 
 ---
 
-5\. "How It Works" Homepage Section
+# 5. Home Page
 
-This should be highly visual.
+URL:
 
-Use a cutaway illustration of the chamber.
+`/`
 
-Step 1 — Filter
+## Purpose
 
-Room air enters the filtration module and passes through a HEPA filter.
+The Home page should explain Eden's value proposition within seconds.
 
-Step 2 — Distribute
+A visitor should quickly understand:
 
-A supply plenum distributes filtered air evenly across the top of the chamber.
+1. What Eden makes.
+2. Why localized clean air matters.
+3. What the Clean Process Chamber is.
+4. How it works.
+5. Where it can be used.
+6. Why they should consider it.
+7. How to request a quote.
 
-Step 3 — Sweep
-
-Clean air moves vertically through the critical work zone.
-
-Step 4 — Exit
-
-Air leaves through engineered exhaust openings near the bottom of the enclosure.
-
-Diagram:
-
-**Room Air → Blower → HEPA Filter → Supply Plenum ↓ Work Zone ↓ Exhaust**
-
-CTA:
-
-**Explore the Technology**
+The Home page should be visually driven and relatively concise.
 
 ---
 
-6\. Applications Section
+## Home — Hero
 
-One Platform. Many Critical Processes.
+### Headline
 
-Rather than organizing everything around industries, emphasize what customers are actually doing.
+# Clean Air. Right Where You Need It.
 
-Assembly
+### Supporting Copy
 
-Protect sensitive components during precision assembly.
+Create a localized HEPA-filtered work zone around critical processes without controlling an entire room.
 
-Inspection
+Eden Clean Process Chambers bring filtered airflow directly to sensitive manufacturing, assembly, inspection, and packaging operations.
 
-Create a cleaner environment for visual, dimensional, and quality inspection.
+### Primary CTA
 
-Packaging
+**View Products**
 
-Reduce contamination exposure during final packaging operations.
+Links to:
 
-Sample Preparation
+`/products`
 
-Provide localized filtered airflow for appropriate laboratory preparation processes.
+### Secondary CTA
 
-Electronics
+**Request a Quote**
 
-Reduce airborne particulate exposure during sensitive electronics handling and assembly.
+Links to:
 
-Medical & Life Science Manufacturing
+`/request-a-quote`
 
-Provide a controlled local environment for suitable non-hazardous manufacturing processes.
+### Hero Visual
 
-CTA:
+The product should dominate the hero.
 
-**Find Your Application**
+Preferred visual:
+
+A large three-quarter rendering of the Eden Clean Process Chamber showing:
+
+- Stainless enclosure
+- Clear side panels
+- Overhead filtration module
+- Work surface
+- Product or component inside the chamber
+- Subtle downward airflow visualization
+
+Avoid generic cleanroom stock photography as the main hero.
 
 ---
 
-7\. Economics / Value Proposition
+# 6. Home — Problem / Value Proposition
 
-Control 12 Square Feet Instead of 1,200.
+## You May Not Need to Control the Entire Room.
 
-Use a simple visual showing a large cleanroom with a tiny critical process highlighted.
+Many critical manufacturing processes occupy only a small portion of a facility.
 
-Supporting message:
+Traditional environmental control can require conditioning a much larger space than the process itself occupies.
 
-Many manufacturing operations don't require every square foot of the surrounding facility to receive the same level of environmental control.
+Eden takes a localized approach:
 
-Localized filtration concentrates the clean-air system around the process that actually matters.
+> **Create the clean environment around the process itself.**
+
+Use a simple visual comparison.
+
+### Traditional Approach
+
+Large controlled room
+
+↓
+
+Large controlled footprint
+
+### Eden Approach
+
+Localized clean-air workstation
+
+↓
+
+Controlled environment around the critical process
 
 Potential benefits:
 
-* Smaller controlled footprint  
-* Lower infrastructure requirements  
-* Faster installation  
-* Easier relocation  
-* Modular expansion  
-* Lower barrier to adding additional controlled work zones
+- Smaller controlled footprint
+- Less infrastructure
+- Faster deployment
+- Easier relocation
+- Modular expansion
+- Ability to add clean work zones where they are needed
 
-Avoid promising exact cost savings until Eden has data supporting those claims.
-
----
-
-8\. Product Page
-
-URL structure:
-
-**/products/clean-process-chamber**
-
-Product Hero
-
-Eden Clean Process Chamber
-
-**Localized HEPA-filtered airflow for critical processes.**
-
-Product rendering \+ Request Quote button.
+Do not state specific cost savings unless Eden has supporting data.
 
 ---
 
-Product Overview
+# 7. Home — Product Introduction
 
-Explain the system in approximately three short paragraphs.
+## Meet the Eden Clean Process Chamber
 
-Focus on:
+A compact clean-air workstation designed to create a localized HEPA-filtered environment around critical operations.
 
-* localized environmental control  
-* compact installation  
-* modular construction  
-* simple operation
+Potential feature callouts:
 
----
+- HEPA-filtered supply air
+- Vertical downward airflow
+- Stainless-steel construction
+- Clear enclosure panels
+- Variable-speed blower
+- Integrated lighting
+- Compact footprint
+- Replaceable filtration
+- Configurable chamber sizes
+- Serviceable components
 
-Airflow Diagram
+CTA:
 
-This should be one of the most important graphics on the website.
+**Explore the Clean Process Chamber**
 
-Show:
-
-1. Room-air intake  
-2. Prefilter  
-3. Blower  
-4. HEPA filter  
-5. Supply plenum  
-6. Vertical filtered airflow  
-7. Work zone  
-8. Lower exhaust openings
+Links to the relevant section of `/products`.
 
 ---
 
-Product Features
+# 8. Home — How It Works
 
-HEPA Filtration
+This should be one of the most visual sections of the homepage.
 
-Replaceable high-efficiency filtration provides clean supply air to the work zone.
+Use a cutaway or simplified technical illustration of the chamber.
 
-Engineered Air Distribution
+## Step 1 — Intake
+
+Room air enters the filtration system.
+
+## Step 2 — Filter
+
+Air passes through the filtration system and HEPA filter.
+
+## Step 3 — Distribute
 
 The upper plenum distributes filtered air across the chamber.
 
-Vertical Airflow
+## Step 4 — Sweep
 
-Filtered air moves downward through the critical process area.
+Filtered air moves vertically downward through the critical work zone.
 
-Stainless Construction
+## Step 5 — Exit
 
-Durable surfaces designed for industrial environments and easy cleaning.
+Air exits through engineered openings near the bottom of the enclosure.
 
-Clear Enclosure
+Simplified diagram:
 
-Transparent panels maintain visibility while helping isolate the work zone.
+**Room Air → Blower → HEPA Filter → Supply Plenum ↓ Work Zone ↓ Exhaust**
 
-Variable Airflow
-
-Adjustable blower operation allows the workstation to accommodate different process requirements.
-
-Integrated Lighting
-
-Bright illumination across the working area.
-
-Serviceable Design
-
-Filters and major components are accessible for routine maintenance.
+The diagram should make the product understandable without requiring the visitor to read a long technical explanation.
 
 ---
 
-9\. Specifications Section
+# 9. Home — Applications
 
-Build this as a professional engineering specification table.
+Applications should appear as a section of the Home page rather than as a separate navigation page.
 
-Example categories:
+## Built Around the Process
 
-**Chamber Width**  
-TBD
+Focus primarily on what customers are doing rather than broad industry categories.
 
-**Chamber Depth**  
-TBD
+Potential applications:
 
-**Working Height**  
-TBD
+### Assembly
 
-**Overall Height**  
-TBD
+Reduce airborne particulate exposure during precision assembly.
 
-**Filter Type**  
-HEPA
+### Inspection
 
-**Airflow Direction**  
-Vertical / downward
+Create a cleaner environment for visual, dimensional, and quality inspection.
 
-**Blower**  
-Variable-speed EC blower
+### Packaging
 
-**Construction**  
-304 stainless steel / clear enclosure panels
+Reduce contamination exposure during final packaging operations.
 
-**Electrical**  
-TBD
+### Electronics
 
-**Lighting**  
-Integrated LED
+Provide localized filtered airflow during sensitive electronics handling and assembly.
 
-**Filter Monitoring**  
-Optional differential-pressure monitoring
+### Sample Preparation
 
-Specifications should remain clearly marked as preliminary until engineering validation is complete.
+Provide localized filtered airflow for appropriate non-hazardous laboratory processes.
+
+### Medical & Life Science Manufacturing
+
+Provide localized environmental control for appropriate non-hazardous manufacturing operations.
+
+Avoid implying suitability for hazardous, sterile, pharmaceutical, aseptic, or regulated applications unless validated.
 
 ---
 
-10\. Configuration Section
+# 10. Home — Why Eden
 
-Configure the Chamber Around Your Process
+Instead of creating a separate About page, include a short company section on the homepage.
 
-Potential options:
-
-Chamber Size
-
-Compact / Standard / Large
-
-Base
-
-* Tabletop installation  
-* Eden stainless workstation  
-* Mobile workstation
-
-Access
-
-* Open front  
-* Hinged doors  
-* Sliding access  
-* Pass-through configuration
-
-Instrumentation
-
-* Filter pressure monitoring  
-* Air velocity display  
-* Particle monitoring
-
-Accessories
-
-* Stainless shelves  
-* Internal racks  
-* Parts trays  
-* Electrical pass-throughs  
-* Cable pass-throughs  
-* Additional lighting  
-* Replacement filters
-
-CTA:
-
-**Configure Your System**
-
----
-
-11\. Technology Page
-
-URL:
-
-**/technology**
-
-How Localized Clean Air Works
-
-This page establishes Eden's technical credibility.
-
-Sections:
-
-HEPA Filtration
-
-Explain what HEPA filtration does without overstating the resulting cleanliness classification.
-
-Air Distribution
-
-Explain why the plenum and airflow distribution matter.
-
-Vertical Airflow
-
-Explain how filtered air moves through the work zone.
-
-Chamber Design
-
-Explain how enclosure geometry helps isolate the process.
-
-Filter Monitoring
-
-Explain filter loading and differential-pressure monitoring.
-
-Validation
-
-Explain how airflow velocity, airflow uniformity, and particle concentrations can be measured.
-
-Important disclaimer:
-
-**Cleanliness classifications and performance claims depend on system configuration, operating conditions, test methodology, and validation. Consult Eden regarding requirements for a specific application.**
-
----
-
-12\. Applications Page
-
-URL:
-
-**/applications**
-
-Build individual landing sections/pages around high-intent searches.
-
-Potential future pages:
-
-**/applications/precision-assembly**
-
-**/applications/electronics-assembly**
-
-**/applications/medical-device-manufacturing**
-
-**/applications/inspection**
-
-**/applications/clean-packaging**
-
-**/applications/laboratory-work**
-
-Each page follows:
-
-**Problem → Process → Eden solution → configuration → CTA**
-
----
-
-13\. Existing Stainless Tables
-
-Do not eliminate the existing table business.
-
-Reposition it.
-
-Instead of being Eden's central identity, tables become part of the clean-workstation ecosystem.
-
-Products:
-
-Clean Process Chamber
-
-Primary flagship product.
-
-Cleanroom Workstations
-
-Stainless tables designed for clean manufacturing environments.
-
-Chamber \+ Workstation Systems
-
-Integrated chamber and stainless workstation.
-
-This gives Eden a natural good/better/best progression.
-
----
-
-14\. Resources
-
-URL:
-
-**/resources**
-
-Initially create educational content around customer questions rather than generic company news.
-
-Potential articles:
-
-* What Is Localized Clean-Air Filtration?  
-* Clean Bench vs. Cleanroom: What's the Difference?  
-* When Does a Manufacturing Process Need a Cleanroom?  
-* Understanding HEPA Filtration  
-* Vertical vs. Horizontal Clean-Air Workstations  
-* How to Size a Clean-Air Workstation  
-* Understanding Airflow Velocity in Clean Workstations  
-* How HEPA Filters Are Monitored  
-* Cleanroom Table vs. Clean-Air Workstation  
-* Can You Create a Clean Zone Without Building a Cleanroom?
-
-These pages can become an important source of organic search traffic.
-
----
-
-15\. About Eden
-
-Practical Clean-Air Systems for Manufacturing
-
-Position Eden as an engineering/manufacturing company rather than a furniture reseller.
-
-Core message:
+## Practical Clean-Air Systems for Manufacturing
 
 Eden Cleanroom Systems develops compact clean-air equipment for manufacturers that need environmental control around specific processes.
 
-Our goal is simple:
+The company should be positioned around:
 
-**Make controlled environments easier to deploy.**
+- Practical engineering
+- Straightforward products
+- Stainless fabrication
+- Modular equipment
+- Serviceable designs
+- Direct customer support
+- Application-specific solutions
 
-Talk about:
+Core message:
 
-* practical engineering  
-* straightforward products  
-* modular equipment  
-* stainless fabrication  
-* serviceable designs  
-* direct customer support
+> **Make controlled environments easier to deploy.**
 
-Avoid trying to make the company sound larger than it is.
+Avoid language that attempts to make Eden appear larger or more established than it currently is.
+
+Technical credibility is more important than corporate-sounding language.
 
 ---
 
-16\. Quote / Application Page
+# 11. Home — Final CTA
+
+End the homepage with a strong quote CTA.
+
+## Have a Process That Needs Cleaner Air?
+
+Tell us what you're working with and we'll help determine the right configuration.
+
+Primary CTA:
+
+**Request a Quote**
+
+Secondary CTA:
+
+**Contact Eden**
+
+---
+
+# 12. Products Page
 
 URL:
 
-**/request-a-quote**
+`/products`
 
-Don't use a generic "Contact Us" form.
+## Purpose
 
-Make this an **application intake form**.
+The Products page should become the technical center of the website.
 
-Tell Us About Your Process
+It should explain:
 
-Fields:
+- What Eden sells
+- How the products work
+- Available configurations
+- Technical features
+- Preliminary specifications
+- Accessories
+- How products can be customized
 
-* Name  
-* Company  
-* Email  
-* Phone  
-* Industry  
-* Process description  
-* Parts/product being handled  
-* Desired chamber dimensions  
-* Required working area  
-* Existing cleanroom?  
-* Required cleanliness specification, if known  
-* Installation location  
-* Electrical requirements  
-* Desired quantity  
-* Desired delivery date  
-* Additional requirements
+The page should be designed so additional Eden products can be added later without restructuring the entire website.
 
-Optional:
+---
 
-**Upload drawing / photo / specification**
+# 13. Products — Clean Process Chamber
+
+The flagship product should receive the most attention.
+
+# Eden Clean Process Chamber
+
+**Localized HEPA-filtered airflow for critical processes.**
+
+Supporting copy should explain:
+
+The Eden Clean Process Chamber creates a compact clean-air work zone around sensitive operations.
+
+Filtered air is supplied from above and moves vertically through the working area before exiting through engineered openings near the bottom of the chamber.
+
+The system is intended to provide localized environmental control without requiring the surrounding room to become the primary controlled environment.
 
 CTA:
 
-Discuss My Application
-
-This turns inquiries into useful engineering leads rather than generic contact messages.
+**Request a Quote**
 
 ---
 
-17\. Recommended Initial Sitemap  
-/  
-├── Products  
-│   ├── Clean Process Chamber  
-│   ├── Cleanroom Workstations  
-│   └── Accessories & Filters  
-│  
-├── Applications  
-│   ├── Precision Assembly  
-│   ├── Inspection  
-│   ├── Packaging  
-│   ├── Electronics  
-│   └── Laboratory  
-│  
-├── Technology  
-│   ├── HEPA Filtration  
-│   ├── Airflow  
-│   └── Validation  
-│  
-├── Resources  
-│  
-├── About  
-│  
+# 14. Products — Airflow Diagram
+
+This should be one of the most important technical graphics on the website.
+
+Show:
+
+1. Room-air intake
+2. Prefilter
+3. Blower
+4. HEPA filter
+5. Supply plenum
+6. Vertical filtered airflow
+7. Critical work zone
+8. Lower exhaust openings
+
+The visual should make airflow direction immediately understandable.
+
+Use restrained technical graphics rather than decorative illustrations.
+
+---
+
+# 15. Products — Features
+
+## HEPA Filtration
+
+Replaceable high-efficiency filtration provides filtered supply air to the work zone.
+
+## Engineered Air Distribution
+
+The upper supply plenum distributes filtered air across the chamber.
+
+## Vertical Airflow
+
+Filtered air moves downward through the critical work area.
+
+## Stainless Construction
+
+Durable stainless surfaces support industrial use and routine cleaning.
+
+## Clear Enclosure
+
+Transparent panels maintain process visibility while helping define the controlled work zone.
+
+## Variable Airflow
+
+Variable-speed blower control allows airflow to be adjusted for different operating requirements.
+
+## Integrated Lighting
+
+Integrated lighting provides clear illumination of the working area.
+
+## Serviceable Design
+
+Filters and major service components should be accessible for maintenance and replacement.
+
+---
+
+# 16. Products — Preliminary Specifications
+
+Specifications should be presented in a clean engineering-style table.
+
+Potential fields:
+
+| Specification | Value |
+|---|---|
+| Chamber Width | TBD |
+| Chamber Depth | TBD |
+| Working Height | TBD |
+| Overall Height | TBD |
+| Filter Type | HEPA |
+| Airflow Direction | Vertical / Downward |
+| Blower | Variable-Speed EC Blower |
+| Construction | 304 Stainless Steel / Clear Enclosure Panels |
+| Electrical | TBD |
+| Lighting | Integrated LED |
+| Filter Monitoring | Optional Differential-Pressure Monitoring |
+
+All specifications should remain clearly preliminary until engineering development and validation are complete.
+
+Do not invent missing dimensions or performance specifications.
+
+---
+
+# 17. Products — Configuration
+
+## Configure the Chamber Around Your Process
+
+Potential configuration categories:
+
+### Chamber Size
+
+Potential future options:
+
+- Compact
+- Standard
+- Large
+
+Do not present these as finalized SKUs until actual dimensions and configurations are established.
+
+### Base
+
+Potential options:
+
+- Tabletop installation
+- Eden stainless workstation
+- Mobile workstation
+
+### Access
+
+Potential configurations:
+
+- Open front
+- Hinged access
+- Sliding access
+- Pass-through configuration
+
+### Instrumentation
+
+Potential options:
+
+- Filter pressure monitoring
+- Air velocity monitoring
+- Particle monitoring
+
+### Accessories
+
+Potential options:
+
+- Stainless shelves
+- Internal racks
+- Parts trays
+- Electrical pass-throughs
+- Cable pass-throughs
+- Additional lighting
+- Replacement filters
+
+CTA:
+
+**Request a Configuration Quote**
+
+---
+
+# 18. Products — Cleanroom Workstations
+
+Existing stainless workstations should remain part of the product offering.
+
+However, they should no longer define Eden's entire identity.
+
+Position them as:
+
+## Eden Cleanroom Workstations
+
+Stainless-steel workstations designed for clean manufacturing environments and integration with Eden clean-air systems.
+
+Potential uses:
+
+- Standalone cleanroom workstation
+- Base for Clean Process Chamber
+- Inspection station
+- Assembly station
+- Packaging station
+- Mobile workstation
+
+This allows Eden to continue selling existing products while moving the brand toward higher-value clean-air systems.
+
+---
+
+# 19. Products — Future Product Architecture
+
+The Products page should be designed to accommodate future products.
+
+Potential future product families:
+
+## Eden Clean Process Chamber
+
+Compact enclosed clean zone.
+
+## Eden Clean Workstation
+
+Larger operator clean-air workstation.
+
+## Eden Pass-Through Chamber
+
+Localized controlled transfer system.
+
+## Eden Mobile Clean Station
+
+Portable clean-air workstation.
+
+## Eden Custom Systems
+
+Application-specific clean-air equipment.
+
+## Filters & Accessories
+
+Replacement filters, monitoring equipment, shelves, trays, racks, and related components.
+
+These are future product directions, not necessarily current products.
+
+Do not present conceptual products as currently available unless explicitly instructed.
+
+---
+
+# 20. Products — Technical Information
+
+Technology information should live directly on the Products page rather than on a separate Technology page.
+
+Relevant topics include:
+
+## HEPA Filtration
+
+Explain the purpose of HEPA filtration without automatically claiming a resulting ISO cleanliness classification.
+
+## Air Distribution
+
+Explain why uniform air distribution across the working area matters.
+
+## Vertical Airflow
+
+Explain how filtered air travels through the work zone.
+
+## Chamber Design
+
+Explain how the enclosure helps define and protect the localized working environment.
+
+## Filter Monitoring
+
+Explain how filter loading can be monitored through pressure differential where applicable.
+
+## Validation
+
+Explain that airflow velocity, airflow uniformity, and particle concentrations can be measured during product development and system validation.
+
+Include an appropriate technical disclaimer:
+
+> **Cleanliness classifications and performance depend on system configuration, operating conditions, installation, test methodology, and validation. Consult Eden regarding requirements for a specific application.**
+
+---
+
+# 21. Contact Page
+
+URL:
+
+`/contact`
+
+## Purpose
+
+The Contact page is for general communication with Eden.
+
+It should remain simple.
+
+This page is different from Request a Quote.
+
+Contact is for:
+
+- General questions
+- Product questions
+- Existing customer communication
+- Supplier communication
+- Partnership inquiries
+- Other non-quote inquiries
+
+---
+
+## Contact Hero
+
+# Contact Eden
+
+Have a question about our products or clean-air systems?
+
+Get in touch with Eden Cleanroom Systems.
+
+---
+
+## Contact Information
+
+Display available company contact information clearly.
+
+Potential fields:
+
+- Email
+- Phone
+- Location
+- Business hours, if applicable
+
+Do not invent contact information.
+
+---
+
+## Contact Form
+
+Suggested fields:
+
+- Name
+- Company
+- Email
+- Phone
+- Subject
+- Message
+
+CTA:
+
+**Send Message**
+
+Also include a visible path for visitors who are actually looking for pricing:
+
+> Looking for pricing or a custom configuration?
+
+**Request a Quote**
+
+---
+
+# 22. Request a Quote Page
+
+URL:
+
+`/request-a-quote`
+
+## Purpose
+
+This should not be a generic contact form.
+
+It should function as an **application intake form**.
+
+The objective is to collect enough information to understand the customer's process before beginning a sales or engineering conversation.
+
+---
+
+## Quote Page Hero
+
+# Tell Us About Your Process
+
+Every application is different.
+
+Tell us what you're working with and what kind of clean-air environment you need.
+
+---
+
+## Customer Information
+
+Fields:
+
+- Name
+- Company
+- Email
+- Phone
+
+---
+
+## Application Information
+
+Potential fields:
+
+- Industry
+- Process description
+- Parts or products being handled
+- What problem are you trying to solve?
+- Existing cleanroom or controlled environment?
+- Required cleanliness specification, if known
+
+---
+
+## System Requirements
+
+Potential fields:
+
+- Desired working width
+- Desired working depth
+- Desired working height
+- Preferred installation type
+- Electrical requirements, if known
+- Special access requirements
+- Instrumentation requirements
+- Additional requirements
+
+---
+
+## Project Information
+
+Potential fields:
+
+- Desired quantity
+- Desired delivery timeframe
+- Installation location
+
+---
+
+## File Upload
+
+Allow customers to optionally upload:
+
+- Drawings
+- Photos
+- Specifications
+- Process layouts
+- Existing equipment information
+
+---
+
+## CTA
+
+# Request My Quote
+
+Supporting copy:
+
+Eden will review the application information and follow up to discuss the appropriate configuration.
+
+Do not promise an automated or instant quote unless that functionality actually exists.
+
+---
+
+# 23. Navigation Behavior
+
+Desktop navigation:
+
+**Home | Products | Contact | Request a Quote**
+
+`Request a Quote` should appear as a button or otherwise receive stronger visual emphasis.
+
+Mobile navigation should contain the same four destinations.
+
+Do not add unnecessary navigation items.
+
+The Eden logo should link to Home.
+
+---
+
+# 24. Recommended Sitemap
+
+```text
+/
+├── Home
+│
+├── Products
+│   ├── Clean Process Chamber
+│   ├── Cleanroom Workstations
+│   ├── Technical Information
+│   └── Configurations & Accessories
+│
+├── Contact
+│
 └── Request a Quote
+```
+
+The items beneath Products are sections of the Products page unless there is a strong future reason to create dedicated product URLs.
+
+For the initial website, simplicity is preferred.
 
 ---
 
-18\. Visual Direction
+# 25. Visual Direction
 
-The site should feel like **industrial equipment**, not laboratory furniture.
+The website should feel like **industrial equipment**, not laboratory furniture and not a generic SaaS website.
 
 Use:
 
-* white backgrounds  
-* stainless/metallic product imagery  
-* dark technical typography  
-* restrained Eden brand colors  
-* engineering diagrams  
-* airflow visualizations  
-* cutaway product illustrations  
-* dimensioned product drawings  
-* real manufacturing photography
+- White or restrained neutral backgrounds
+- Stainless and metallic product imagery
+- Dark technical typography
+- Restrained Eden brand colors
+- Engineering diagrams
+- Airflow visualizations
+- Cutaway product illustrations
+- Dimensioned product drawings
+- Real manufacturing photography
+- Generous whitespace
+- Strong product photography/rendering
 
-Avoid excessive generic cleanroom stock photography.
+Avoid:
 
-The **product itself should dominate the website.**
+- Excessive gradients
+- Generic cleanroom stock photography
+- Generic corporate stock photography
+- Decorative animations without purpose
+- Overly rounded SaaS-style interfaces
+- Excessive cards
+- Marketing language unsupported by technical evidence
+
+The **product itself should dominate the visual identity of the website.**
 
 ---
 
-19\. Homepage Story in One Scroll
+# 26. Homepage Story in One Scroll
 
-The homepage should essentially tell this story:
+The homepage should approximately tell this story:
 
-1
+### 1. What is this?
 
 **Clean Air. Right Where You Need It.**
 
 ↓
 
-2
+### 2. Why does it matter?
 
 **You may not need to control an entire room.**
 
 ↓
 
-3
+### 3. What does Eden sell?
 
 **Meet the Eden Clean Process Chamber.**
 
 ↓
 
-4
+### 4. How does it work?
 
-**See exactly how the airflow works.**
-
-↓
-
-5
-
-**Choose the configuration for your process.**
+**See the airflow.**
 
 ↓
 
-6
+### 5. Where would I use it?
 
-**See where customers could use it.**
-
-↓
-
-7
-
-**Understand the technology.**
+**Assembly. Inspection. Packaging. Sensitive processes.**
 
 ↓
 
-8
+### 6. Why Eden?
 
-**Tell us about your application.**
+**Practical clean-air systems designed around the process.**
 
-That gives Eden a much stronger identity than simply presenting a catalog of stainless tables.
+↓
+
+### 7. What do I do next?
+
+**Request a Quote.**
+
+The homepage should educate quickly and then move interested visitors toward Products or Request a Quote.
 
 ---
 
-20\. Long-Term Product Architecture
+# 27. CTA Hierarchy
 
-Build the website from the beginning so the chamber can become a family rather than a single product.
+The primary conversion action across the entire website is:
 
-Future structure:
+# Request a Quote
 
-Eden Clean Process Chamber
+Secondary actions:
 
-Compact enclosed clean zone.
+- View Products
+- Contact Eden
+- Explore the Clean Process Chamber
 
-Eden Clean Workstation
+Avoid creating too many competing CTAs.
 
-Larger operator workstation.
+Visitors interested in buying should consistently be directed toward `/request-a-quote`.
 
-Eden Pass-Through Chamber
+---
 
-Controlled transfer between environments.
+# 28. Technical Claims and Accuracy
 
-Eden Mobile Clean Station
+The website must be conservative with technical claims until the product has been engineered and validated.
 
-Portable localized clean zone.
+Do not claim or imply any of the following unless Eden has supporting test data or documentation:
 
-Eden Custom Systems
+- ISO Class 5
+- ISO Class 6
+- ISO Class 7
+- Any other ISO cleanliness classification
+- Sterile environment
+- Sterility
+- Aseptic environment
+- Pharmaceutical compliance
+- Medical-device compliance
+- Hazardous-material containment
+- Biological containment
+- Chemical containment
+- Specific particle-count performance
+- Specific airflow uniformity
+- Specific airflow velocity
+- Guaranteed contamination reduction
+- Guaranteed cost savings
+- Cleanroom equivalence
 
-Application-specific configurations.
+HEPA filtration does not by itself establish an ISO cleanliness classification.
 
-Filters & Accessories
+Performance claims should be based on engineering data and testing.
 
-Replacement filters, monitoring, shelves, trays, racks, and related components.
+If a technical value is unknown, omit it or mark it internally as TBD rather than inventing it.
 
-The long-term brand proposition becomes:
+---
 
-Eden builds clean environments around processes.
+# 29. Content Principles
 
-That positioning is broad enough to support a substantially larger product company while remaining specific enough for customers to immediately understand what Eden does.
+Website copy should be:
 
+- Direct
+- Technical
+- Understandable
+- Concise
+- Confident without exaggeration
+- Focused on customer processes
+- Grounded in actual product capabilities
+
+Avoid vague language such as:
+
+- Revolutionary
+- Industry-leading
+- World-class
+- Cutting-edge
+- Game-changing
+- Best-in-class
+
+unless there is a meaningful and supportable reason to use it.
+
+Prefer explaining **what the product actually does**.
+
+---
+
+# 30. Website Development Priorities
+
+The initial build should prioritize:
+
+1. Clear navigation
+2. Strong homepage
+3. Strong Products page
+4. Clear product rendering and airflow visualization
+5. Functional Contact page
+6. Functional Request a Quote form
+7. Responsive mobile design
+8. Fast page load
+9. Accessibility
+10. Technical accuracy
+
+Do not expand the site simply to make it appear larger.
+
+A small, polished, technically credible website is preferable to a large site filled with thin content.
+
+---
+
+# 31. Long-Term Direction
+
+The four-page architecture should remain usable even as Eden expands.
+
+New products can be added within Products.
+
+New applications can be demonstrated within Home and Products.
+
+Technical information can expand within Products.
+
+Company information can remain integrated into Home and Contact.
+
+Only create additional top-level pages when the amount of real content makes them necessary.
+
+The long-term brand proposition remains:
+
+> # Eden builds clean environments around processes.
+
+And the central customer idea remains:
+
+> # Clean the process, not the entire room.
