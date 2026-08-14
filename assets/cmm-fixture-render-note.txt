@@ -1,1 +1,0 @@
-The homepage uses the supplied CMM fixture CAD rendering.
