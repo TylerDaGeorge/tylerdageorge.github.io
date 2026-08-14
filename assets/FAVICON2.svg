@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Eden Industrial Systems">
+  <!-- Simplified Eden enclosure mark for small-size favicon use -->
+  <g fill="#10232C">
+    <path d="M10 8H54L49 16H10Z"/>
+    <path d="M10 17L17 23V41L10 47Z"/>
+    <path d="M10 48H49L54 56H10Z"/>
+  </g>
+  <g fill="#087A4B">
+    <rect x="23" y="22" width="25" height="5"/>
+    <rect x="23" y="30" width="25" height="5"/>
+    <rect x="23" y="38" width="25" height="5"/>
+  </g>
+</svg>
