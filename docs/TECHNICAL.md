@@ -1,8 +1,8 @@
-# Eden Cleanroom Systems — Technical Implementation Guide
+# Eden Industrial Systems — Technical Implementation Guide
 
 ## 1. Purpose
 
-This document defines the technical implementation expectations for the Eden Cleanroom Systems website.
+This document defines the technical implementation expectations for the Eden Industrial Systems website.
 
 It should be read alongside:
 
@@ -214,7 +214,7 @@ Use one consistent footer across all pages.
 
 Footer may contain:
 
-* Eden Cleanroom Systems
+* Eden Industrial Systems
 * Primary navigation
 * Confirmed contact information
 * Copyright
@@ -693,16 +693,16 @@ Preferred direction:
 
 ```text
 Home:
-Eden Cleanroom Systems | Localized Clean-Air Workstations
+Eden Industrial Systems | Localized Process Environments
 
 Products:
-Clean-Air Workstations | Eden Cleanroom Systems
+Clean Process Chambers | Eden Industrial Systems
 
 Contact:
-Contact Eden Cleanroom Systems
+Contact Eden Industrial Systems
 
 Request a Quote:
-Request a Quote | Eden Cleanroom Systems
+Request a Quote | Eden Industrial Systems
 ```
 
 ---

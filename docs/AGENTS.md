@@ -1,4 +1,4 @@
-# Eden Cleanroom Systems — Coding Agent Instructions
+# Eden Industrial Systems — Coding Agent Instructions
 
 ## 0. Image Generation Rule
 
@@ -27,7 +27,7 @@ The user controls the visual source material.
 
 ## 1. Purpose
 
-This file defines how coding agents should work in the Eden Cleanroom Systems website repository.
+This file defines how coding agents should work in the Eden Industrial Systems website repository.
 
 Before making substantive website changes, read the project documentation in `/docs`.
 
@@ -87,7 +87,7 @@ When a lower-priority source conflicts with a higher-priority source, follow the
 
 # 4. Project Goal
 
-Eden Cleanroom Systems is being repositioned around **localized clean-air equipment for critical processes**.
+Eden Industrial Systems is being repositioned around **equipment for localized process environments for critical processes**.
 
 The current flagship product direction is:
 
@@ -95,11 +95,11 @@ The current flagship product direction is:
 
 The broader positioning is:
 
-> **Eden builds clean environments around processes.**
+> **Eden builds localized environments around critical processes.**
 
 The central customer proposition is:
 
-> **Clean the process, not the entire room.**
+> **Control the process environment, not the entire room.**
 
 The website should make this concept immediately understandable.
 
@@ -290,7 +290,7 @@ Preferred current terminology:
 * Downward filtered airflow
 * Engineered airflow distribution
 * Supply plenum
-* Localized clean-air work zone
+* Localized HEPA-filtered work zone
 
 Do not use **laminar flow** as a confirmed performance characteristic until documented validation supports it.
 
@@ -319,7 +319,7 @@ Do not automatically delete or ignore Eden's existing stainless workstation prod
 
 They remain part of the product offering.
 
-Their role is now secondary to the Clean Process Chamber and the broader clean-air system direction.
+Their role is now secondary to the Clean Process Chamber and the broader localized process-environment direction.
 
 They may be positioned as:
 
@@ -865,8 +865,8 @@ Do not use inaccurate terminology because it has higher search volume.
 
 Current high-level themes include:
 
-* Localized clean-air workstation
-* Clean-air workstation
+* Localized process environment
+* HEPA-filtered workstation
 * HEPA workstation
 * Clean Process Chamber
 * Cleanroom workstation
@@ -1232,7 +1232,7 @@ The website should feel like the digital extension of Eden's equipment:
 
 A visitor should quickly understand:
 
-1. Eden makes localized clean-air equipment.
+1. Eden creates localized process environments.
 2. The Eden Clean Process Chamber is the flagship product.
 3. It brings HEPA-filtered airflow directly around critical processes.
 4. Eden also provides stainless cleanroom workstations.
@@ -1240,4 +1240,4 @@ A visitor should quickly understand:
 
 The central message remains:
 
-> # Clean the process, not the entire room.
+> # Control the process environment, not the entire room.

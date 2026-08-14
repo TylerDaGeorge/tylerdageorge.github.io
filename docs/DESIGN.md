@@ -1,4 +1,4 @@
-# Eden Cleanroom Systems — Website Design Direction
+# Eden Industrial Systems — Website Design Direction
 
 ## 0. Visual Asset Source Rule
 
@@ -21,7 +21,7 @@ If an approved asset is missing, use a temporary development placeholder and cle
 
 ## 1. Purpose
 
-This document defines the visual and user-interface direction for the Eden Cleanroom Systems website.
+This document defines the visual and user-interface direction for the Eden Industrial Systems website.
 
 It should be read alongside:
 
@@ -43,7 +43,7 @@ This document governs:
 - Interaction design
 - Overall website feel
 
-The goal is to create a website that feels like it belongs to a serious manufacturer of engineered clean-air equipment.
+The goal is to create a website that feels like it belongs to a serious manufacturer of engineered process-airflow equipment.
 
 The site should not look like:
 
@@ -279,7 +279,7 @@ The product and content should remain visually dominant.
 
 Airflow should have a consistent visual treatment throughout the website.
 
-Use a restrained clean-air visual language.
+Use a restrained controlled-airflow visual language.
 
 Potential treatment:
 
@@ -338,7 +338,7 @@ Headlines should be:
 
 Example:
 
-# Clean Air. Right Where You Need It.
+# Control the Environment Around the Process.
 
 Not:
 
@@ -387,7 +387,7 @@ The desktop header should contain:
 
 Left:
 
-**Eden logo / Eden Cleanroom Systems**
+**Eden logo / Eden Industrial Systems**
 
 Right:
 
@@ -467,7 +467,7 @@ The homepage hero is the most important visual section of the website.
 
 It should immediately communicate:
 
-**Eden makes physical clean-air equipment.**
+**Eden makes physical equipment for localized process environments.**
 
 Recommended desktop composition:
 
@@ -973,7 +973,7 @@ Keep the footer compact.
 
 Potential contents:
 
-**Eden Cleanroom Systems**
+**Eden Industrial Systems**
 
 Navigation:
 
@@ -1419,7 +1419,7 @@ Do not sacrifice hierarchy to create an unusual layout.
 The homepage should visually emphasize:
 
 1. Clean Process Chamber
-2. Localized clean-air concept
+2. Localized process-environment concept
 3. How airflow works
 4. Applications
 5. Eden
@@ -1641,8 +1641,8 @@ The Eden website should feel like the digital extension of the equipment itself:
 
 The visual system should reinforce the central product proposition:
 
-> # Clean Air. Right Where You Need It.
+> # Control the Environment Around the Process.
 
 And the larger Eden strategy:
 
-> # Clean the process, not the entire room.
+> # Control the process environment, not the entire room.
