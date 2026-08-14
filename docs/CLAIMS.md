@@ -1,8 +1,8 @@
-# Eden Cleanroom Systems — Claims and Technical Guardrails
+# Eden Industrial Systems — Claims and Technical Guardrails
 
 ## 1. Purpose
 
-This document defines what Eden Cleanroom Systems may and may not claim on the website at the current stage of product development.
+This document defines what Eden Industrial Systems may and may not claim on the website at the current stage of product development.
 
 It should be read alongside:
 
@@ -44,8 +44,8 @@ Never invent a number to complete a table or design.
 
 The following claims are approved as general positioning:
 
-- Eden develops localized clean-air systems for critical processes.
-- Eden develops clean-air workstations for manufacturing and handling applications.
+- Eden develops localized process environments for critical processes.
+- Eden develops HEPA-filtered workstations for manufacturing and handling applications.
 - The Eden Clean Process Chamber is designed around localized HEPA-filtered airflow.
 - The system is intended to create a controlled work zone around a process.
 - The Clean Process Chamber uses a downward airflow concept.
@@ -62,8 +62,8 @@ These statements must still remain consistent with the latest `PRODUCT.md`.
 Approved terminology includes:
 
 - HEPA-filtered airflow
-- Localized clean air
-- Clean-air workstation
+- Localized HEPA-filtered airflow
+- HEPA-filtered workstation
 - Clean Process Chamber
 - Controlled work zone
 - Critical process
@@ -154,7 +154,7 @@ Do not claim:
 
 Approved alternative:
 
-> **Localized clean-air control may reduce the need to control a larger surrounding area for some applications.**
+> **Localized process-environment control may reduce the need to control a larger surrounding area for some applications.**
 
 Even this should not be framed as universal.
 
@@ -732,7 +732,7 @@ Not approved:
 
 Approved:
 
-> **Localized clean-air work zone**
+> **Localized HEPA-filtered work zone**
 
 Not approved:
 
@@ -790,13 +790,13 @@ unless demonstrably true.
 
 At the current product-development stage, the safest core claims are:
 
-> **Eden Cleanroom Systems develops localized clean-air equipment for critical manufacturing and handling processes.**
+> **Eden Industrial Systems develops equipment for localized process environments for critical manufacturing and handling processes.**
 
 > **The Eden Clean Process Chamber is designed around downward HEPA-filtered airflow through a localized work zone.**
 
-> **The system is intended to concentrate clean-air control around the process rather than automatically controlling an entire surrounding room.**
+> **The system is intended to concentrate process-environment control around the process rather than automatically controlling an entire surrounding room.**
 
-> **Eden also develops stainless workstations for clean manufacturing environments and integration with clean-air systems.**
+> **Eden also develops stainless workstations for clean manufacturing environments and integration with process airflow systems.**
 
 These statements should remain the baseline until additional product testing supports stronger claims.
 

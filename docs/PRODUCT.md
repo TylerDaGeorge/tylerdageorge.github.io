@@ -1,8 +1,8 @@
-# Eden Cleanroom Systems — Product Definition
+# Eden Industrial Systems — Product Definition
 
 ## 1. Purpose of This Document
 
-This document defines the current product direction for Eden Cleanroom Systems.
+This document defines the current product direction for Eden Industrial Systems.
 
 It is the source of truth for what products the website should present, how those products should be positioned, and which product details are confirmed versus still under development.
 
@@ -22,7 +22,7 @@ When this document conflicts with assumptions made elsewhere in the codebase, th
 
 # 2. Company Product Direction
 
-Eden Cleanroom Systems is developing **localized clean-air equipment for critical processes**.
+Eden Industrial Systems is developing **equipment for localized process environments for critical processes**.
 
 The company should not be positioned primarily as a stainless-steel furniture manufacturer.
 
@@ -30,11 +30,11 @@ The broader product strategy is to create equipment that brings controlled, filt
 
 Core positioning:
 
-> **Eden builds clean environments around processes.**
+> **Eden builds localized environments around critical processes.**
 
 Core customer idea:
 
-> **Clean the process, not the entire room.**
+> **Control the process environment, not the entire room.**
 
 The goal is to give manufacturers another option when their critical process occupies a relatively small working area compared with the surrounding facility.
 
@@ -68,11 +68,11 @@ These can function independently or as the base/platform for an Eden Clean Proce
 
 Potential future products include:
 
-- Larger clean-air workstations
-- Mobile clean-air workstations
+- Larger HEPA-filtered workstations
+- Mobile HEPA-filtered workstations
 - Pass-through chambers
 - Integrated chamber/workstation systems
-- Custom clean-air systems
+- Custom process airflow systems
 - Replacement filtration
 - Monitoring equipment
 - Chamber accessories
@@ -89,11 +89,11 @@ Do not present them as currently available products unless this document is upda
 
 ## Product Category
 
-**Localized Clean-Air Workstation**
+**Localized Process Environment**
 
 Alternative descriptive terminology may include:
 
-- Clean-air chamber
+- HEPA-filtered chamber
 - HEPA-filtered workstation
 - Localized clean zone
 - Controlled work environment
@@ -240,7 +240,7 @@ Final material thicknesses and finishes are TBD.
 
 ## Transparent Panels
 
-Transparent enclosure panels are intended to maintain visibility into the work area while helping define the localized clean-air zone.
+Transparent enclosure panels are intended to maintain visibility into the work area while helping define the localized controlled work zone.
 
 Potential materials may include:
 
@@ -549,7 +549,7 @@ Appropriate non-hazardous sample preparation or laboratory processes.
 
 ## Medical and Life Science Manufacturing
 
-Appropriate non-hazardous manufacturing or handling operations where localized clean airflow may be useful.
+Appropriate non-hazardous manufacturing or handling operations where localized HEPA-filtered airflowflow may be useful.
 
 ---
 
@@ -645,7 +645,7 @@ Current status:
 | Attribute | Status |
 |---|---|
 | Product Name | Eden Clean Process Chamber |
-| Product Category | Localized Clean-Air Workstation |
+| Product Category | Localized Process Environment |
 | Primary Airflow Direction | Vertical / Downward Concept |
 | Primary Filtration | HEPA |
 | Prefilter | Intended |
@@ -682,11 +682,11 @@ Do not automatically publish every row on the customer-facing website.
 
 Eden's existing stainless workstations remain part of the product offering.
 
-They should be positioned as supporting equipment within the broader Eden clean-air ecosystem.
+They should be positioned as supporting equipment within the broader Eden localized process-environment strategy.
 
 Potential positioning:
 
-> **Stainless-steel workstations designed for clean manufacturing environments and integration with Eden clean-air systems.**
+> **Stainless-steel workstations designed for clean manufacturing environments and integration with Eden process-environment systems.**
 
 Potential applications include:
 
@@ -834,7 +834,7 @@ Eden's product strategy is to explore whether environmental control can instead 
 
 This creates the core positioning:
 
-> **Clean the process, not the entire room.**
+> **Control the process environment, not the entire room.**
 
 ---
 
@@ -938,7 +938,7 @@ The website should primarily explain:
 
 ### What is it?
 
-A localized HEPA-filtered clean-air workstation.
+A localized HEPA-filtered HEPA-filtered workstation.
 
 ### What does it do?
 
@@ -966,17 +966,17 @@ Tell Eden about the application and request a quote.
 
 The following language reflects the intended product positioning:
 
-> **Clean Air. Right Where You Need It.**
+> **Control the Environment Around the Process.**
 
-> **Clean the process, not the entire room.**
+> **Control the process environment, not the entire room.**
 
 > **Localized HEPA-filtered airflow for critical processes.**
 
-> **Create a clean-air work zone around the process that matters.**
+> **Create a HEPA-filtered work zone around the process that matters.**
 
-> **Practical clean-air systems for manufacturing.**
+> **Practical process environments for manufacturing.**
 
-> **Eden builds clean environments around processes.**
+> **Eden builds localized environments around critical processes.**
 
 These statements describe the positioning direction.
 
@@ -1098,7 +1098,7 @@ The product should not be designed around claims that were prematurely written i
 
 At this stage, the most accurate concise description is:
 
-> **The Eden Clean Process Chamber is a developing localized clean-air workstation concept designed to provide downward HEPA-filtered airflow around critical manufacturing and handling processes. The system is intended to concentrate environmental control around the working area using an overhead filtration module, air-distribution plenum, enclosed work zone, and lower exhaust path. Final dimensions, airflow performance, filtration specifications, configurations, and cleanliness performance remain subject to engineering development and validation.**
+> **The Eden Clean Process Chamber is a developing localized process environment concept designed to provide downward HEPA-filtered airflow around critical manufacturing and handling processes. The system is intended to concentrate environmental control around the working area using an overhead filtration module, air-distribution plenum, enclosed work zone, and lower exhaust path. Final dimensions, airflow performance, filtration specifications, configurations, and cleanliness performance remain subject to engineering development and validation.**
 
 For customer-facing website copy, avoid unnecessarily emphasizing that the product is unfinished.
 
@@ -1124,7 +1124,7 @@ Potential evolution:
 
 ↓
 
-**Mobile Clean-Air Systems**
+**Mobile Process Airflow Systems**
 
 ↓
 
@@ -1132,7 +1132,7 @@ Potential evolution:
 
 ↓
 
-**Application-Specific Clean-Air Equipment**
+**Application-Specific Process Environment Equipment**
 
 ↓
 
@@ -1144,8 +1144,8 @@ The larger opportunity is building a family of equipment that creates controlled
 
 The product strategy can be summarized as:
 
-> # Eden builds clean environments around processes.
+> # Eden builds localized environments around critical processes.
 
 And the customer proposition remains:
 
-> # Clean the process, not the entire room.
+> # Control the process environment, not the entire room.

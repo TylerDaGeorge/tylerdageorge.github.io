@@ -1,8 +1,8 @@
-# Eden Cleanroom Systems — Acceptance Criteria
+# Eden Industrial Systems — Acceptance Criteria
 
 ## 1. Purpose
 
-This document defines what must be true before the Eden Cleanroom Systems website should be considered complete enough for launch or handoff.
+This document defines what must be true before the Eden Industrial Systems website should be considered complete enough for launch or handoff.
 
 It should be read alongside:
 
@@ -86,7 +86,7 @@ The Home page must clearly communicate what Eden does.
 Required content:
 
 * Primary hero
-* Clean-air positioning
+* Localized process-environment positioning
 * Clean Process Chamber introduction
 * Localized-control value proposition
 * How It Works section
@@ -110,7 +110,7 @@ Required:
 
 Preferred headline:
 
-**Clean Air. Right Where You Need It.**
+**Control the Environment Around the Process.**
 
 Acceptance criteria:
 
@@ -144,7 +144,7 @@ The flagship product should receive more visual emphasis than stainless workstat
 
 The site should communicate the idea:
 
-**Clean the process, not the entire room.**
+**Control the process environment, not the entire room.**
 
 Acceptance criteria:
 
@@ -350,7 +350,7 @@ Acceptance criteria:
 * Workstations are secondary to the Clean Process Chamber.
 * Existing confirmed specifications are preserved if used.
 * New specifications are not invented.
-* The positioning fits the broader clean-air ecosystem.
+* The positioning fits the broader localized process-environment strategy.
 
 ---
 
@@ -588,7 +588,7 @@ Acceptance criteria:
 
 Use:
 
-**Eden Cleanroom Systems**
+**Eden Industrial Systems**
 
 Product:
 
@@ -752,19 +752,19 @@ Preferred:
 
 Home:
 
-**Eden Cleanroom Systems | Localized Clean-Air Workstations**
+**Eden Industrial Systems | Localized Process Environments**
 
 Products:
 
-**Clean-Air Workstations | Eden Cleanroom Systems**
+**Clean Process Chambers | Eden Industrial Systems**
 
 Contact:
 
-**Contact Eden Cleanroom Systems**
+**Contact Eden Industrial Systems**
 
 Request a Quote:
 
-**Request a Quote | Eden Cleanroom Systems**
+**Request a Quote | Eden Industrial Systems**
 
 Small adjustments are acceptable if they improve accuracy without keyword stuffing.
 
@@ -1108,7 +1108,7 @@ Confirm:
 
 * Eden's offering is understandable.
 * The flagship product is clear.
-* The localized clean-air concept is clear.
+* The localized process-environment concept is clear.
 * Technical language is understandable.
 * Claims are not overstated.
 * Quote path is easy to find.
@@ -1120,8 +1120,8 @@ Confirm:
 
 On the Home page, a new visitor should be able to determine within approximately five seconds:
 
-* Eden makes physical clean-air equipment.
-* The system is designed around localized clean air.
+* Eden makes physical equipment for localized process environments.
+* The system is designed around localized HEPA-filtered airflow.
 * The Clean Process Chamber is the primary product.
 * There is a clear way to view products or request a quote.
 
@@ -1293,8 +1293,8 @@ The site should feel complete when it is:
 
 The final website should consistently reinforce:
 
-> **Eden builds clean environments around processes.**
+> **Eden builds localized environments around critical processes.**
 
 and:
 
-> **Clean the process, not the entire room.**
+> **Control the process environment, not the entire room.**

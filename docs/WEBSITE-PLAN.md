@@ -1,12 +1,12 @@
-# Eden Cleanroom Systems — Website Plan
+# Eden Industrial Systems — Website Plan
 
 ## 1. Website Objective
 
-Position Eden Cleanroom Systems as a manufacturer of **compact, localized clean-air systems for critical processes**.
+Position Eden Industrial Systems as a manufacturer of **compact, localized process environments for critical processes**.
 
 The central value proposition:
 
-> **Clean the process, not the entire room.**
+> **Control the process environment, not the entire room.**
 
 Instead of requiring customers to build or upgrade an entire cleanroom, Eden provides localized HEPA-filtered work zones that create controlled environments directly where sensitive work happens.
 
@@ -14,7 +14,7 @@ The website should:
 
 - Make the product immediately understandable.
 - Establish technical and manufacturing credibility.
-- Explain why localized clean air can be preferable to controlling an entire room.
+- Explain why localized HEPA-filtered airflow can be preferable to controlling an entire room.
 - Present Eden's products clearly.
 - Drive qualified visitors toward requesting a quote.
 - Keep the overall site simple and focused.
@@ -56,7 +56,7 @@ The goal is a small, focused website rather than a large corporate site.
 
 ## Primary Product Category
 
-**Localized Clean-Air Workstations**
+**Localized Process Environments**
 
 The initial flagship product is:
 
@@ -64,7 +64,7 @@ The initial flagship product is:
 
 **A compact HEPA-filtered environment for critical processes.**
 
-The system creates a localized clean-air work zone around sensitive manufacturing, assembly, inspection, packaging, and laboratory operations.
+The system creates a localized HEPA-filtered work zone around sensitive manufacturing, assembly, inspection, packaging, and laboratory operations.
 
 The chamber may sit on an existing workbench or be paired with a dedicated Eden stainless-steel workstation.
 
@@ -82,23 +82,23 @@ Eden should not position itself primarily as a stainless-steel furniture company
 
 The broader positioning should be:
 
-> **Eden builds clean environments around processes.**
+> **Eden builds localized environments around critical processes.**
 
 Supporting idea:
 
-> **Clean the process, not the entire room.**
+> **Control the process environment, not the entire room.**
 
-The existing stainless workstation/table products remain relevant, but they should support the clean-air product ecosystem rather than define the company.
+The existing stainless workstation/table products remain relevant, but they should support the localized process-environment product strategy rather than define the company.
 
 Long term, Eden should be capable of offering:
 
-- Localized clean-air chambers
-- Clean-air workstations
+- Localized HEPA-filtered work zones
+- Controlled-airflow workstations
 - Stainless cleanroom workstations
 - Integrated chamber/workstation systems
 - Replacement filters
 - Accessories
-- Custom clean-air systems
+- Custom process airflow systems
 
 ---
 
@@ -115,7 +115,7 @@ The Home page should explain Eden's value proposition within seconds.
 A visitor should quickly understand:
 
 1. What Eden makes.
-2. Why localized clean air matters.
+2. Why localized HEPA-filtered airflow matters.
 3. What the Clean Process Chamber is.
 4. How it works.
 5. Where it can be used.
@@ -130,7 +130,7 @@ The Home page should be visually driven and relatively concise.
 
 ### Headline
 
-# Clean Air. Right Where You Need It.
+# Control the Environment Around the Process.
 
 ### Supporting Copy
 
@@ -197,7 +197,7 @@ Large controlled footprint
 
 ### Eden Approach
 
-Localized clean-air workstation
+Localized process environment
 
 ↓
 
@@ -220,7 +220,7 @@ Do not state specific cost savings unless Eden has supporting data.
 
 ## Meet the Eden Clean Process Chamber
 
-A compact clean-air workstation designed to create a localized HEPA-filtered environment around critical operations.
+A compact HEPA-filtered workstation designed to create a localized HEPA-filtered environment around critical operations.
 
 Potential feature callouts:
 
@@ -319,9 +319,9 @@ Avoid implying suitability for hazardous, sterile, pharmaceutical, aseptic, or r
 
 Instead of creating a separate About page, include a short company section on the homepage.
 
-## Practical Clean-Air Systems for Manufacturing
+## Practical Process Airflow Systems for Manufacturing
 
-Eden Cleanroom Systems develops compact clean-air equipment for manufacturers that need environmental control around specific processes.
+Eden Industrial Systems develops compact process-airflow equipment for manufacturers that need environmental control around specific processes.
 
 The company should be positioned around:
 
@@ -395,7 +395,7 @@ The flagship product should receive the most attention.
 
 Supporting copy should explain:
 
-The Eden Clean Process Chamber creates a compact clean-air work zone around sensitive operations.
+The Eden Clean Process Chamber creates a compact HEPA-filtered work zone around sensitive operations.
 
 Filtered air is supplied from above and moves vertically through the working area before exiting through engineered openings near the bottom of the chamber.
 
@@ -559,7 +559,7 @@ Position them as:
 
 ## Eden Cleanroom Workstations
 
-Stainless-steel workstations designed for clean manufacturing environments and integration with Eden clean-air systems.
+Stainless-steel workstations designed for clean manufacturing environments and integration with Eden process-environment systems.
 
 Potential uses:
 
@@ -570,7 +570,7 @@ Potential uses:
 - Packaging station
 - Mobile workstation
 
-This allows Eden to continue selling existing products while moving the brand toward higher-value clean-air systems.
+This allows Eden to continue selling existing products while moving the brand toward higher-value localized process environments.
 
 ---
 
@@ -586,7 +586,7 @@ Compact enclosed clean zone.
 
 ## Eden Clean Workstation
 
-Larger operator clean-air workstation.
+Larger operator HEPA-filtered workstation.
 
 ## Eden Pass-Through Chamber
 
@@ -594,11 +594,11 @@ Localized controlled transfer system.
 
 ## Eden Mobile Clean Station
 
-Portable clean-air workstation.
+Portable HEPA-filtered workstation.
 
 ## Eden Custom Systems
 
-Application-specific clean-air equipment.
+Application-specific process environment equipment.
 
 ## Filters & Accessories
 
@@ -675,9 +675,9 @@ Contact is for:
 
 # Contact Eden
 
-Have a question about our products or clean-air systems?
+Have a question about our products or process airflow systems?
 
-Get in touch with Eden Cleanroom Systems.
+Get in touch with Eden Industrial Systems.
 
 ---
 
@@ -741,7 +741,7 @@ The objective is to collect enough information to understand the customer's proc
 
 Every application is different.
 
-Tell us what you're working with and what kind of clean-air environment you need.
+Tell us what you're working with and what kind of process environment you need.
 
 ---
 
@@ -895,7 +895,7 @@ The homepage should approximately tell this story:
 
 ### 1. What is this?
 
-**Clean Air. Right Where You Need It.**
+**Control the Environment Around the Process.**
 
 ↓
 
@@ -925,7 +925,7 @@ The homepage should approximately tell this story:
 
 ### 6. Why Eden?
 
-**Practical clean-air systems designed around the process.**
+**Practical process airflow systems designed around the process.**
 
 ↓
 
@@ -1052,8 +1052,8 @@ Only create additional top-level pages when the amount of real content makes the
 
 The long-term brand proposition remains:
 
-> # Eden builds clean environments around processes.
+> # Eden builds localized environments around critical processes.
 
 And the central customer idea remains:
 
-> # Clean the process, not the entire room.
+> # Control the process environment, not the entire room.

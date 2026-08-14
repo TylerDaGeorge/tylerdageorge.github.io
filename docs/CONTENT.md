@@ -1,8 +1,8 @@
-# Eden Cleanroom Systems — Website Content
+# Eden Industrial Systems — Website Content
 
 ## 1. Purpose
 
-This document defines the preferred customer-facing copy for the Eden Cleanroom Systems website.
+This document defines the preferred customer-facing copy for the Eden Industrial Systems website.
 
 It should be read alongside:
 
@@ -32,15 +32,15 @@ When exact text is not provided here, preserve the tone and terminology defined 
 
 Primary brand proposition:
 
-> **Clean the process, not the entire room.**
+> **Control the process environment, not the entire room.**
 
 Primary homepage headline:
 
-> **Clean Air. Right Where You Need It.**
+> **Control the Environment Around the Process.**
 
 Company positioning:
 
-> **Eden builds clean environments around processes.**
+> **Eden builds localized environments around critical processes.**
 
 Product positioning:
 
@@ -48,7 +48,7 @@ Product positioning:
 
 Supporting company statement:
 
-> **Practical clean-air systems for manufacturing.**
+> **Practical process environments for manufacturing.**
 
 ---
 
@@ -84,8 +84,8 @@ Prefer explaining what the product actually does.
 Preferred terminology:
 
 - Clean Process Chamber
-- Clean-air workstation
-- Localized clean air
+- HEPA-filtered workstation
+- Localized HEPA-filtered airflow
 - HEPA-filtered airflow
 - Vertical airflow
 - Downward airflow
@@ -176,11 +176,11 @@ Avoid creating too many alternate CTA phrasings.
 
 Optional:
 
-**Localized Clean-Air Systems**
+**Localized Process Environments**
 
 ## Headline
 
-# Clean Air. Right Where You Need It.
+# Control the Environment Around the Process.
 
 ## Supporting Copy
 
@@ -242,7 +242,7 @@ Do not attach numerical savings unless validated.
 
 ## Body Copy
 
-The Eden Clean Process Chamber is a compact clean-air workstation designed to create a localized HEPA-filtered environment around critical operations.
+The Eden Clean Process Chamber is a compact HEPA-filtered workstation designed to create a localized HEPA-filtered environment around critical operations.
 
 Filtered air is supplied from above, moves vertically through the working area, and exits through engineered openings near the lower portion of the chamber.
 
@@ -321,7 +321,7 @@ Air leaves through engineered openings near the bottom of the enclosure.
 
 ## Intro
 
-Localized clean airflow can support a range of contamination-sensitive operations.
+Localized HEPA-filtered airflowflow can support a range of contamination-sensitive operations.
 
 ## Assembly
 
@@ -345,7 +345,7 @@ Provide localized filtered airflow for appropriate non-hazardous laboratory proc
 
 ## Medical & Life Science Manufacturing
 
-Support appropriate non-hazardous manufacturing and handling operations where localized clean airflow is useful.
+Support appropriate non-hazardous manufacturing and handling operations where localized HEPA-filtered airflowflow is useful.
 
 ---
 
@@ -357,11 +357,11 @@ Support appropriate non-hazardous manufacturing and handling operations where lo
 
 ## Headline
 
-# Practical Clean-Air Systems for Manufacturing.
+# Practical Process Environments for Manufacturing.
 
 ## Body Copy
 
-Eden Cleanroom Systems develops compact clean-air equipment for manufacturers that need environmental control around specific processes.
+Eden Industrial Systems develops compact process-airflow equipment for manufacturers that need environmental control around specific processes.
 
 Our focus is straightforward:
 
@@ -406,11 +406,11 @@ Tell us what you're working with and what kind of working environment you need.
 
 ## Headline
 
-# Clean-Air Equipment Built Around the Process.
+# Process Environments Built Around the Work.
 
 ## Supporting Copy
 
-Eden develops localized clean-air systems and stainless workstations for critical manufacturing and handling operations.
+Eden develops localized process environments and stainless workstations for critical manufacturing and handling operations.
 
 ## Primary CTA
 
@@ -430,7 +430,7 @@ Eden develops localized clean-air systems and stainless workstations for critica
 
 ## Body Copy
 
-The Eden Clean Process Chamber creates a compact clean-air work zone around sensitive operations.
+The Eden Clean Process Chamber creates a compact HEPA-filtered work zone around sensitive operations.
 
 Filtered air is introduced from above, distributed across the chamber, and directed vertically through the working area before exiting through engineered lower openings.
 
@@ -543,7 +543,7 @@ Do not show unknown values simply to make the table appear complete.
 
 ## Body Copy
 
-The Clean Process Chamber combines filtration, airflow distribution, and enclosure geometry to create a localized clean-air work zone around the process.
+The Clean Process Chamber combines filtration, airflow distribution, and enclosure geometry to create a localized HEPA-filtered work zone around the process.
 
 Performance depends on the final system configuration, operating conditions, and validation method.
 
@@ -615,7 +615,7 @@ System performance may be evaluated using methods such as:
 
 ## Supporting Copy
 
-Stainless-steel workstations designed for clean manufacturing environments and integration with Eden clean-air systems.
+Stainless-steel workstations designed for clean manufacturing environments and integration with Eden process-environment systems.
 
 Potential uses include:
 
@@ -638,9 +638,9 @@ Only publish confirmed specifications for current workstation products.
 
 ## Supporting Copy
 
-Have a general question about our products or clean-air systems?
+Have a general question about our products or process airflow systems?
 
-Get in touch with Eden Cleanroom Systems.
+Get in touch with Eden Industrial Systems.
 
 ---
 
@@ -692,7 +692,7 @@ Do not invent fields without a clear purpose.
 
 Every application is different.
 
-Tell us what you're working with and what kind of clean-air environment you need.
+Tell us what you're working with and what kind of process environment you need.
 
 ---
 
@@ -791,7 +791,7 @@ Do not promise a response time unless one has been established.
 
 Use:
 
-**Eden Cleanroom Systems**
+**Eden Industrial Systems**
 
 Navigation:
 
@@ -802,7 +802,7 @@ Navigation:
 
 Optional tagline:
 
-**Clean the process, not the entire room.**
+**Control the process environment, not the entire room.**
 
 Only display confirmed contact information.
 
@@ -857,19 +857,19 @@ Do not promise a specific response time unless confirmed.
 
 Preferred homepage title:
 
-**Eden Cleanroom Systems | Localized Clean-Air Workstations**
+**Eden Industrial Systems | Localized Process Environments**
 
 Products page:
 
-**Clean-Air Workstations | Eden Cleanroom Systems**
+**Clean Process Chambers | Eden Industrial Systems**
 
 Contact page:
 
-**Contact Eden Cleanroom Systems**
+**Contact Eden Industrial Systems**
 
 Quote page:
 
-**Request a Quote | Eden Cleanroom Systems**
+**Request a Quote | Eden Industrial Systems**
 
 These may be refined later in `SEO.md`.
 
@@ -879,7 +879,7 @@ These may be refined later in `SEO.md`.
 
 Homepage:
 
-**Eden Cleanroom Systems develops localized HEPA-filtered clean-air workstations for critical manufacturing, assembly, inspection, and packaging processes.**
+**Eden Industrial Systems develops localized HEPA-filtered HEPA-filtered workstations for critical manufacturing, assembly, inspection, and packaging processes.**
 
 Products:
 
@@ -887,11 +887,11 @@ Products:
 
 Contact:
 
-**Contact Eden Cleanroom Systems with general product, customer, supplier, or partnership questions.**
+**Contact Eden Industrial Systems with general product, customer, supplier, or partnership questions.**
 
 Request a Quote:
 
-**Tell Eden Cleanroom Systems about your process and request a quote for a localized clean-air system or workstation configuration.**
+**Tell Eden Industrial Systems about your process and request a quote for a localized process environment or workstation configuration.**
 
 ---
 
@@ -919,7 +919,7 @@ Do not automatically rewrite as:
 
 Internal:
 
-**Localized clean-air workstation**
+**Localized process environment**
 
 Do not automatically rewrite as:
 
@@ -964,7 +964,7 @@ The Products page may contain more technical depth.
 Homepage content should answer:
 
 1. What does Eden make?
-2. Why is localized clean air useful?
+2. Why is localized HEPA-filtered airflow useful?
 3. What is the Clean Process Chamber?
 4. How does it work?
 5. Where can it be used?
@@ -995,15 +995,15 @@ Products copy should be more technical than homepage copy.
 
 ## Company
 
-**Eden Cleanroom Systems develops localized clean-air equipment for critical manufacturing and handling processes.**
+**Eden Industrial Systems develops equipment for localized process environments for critical manufacturing and handling processes.**
 
 ## Clean Process Chamber
 
-**A compact HEPA-filtered clean-air workstation designed around critical processes.**
+**A compact HEPA-filtered HEPA-filtered workstation designed around critical processes.**
 
 ## Cleanroom Workstations
 
-**Stainless-steel workstations for clean manufacturing environments and integration with Eden clean-air systems.**
+**Stainless-steel workstations for clean manufacturing environments and integration with Eden process-environment systems.**
 
 ---
 
@@ -1011,13 +1011,13 @@ Products copy should be more technical than homepage copy.
 
 Approved:
 
-**Clean Air. Right Where You Need It.**
+**Control the Environment Around the Process.**
 
-**Clean the process, not the entire room.**
+**Control the process environment, not the entire room.**
 
-**Localized clean air for critical processes.**
+**Localized HEPA-filtered airflow for critical processes.**
 
-**Practical clean-air systems for manufacturing.**
+**Practical process environments for manufacturing.**
 
 **Clean environments built around the process.**
 
@@ -1119,7 +1119,7 @@ If not, revise it.
 
 The customer should leave the website understanding three things:
 
-> **Eden makes localized clean-air equipment.**
+> **Eden creates localized process environments.**
 
 > **The Clean Process Chamber brings HEPA-filtered airflow directly to critical processes.**
 
@@ -1127,4 +1127,4 @@ The customer should leave the website understanding three things:
 
 The central positioning remains:
 
-> # Clean the process, not the entire room.
+> # Control the process environment, not the entire room.

@@ -1,8 +1,8 @@
-# Eden Cleanroom Systems — SEO Strategy
+# Eden Industrial Systems — SEO Strategy
 
 ## 1. Purpose
 
-This document defines the search engine optimization direction for the Eden Cleanroom Systems website.
+This document defines the search engine optimization direction for the Eden Industrial Systems website.
 
 It should be read alongside:
 
@@ -27,7 +27,7 @@ This document governs:
 * Image SEO
 * Content priorities
 
-The objective is to help qualified buyers find Eden when searching for localized clean-air equipment, HEPA workstations, clean process chambers, and related manufacturing solutions.
+The objective is to help qualified buyers find Eden when searching for equipment for localized process environments, HEPA workstations, clean process chambers, and related manufacturing solutions.
 
 SEO must never override technical accuracy.
 
@@ -39,9 +39,9 @@ Do not add unsupported claims simply because they may attract search traffic.
 
 The website should attract users searching for:
 
-* Localized clean-air workstations
+* Localized process environments
 * HEPA-filtered workstations
-* Clean-air chambers
+* HEPA-filtered chambers
 * Clean process chambers
 * Cleanroom workstations
 * Stainless cleanroom workstations
@@ -120,7 +120,7 @@ The homepage should target the broad company/category concept.
 
 Primary theme:
 
-**Localized Clean-Air Workstations**
+**Localized Process Environments**
 
 Secondary themes:
 
@@ -137,11 +137,11 @@ The homepage should establish what Eden is and what category of equipment it mak
 
 Preferred:
 
-**Eden Cleanroom Systems | Localized Clean-Air Workstations**
+**Eden Industrial Systems | Localized Process Environments**
 
 Alternative if character length becomes an issue:
 
-**Localized Clean-Air Workstations | Eden Cleanroom Systems**
+**Localized Process Environments | Eden Industrial Systems**
 
 Do not stuff multiple keyword variants into the title.
 
@@ -155,7 +155,7 @@ Avoid:
 
 Preferred:
 
-**Eden Cleanroom Systems develops localized HEPA-filtered clean-air workstations for critical manufacturing, assembly, inspection, and packaging processes.**
+**Eden Industrial Systems develops localized HEPA-filtered clean-air workstations for critical manufacturing, assembly, inspection, and packaging processes.**
 
 Keep the final implementation concise enough to display well in search results.
 
@@ -165,7 +165,7 @@ Keep the final implementation concise enough to display well in search results.
 
 Use:
 
-# Clean Air. Right Where You Need It.
+# Control the Environment Around the Process.
 
 The H1 does not need to exactly match the primary keyword if the surrounding content clearly establishes the product category.
 
@@ -175,7 +175,7 @@ The H1 does not need to exactly match the primary keyword if the surrounding con
 
 Early homepage content should naturally include language such as:
 
-* Localized clean-air workstation
+* Localized process environment
 * HEPA-filtered airflow
 * Critical manufacturing processes
 * Clean Process Chamber
@@ -194,7 +194,7 @@ The Products page should be the strongest commercial/technical SEO page on the s
 
 Primary themes:
 
-* Clean-air workstation
+* HEPA-filtered workstation
 * HEPA workstation
 * Clean Process Chamber
 * Cleanroom workstation
@@ -213,11 +213,11 @@ Secondary themes:
 
 Preferred:
 
-**Clean-Air Workstations | Eden Cleanroom Systems**
+**Clean Process Chambers | Eden Industrial Systems**
 
 Alternative:
 
-**Clean Process Chambers & Workstations | Eden Cleanroom Systems**
+**Clean Process Chambers & Workstations | Eden Industrial Systems**
 
 Use the second version only if the Clean Process Chamber becomes the dominant established product.
 
@@ -235,7 +235,7 @@ Preferred:
 
 Preferred:
 
-# Clean-Air Equipment Built Around the Process.
+# Process Environments Built Around the Work.
 
 The product name should appear prominently in an H2 or equivalent:
 
@@ -248,9 +248,9 @@ The product name should appear prominently in an H2 or equivalent:
 Naturally use terms including:
 
 * Eden Clean Process Chamber
-* Clean-air chamber
+* HEPA-filtered chamber
 * HEPA-filtered workstation
-* Localized clean-air workstation
+* Localized process environment
 * Vertical airflow
 * Downward filtered airflow
 * Critical work zone
@@ -296,7 +296,7 @@ Users searching specifically for Eden contact information.
 
 Use:
 
-**Contact Eden Cleanroom Systems**
+**Contact Eden Industrial Systems**
 
 ---
 
@@ -304,7 +304,7 @@ Use:
 
 Use:
 
-**Contact Eden Cleanroom Systems with general product, customer, supplier, or partnership questions.**
+**Contact Eden Industrial Systems with general product, customer, supplier, or partnership questions.**
 
 ---
 
@@ -322,7 +322,7 @@ The Request a Quote page is primarily a conversion page.
 
 It should support commercial intent around:
 
-* Clean-air workstation quote
+* HEPA-filtered workstation quote
 * Clean Process Chamber quote
 * Cleanroom workstation quote
 
@@ -334,7 +334,7 @@ Do not keyword-stuff the form.
 
 Use:
 
-**Request a Quote | Eden Cleanroom Systems**
+**Request a Quote | Eden Industrial Systems**
 
 ---
 
@@ -342,7 +342,7 @@ Use:
 
 Use:
 
-**Tell Eden Cleanroom Systems about your process and request a quote for a localized clean-air system or stainless workstation configuration.**
+**Tell Eden Industrial Systems about your process and request a quote for a localized process environment or stainless workstation configuration.**
 
 ---
 
@@ -371,7 +371,7 @@ Do not use headings solely for visual styling.
 Example Products page:
 
 ```text
-H1 Clean-Air Equipment Built Around the Process
+H1 Process Environments Built Around the Work
   H2 Eden Clean Process Chamber
     H3 HEPA Filtration
     H3 Air Distribution
@@ -845,12 +845,12 @@ Do not create thin pages just to target keywords.
 Potential future content, once the core site is established:
 
 * Clean bench vs cleanroom
-* Localized clean-air workstation vs full cleanroom
+* Localized process environment vs full cleanroom
 * Understanding HEPA filtration for manufacturing workstations
 * Vertical vs horizontal airflow workstations
 * How to choose a clean-air workstation
 * How clean-air workstations are tested
-* Clean-air workstation applications
+* HEPA-filtered workstation applications
 * Cleanroom workstation design considerations
 
 These are future opportunities, not required launch pages.
@@ -954,7 +954,7 @@ Some repeated short messaging is acceptable.
 
 For example:
 
-**Clean the process, not the entire room.**
+**Control the process environment, not the entire room.**
 
 may appear in multiple strategic locations.
 
@@ -985,7 +985,7 @@ Consistent naming helps both users and search engines.
 
 Use:
 
-**Eden Cleanroom Systems**
+**Eden Industrial Systems**
 
 Do not inconsistently alternate between:
 
@@ -1030,7 +1030,7 @@ Search engines may rewrite descriptions, so the goal is clarity rather than exac
 
 A search visitor landing on the homepage should quickly understand:
 
-> Eden manufactures localized clean-air equipment for critical processes.
+> Eden manufactures equipment for localized process environments for critical processes.
 
 That concept should be visible without scrolling excessively.
 
@@ -1195,8 +1195,8 @@ Before launch, verify:
 
 ## Primary
 
-* Localized clean-air workstation
-* Clean-air workstation
+* Localized process environment
+* HEPA-filtered workstation
 * HEPA workstation
 * Clean Process Chamber
 * Cleanroom workstation
@@ -1238,4 +1238,4 @@ The website should rank because it clearly explains a real and useful product ca
 
 The central search and brand proposition remains:
 
-> # Clean the process, not the entire room.
+> # Control the process environment, not the entire room.
