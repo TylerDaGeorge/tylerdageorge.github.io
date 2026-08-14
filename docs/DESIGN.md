@@ -1,5 +1,24 @@
 # Eden Cleanroom Systems — Website Design Direction
 
+## 0. Visual Asset Source Rule
+
+All website visuals must come from approved project assets.
+
+Preferred sources:
+
+1. Existing files in `/assets`
+2. User-provided product photography
+3. User-provided product renders
+4. User-provided diagrams and illustrations
+
+Do not independently generate replacement imagery.
+
+Do not fabricate product renders to fill empty sections.
+
+Do not source stock photography or third-party web images unless explicitly instructed.
+
+If an approved asset is missing, use a temporary development placeholder and clearly identify the missing visual requirement.
+
 ## 1. Purpose
 
 This document defines the visual and user-interface direction for the Eden Cleanroom Systems website.
