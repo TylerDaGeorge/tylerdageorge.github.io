@@ -1239,3 +1239,18 @@ The website should rank because it clearly explains a real and useful product ca
 The central search and brand proposition remains:
 
 > # Control the process environment, not the entire room.
+
+---
+
+# Current CEC SEO Direction (August 2026)
+
+This section supersedes earlier Clean Process Chamber SEO naming.
+
+- **Route:** `/products/cec/`
+- **Title:** `HEPA-Filtered Clean Staging Chamber | CEC | Eden Industrial Systems`
+- **Meta description:** `A compact point-of-use chamber for staging contamination-sensitive components, tools, samples, trays, fixtures, and work-in-process between operations.`
+- **Primary phrases:** HEPA-filtered storage cabinet; cleanroom WIP storage; clean WIP storage; benchtop clean enclosure; clean staging cabinet; point-of-use clean storage; HEPA-filtered staging chamber; clean manufacturing storage; component staging chamber; filtered storage for sensitive components.
+
+Use phrases naturally and never allow search wording to strengthen an unsupported technical claim. Do not use environmental chamber as the primary term. Avoid unsupported cleanliness classifications, certification or validation claims, sterility language, named airflow regimes, pressure claims, containment claims, or personnel-protection claims.
+
+The homepage, Products page, CET section, and CEW section must link descriptively to `/products/cec/`. The CEC page must link to the CEW and quote form. Preserve canonical and Open Graph metadata, one H1, logical headings, and inclusion in the sitemap. Do not add price, availability, rating, review, certification, or performance properties to structured data without approved evidence.

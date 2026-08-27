@@ -1298,3 +1298,22 @@ The final website should consistently reinforce:
 and:
 
 > **Control the process environment, not the entire room.**
+
+---
+
+# CEC Repositioning Acceptance Checks (August 2026)
+
+- [ ] No unsupported ISO cleanliness classification appears as a product claim.
+- [ ] No unsupported “laminar flow” or “unidirectional flow” claim appears.
+- [ ] No sterility, environmental-containment, or personnel-protection capability is claimed.
+- [ ] The CEC page visibly states that the product is intended for nonhazardous staging and lists excluded applications.
+- [ ] The CEC development-status notice is visible near the page hero.
+- [ ] Standalone CEC and integrated CEW configurations are both explained, without requiring an EIS table for standalone use.
+- [ ] The quote form submits every visible field using a `name` attribute and includes all new CEC qualification fields.
+- [ ] The existing Formspree action remains unchanged and form submission is not intercepted or falsely reported.
+- [ ] Home, Products, CEC, Contact, and Request a Quote routes and their internal links remain functional.
+- [ ] Desktop, tablet, and mobile layouts remain readable and free of horizontal overflow.
+- [ ] Only repository-approved assets are used; no external or AI-generated product imagery is added.
+- [ ] The existing CET gallery, hover arrows, keyboard arrows, and approved table images remain functional.
+- [ ] CEC metadata, canonical URL, Open Graph metadata, one-H1 structure, internal links, and sitemap entry are present.
+- [ ] Final source and generated output have been audited for prohibited terms; any occurrence is limited to an accurate limitation, FAQ answer, or internal claims rule.
