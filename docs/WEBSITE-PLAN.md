@@ -1057,3 +1057,17 @@ The long-term brand proposition remains:
 And the central customer idea remains:
 
 > # Control the process environment, not the entire room.
+
+---
+
+# Current Product Hierarchy and Website Position (August 2026)
+
+This section supersedes earlier Clean Process Chamber site positioning.
+
+1. **CET — Clean Environment Table:** a stainless steel work surface for clean manufacturing and laboratory environments.
+2. **CEC — HEPA-Filtered Clean Staging Chamber:** the differentiated EIS product, providing compact point-of-use staging for contamination-sensitive components, tools, samples, trays, fixtures, and work-in-process between operations.
+3. **CEW — Clean Environment Workstation:** the integrated system combining the CEC and CET into a complete point-of-use clean staging workstation.
+
+The homepage leads with the workflow outcome: protecting sensitive work while it waits between process steps. It retains approved CET imagery and introduces all three products using the established card system. A dedicated CEC page explains the staging problem, applications, concept, workflow benefits, potential industries, standalone and integrated installations, planned ESD option, nonhazardous-use limitations, FAQ, development status, and pilot quote path.
+
+The CEC must always be presented as standalone-capable. The website must not imply that an EIS table is required. The primary conversion path remains the existing Formspree-backed quote form.
