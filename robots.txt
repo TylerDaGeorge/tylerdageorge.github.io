@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /docs/
-
 Sitemap: https://edenindustrialsystems.com/sitemap.xml
