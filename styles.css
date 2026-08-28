@@ -234,3 +234,8 @@ footer small { grid-column: 1 / -1; color: #9eafb2; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Flagship CSC hero: an honest content-led treatment until approved chamber imagery exists. */
+.hero-callout { align-self: stretch; padding: clamp(1.5rem, 4vw, 3rem); background: var(--dark); color: #fff; display: flex; flex-direction: column; justify-content: center; }
+.hero-callout h2 { color: #fff; margin-top: .35rem; }
+.hero-callout .check-list { margin-bottom: 0; }

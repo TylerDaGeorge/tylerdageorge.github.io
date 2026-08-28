@@ -1,5 +1,8 @@
 # Eden Industrial Systems — Product Definition
 
+
+> **Current product strategy (August 2026):** The **HEPA-Filtered Clean Staging Chamber (CSC)** is Eden Industrial Systems’ flagship and must dominate customer-facing positioning. The **Clean Environment Table (CET)** is secondary supporting equipment and belongs near the bottom of the Products page, not as a homepage feature. A CSC may be purchased with an EIS stainless steel table, but that combination is not a separate named product. Never imply that an EIS table is required; the CSC is designed for suitable existing workbenches, tables, laboratory benches, inspection stations, assembly stations, carts, and other work surfaces. The retired integrated-workstation name and acronym must not be reintroduced.
+
 ## 1. Purpose of This Document
 
 This document defines the current product direction for Eden Industrial Systems.
@@ -1151,17 +1154,3 @@ And the customer proposition remains:
 > # Control the process environment, not the entire room.
 
 ---
-
-# Current CEC and CEW Product Definition (August 2026)
-
-This section supersedes earlier CEC/clean-process-chamber naming and positioning in this document.
-
-## CEC — HEPA-Filtered Clean Staging Chamber
-
-A compact point-of-use chamber designed to help protect cleaned components, tools, samples, trays, fixtures, and work-in-process during breaks, inspections, shift changes, and process delays. The CEC is positioned for clean WIP staging, point-of-use clean storage, and between-process protection. It is a standalone benchtop product that may be installed on a suitable existing surface; customers do not need to purchase an EIS table.
-
-Status: prototype and pilot development. Performance claims and final specifications remain pending completed testing. See `CEC.md` for current applications, limitations, claims restrictions, validation areas, and the planned ESD option.
-
-## CEW — Clean Environment Workstation
-
-A complete clean staging workstation that combines a HEPA-filtered CEC with an EIS stainless steel Clean Environment Table. The CEW is the integrated configuration; it does not replace the standalone CEC offering.

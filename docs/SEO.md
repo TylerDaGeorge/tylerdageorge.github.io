@@ -1,5 +1,8 @@
 # Eden Industrial Systems — SEO Strategy
 
+
+> **Current product strategy (August 2026):** The **HEPA-Filtered Clean Staging Chamber (CSC)** is Eden Industrial Systems’ flagship and must dominate customer-facing positioning. The **Clean Environment Table (CET)** is secondary supporting equipment and belongs near the bottom of the Products page, not as a homepage feature. A CSC may be purchased with an EIS stainless steel table, but that combination is not a separate named product. Never imply that an EIS table is required; the CSC is designed for suitable existing workbenches, tables, laboratory benches, inspection stations, assembly stations, carts, and other work surfaces. The retired integrated-workstation name and acronym must not be reintroduced.
+
 ## 1. Purpose
 
 This document defines the search engine optimization direction for the Eden Industrial Systems website.
@@ -1242,15 +1245,10 @@ The central search and brand proposition remains:
 
 ---
 
-# Current CEC SEO Direction (August 2026)
+# Current CSC SEO Direction (August 2026)
 
-This section supersedes earlier Clean Process Chamber SEO naming.
+- **Route:** `/products/csc/`
+- **Title:** `HEPA-Filtered Clean Staging Chamber | CSC | Eden Industrial Systems`
+- **Primary themes:** HEPA-filtered clean staging chamber; clean staging chamber; HEPA staging chamber; point-of-use clean staging; contamination-sensitive work-in-process; clean manufacturing staging; filtered staging enclosure; localized HEPA-filtered staging; clean component staging; manufacturing clean staging.
 
-- **Route:** `/products/cec/`
-- **Title:** `HEPA-Filtered Clean Staging Chamber | CEC | Eden Industrial Systems`
-- **Meta description:** `A compact point-of-use chamber for staging contamination-sensitive components, tools, samples, trays, fixtures, and work-in-process between operations.`
-- **Primary phrases:** HEPA-filtered storage cabinet; cleanroom WIP storage; clean WIP storage; benchtop clean enclosure; clean staging cabinet; point-of-use clean storage; HEPA-filtered staging chamber; clean manufacturing storage; component staging chamber; filtered storage for sensitive components.
-
-Use phrases naturally and never allow search wording to strengthen an unsupported technical claim. Do not use environmental chamber as the primary term. Avoid unsupported cleanliness classifications, certification or validation claims, sterility language, named airflow regimes, pressure claims, containment claims, or personnel-protection claims.
-
-The homepage, Products page, CET section, and CEW section must link descriptively to `/products/cec/`. The CEC page must link to the CEW and quote form. Preserve canonical and Open Graph metadata, one H1, logical headings, and inclusion in the sitemap. Do not add price, availability, rating, review, certification, or performance properties to structured data without approved evidence.
+Use these phrases naturally. The homepage, Products page, and quote flow link descriptively to the CSC. Preserve canonical and Open Graph metadata, one H1, logical headings, Product structured data without unsupported commercial or performance properties, and the active route in the sitemap. The old route is a noindex compatibility redirect only. CET search positioning is confined to its secondary Products-page section.
