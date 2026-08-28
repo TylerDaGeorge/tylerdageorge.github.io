@@ -1,5 +1,8 @@
 # Eden Industrial Systems — Website Plan
 
+
+> **Current product strategy (August 2026):** The **HEPA-Filtered Clean Staging Chamber (CSC)** is Eden Industrial Systems’ flagship and must dominate customer-facing positioning. The **Clean Environment Table (CET)** is secondary supporting equipment and belongs near the bottom of the Products page, not as a homepage feature. A CSC may be purchased with an EIS stainless steel table, but that combination is not a separate named product. Never imply that an EIS table is required; the CSC is designed for suitable existing workbenches, tables, laboratory benches, inspection stations, assembly stations, carts, and other work surfaces. The retired integrated-workstation name and acronym must not be reintroduced.
+
 ## 1. Website Objective
 
 Position Eden Industrial Systems as a manufacturer of **compact, localized process environments for critical processes**.
@@ -1062,12 +1065,8 @@ And the central customer idea remains:
 
 # Current Product Hierarchy and Website Position (August 2026)
 
-This section supersedes earlier Clean Process Chamber site positioning.
+1. **CSC — HEPA-Filtered Clean Staging Chamber:** flagship product and dominant website focus.
+2. **Optional table package:** a CSC may be supplied with an EIS stainless steel table, without a separate product name.
+3. **CET — Clean Environment Table:** secondary supporting equipment, placed near the bottom of Products and not featured on Home.
 
-1. **CET — Clean Environment Table:** a stainless steel work surface for clean manufacturing and laboratory environments.
-2. **CEC — HEPA-Filtered Clean Staging Chamber:** the differentiated EIS product, providing compact point-of-use staging for contamination-sensitive components, tools, samples, trays, fixtures, and work-in-process between operations.
-3. **CEW — Clean Environment Workstation:** the integrated system combining the CEC and CET into a complete point-of-use clean staging workstation.
-
-The homepage leads with the workflow outcome: protecting sensitive work while it waits between process steps. It retains approved CET imagery and introduces all three products using the established card system. A dedicated CEC page explains the staging problem, applications, concept, workflow benefits, potential industries, standalone and integrated installations, planned ESD option, nonhazardous-use limitations, FAQ, development status, and pilot quote path.
-
-The CEC must always be presented as standalone-capable. The website must not imply that an EIS table is required. The primary conversion path remains the existing Formspree-backed quote form.
+Home leads with protection between operations, explains the staging gap and compatibility with existing work surfaces, shows applications, and directs visitors to the CSC and quote flow. The dedicated CSC route is `/products/csc/`; the former route is retained only as a compatibility redirect.

@@ -48,7 +48,7 @@ document.querySelectorAll('[data-year]').forEach((element) => {
 const productSelect = document.querySelector('#product');
 if (productSelect) {
   const requestedProduct = new URLSearchParams(window.location.search).get('product');
-  if (['cet', 'cec', 'cew', 'custom', 'unsure'].includes(requestedProduct)) {
+  if (['csc', 'cet', 'custom', 'unsure'].includes(requestedProduct)) {
     productSelect.value = requestedProduct;
   }
 }

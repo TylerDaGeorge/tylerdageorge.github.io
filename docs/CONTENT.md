@@ -1,5 +1,8 @@
 # Eden Industrial Systems — Website Content
 
+
+> **Current product strategy (August 2026):** The **HEPA-Filtered Clean Staging Chamber (CSC)** is Eden Industrial Systems’ flagship and must dominate customer-facing positioning. The **Clean Environment Table (CET)** is secondary supporting equipment and belongs near the bottom of the Products page, not as a homepage feature. A CSC may be purchased with an EIS stainless steel table, but that combination is not a separate named product. Never imply that an EIS table is required; the CSC is designed for suitable existing workbenches, tables, laboratory benches, inspection stations, assembly stations, carts, and other work surfaces. The retired integrated-workstation name and acronym must not be reintroduced.
+
 ## 1. Purpose
 
 This document defines the preferred customer-facing copy for the Eden Industrial Systems website.

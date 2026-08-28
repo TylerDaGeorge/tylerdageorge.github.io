@@ -1,5 +1,8 @@
 # Eden Industrial Systems — Acceptance Criteria
 
+
+> **Current product strategy (August 2026):** The **HEPA-Filtered Clean Staging Chamber (CSC)** is Eden Industrial Systems’ flagship and must dominate customer-facing positioning. The **Clean Environment Table (CET)** is secondary supporting equipment and belongs near the bottom of the Products page, not as a homepage feature. A CSC may be purchased with an EIS stainless steel table, but that combination is not a separate named product. Never imply that an EIS table is required; the CSC is designed for suitable existing workbenches, tables, laboratory benches, inspection stations, assembly stations, carts, and other work surfaces. The retired integrated-workstation name and acronym must not be reintroduced.
+
 ## 1. Purpose
 
 This document defines what must be true before the Eden Industrial Systems website should be considered complete enough for launch or handoff.
@@ -1301,19 +1304,11 @@ and:
 
 ---
 
-# CEC Repositioning Acceptance Checks (August 2026)
+# CSC Repositioning Acceptance Checks (August 2026)
 
-- [ ] No unsupported ISO cleanliness classification appears as a product claim.
-- [ ] No unsupported “laminar flow” or “unidirectional flow” claim appears.
-- [ ] No sterility, environmental-containment, or personnel-protection capability is claimed.
-- [ ] The CEC page visibly states that the product is intended for nonhazardous staging and lists excluded applications.
-- [ ] The CEC development-status notice is visible near the page hero.
-- [ ] Standalone CEC and integrated CEW configurations are both explained, without requiring an EIS table for standalone use.
-- [ ] The quote form submits every visible field using a `name` attribute and includes all new CEC qualification fields.
-- [ ] The existing Formspree action remains unchanged and form submission is not intercepted or falsely reported.
-- [ ] Home, Products, CEC, Contact, and Request a Quote routes and their internal links remain functional.
-- [ ] Desktop, tablet, and mobile layouts remain readable and free of horizontal overflow.
-- [ ] Only repository-approved assets are used; no external or AI-generated product imagery is added.
-- [ ] The existing CET gallery, hover arrows, keyboard arrows, and approved table images remain functional.
-- [ ] CEC metadata, canonical URL, Open Graph metadata, one-H1 structure, internal links, and sitemap entry are present.
-- [ ] Final source and generated output have been audited for prohibited terms; any occurrence is limited to an accurate limitation, FAQ answer, or internal claims rule.
+- [ ] CSC is the flagship across Home, Products, navigation, metadata, and internal links.
+- [ ] The retired integrated-workstation name and acronym do not appear customer-facing.
+- [ ] CET is absent from the homepage and appears last as supporting equipment on Products.
+- [ ] The CSC is explicitly compatible with suitable existing customer work surfaces; an EIS table is optional.
+- [ ] The legacy chamber URL redirects to `/products/csc/`.
+- [ ] Claims, forms, responsive behavior, links, approved assets, and the production build have been verified.
