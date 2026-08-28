@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://edenindustrialsystems.com/</loc></url>
-<url><loc>https://edenindustrialsystems.com/capabilities/</loc></url>
-<url><loc>https://edenindustrialsystems.com/projects/cmm-inspection-fixture/</loc></url>
-<url><loc>https://edenindustrialsystems.com/process/</loc></url>
-<url><loc>https://edenindustrialsystems.com/about/</loc></url>
-<url><loc>https://edenindustrialsystems.com/contact/</loc></url>
-<url><loc>https://edenindustrialsystems.com/request-a-project/</loc></url>
+  <url><loc>https://edenindustrialsystems.com/</loc></url>
+  <url><loc>https://edenindustrialsystems.com/products/</loc></url>
+  <url><loc>https://edenindustrialsystems.com/products/cec/</loc></url>
+  <url><loc>https://edenindustrialsystems.com/contact/</loc></url>
+  <url><loc>https://edenindustrialsystems.com/request-a-quote/</loc></url>
 </urlset>
