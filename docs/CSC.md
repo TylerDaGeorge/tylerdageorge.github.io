@@ -10,7 +10,60 @@ The CSC is a tabletop/benchtop chamber. It is designed for suitable existing wor
 
 ## Approved concept
 
-The preliminary design uses a top-mounted blower and replaceable filtration system to introduce HEPA-filtered supply air. Air is distributed through the staging area and exits through a lower exhaust or return section. Final plenum, diffuser, airflow rate, chamber pressure, filter configuration, noise, loading, particle-cleanliness, and recovery performance remain subject to prototype testing.
+The preliminary design uses a top-mounted blower and replaceable filtration system to introduce HEPA-filtered supply air. Air is distributed through the staging area and exits through a lower exhaust or return section. Final plenum, diffuser, chamber pressure, noise, loading, particle-cleanliness, and recovery performance remain subject to prototype testing.
+
+## Standard specifications
+
+The current standard CSC product direction is:
+
+- Variable fan speed control using a potentiometer
+- HEPA filter
+- Clear acrylic viewing window
+- White painted steel construction
+- Nominal 90 FPM face velocity
+
+### Standard internal sizes (W x D x H)
+
+- 12 x 12 x 12 in.
+- 18 x 12 x 12 in.
+- 24 x 12 x 12 in.
+
+Face velocity remains subject to prototype verification and should be described as nominal until validation is complete.
+
+## Available options
+
+### Airflow configurations
+
+- Recirculating air
+- Side exhaust
+- Rear exhaust
+- Bottom exhaust
+
+### Filtration and monitoring
+
+- ULPA filter
+- Minihelic differential-pressure gauge
+- Magnehelic differential-pressure gauge
+
+### Interior and application options
+
+- Internal adjustable shelf
+- Liquid-tight set-in tray
+- ESD work surface
+- UV light
+
+### Access and window options
+
+- Left-hand or right-hand door swing
+- Glass window
+- Polycarbonate window
+
+### Construction options
+
+- 304 stainless steel construction
+- 316 stainless steel construction
+- Electropolished 304 stainless steel construction
+- Electropolished 316 stainless steel construction
 
 ## Intended use
 
