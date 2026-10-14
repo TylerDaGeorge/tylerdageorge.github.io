@@ -107,3 +107,11 @@ document.querySelectorAll('[data-cet-gallery]').forEach((gallery) => {
     }
   });
 });
+
+const cetQuoteParams = new URLSearchParams(window.location.search);
+if (cetQuoteParams.get('product') === 'cet') {
+  const skuInput = document.querySelector('#requested-sku');
+  const optionsInput = document.querySelector('#requested-options');
+  if (skuInput) skuInput.value = cetQuoteParams.get('sku') || '';
+  if (optionsInput) optionsInput.value = ['tabletop','material','width','depth','height','quantity'].map(k => cetQuoteParams.get(k) ? k + ': ' + cetQuoteParams.get(k) : '').filter(Boolean).join(' | ');
+}
