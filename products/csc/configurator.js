@@ -19,45 +19,51 @@
   scene.add(new THREE.HemisphereLight(0xffffff,0x8b9ba9,2.2));const lamp=new THREE.DirectionalLight(0xffffff,2);lamp.position.set(30,45,55);scene.add(lamp);
   const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minDistance=23;controls.maxDistance=140;
   const parts=new THREE.Group(),dimensions=new THREE.Group();scene.add(parts,dimensions);
-  const white=new THREE.MeshStandardMaterial({color:0xe6e9ed,metalness:.32,roughness:.42,side:THREE.DoubleSide});
-  const stainless=new THREE.MeshStandardMaterial({color:0xaebac4,metalness:.77,roughness:.27,side:THREE.DoubleSide});
-  const glass=new THREE.MeshPhysicalMaterial({color:0xa6d4e7,metalness:0,roughness:.1,transparent:true,opacity:.28,depthWrite:false,side:THREE.DoubleSide});
-  const black=new THREE.MeshStandardMaterial({color:0x48545d,metalness:.3,roughness:.5});
   const blue=new THREE.LineBasicMaterial({color:0x2563eb,depthTest:false});
-  const add=(w,h,d,x,y,z,mat=white)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);o.position.set(x,y,z);parts.add(o);return o};
   const line=(a,b)=>{const o=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(...a),new THREE.Vector3(...b)]),blue);o.renderOrder=40;dimensions.add(o)};
-  const label=(text,pos)=>{const c=document.createElement('canvas');c.width=256;c.height=80;const g=c.getContext('2d');g.fillStyle='rgba(255,255,255,.95)';g.fillRect(0,0,256,80);g.fillStyle='#1d4ed8';g.font='bold 35px Arial';g.textAlign='center';g.textBaseline='middle';g.fillText(text,128,40);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;const o=new THREE.Sprite(new THREE.SpriteMaterial({map:t,transparent:true,depthTest:false}));o.position.set(...pos);o.scale.set(7,2.2,1);o.renderOrder=45;dimensions.add(o)};
+  const label=(text,pos)=>{const c=document.createElement('canvas');c.width=256;c.height=80;const g=c.getContext('2d');g.fillStyle='rgba(255,255,255,.95)';g.fillRect(0,0,256,80);g.fillStyle='#1d4ed8';g.font='bold 34px Arial';g.textAlign='center';g.textBaseline='middle';g.fillText(text,128,40);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;const o=new THREE.Sprite(new THREE.SpriteMaterial({map:t,transparent:true,depthTest:false}));o.position.set(...pos);o.scale.set(7,2.2,1);o.renderOrder=45;dimensions.add(o)};
   const toggle=$('csc-dimensions');toggle.addEventListener('change',()=>{dimensions.visible=toggle.checked});
-  draw=s=>{
-   parts.clear();dimensions.clear();
-   // Nominal internal cavity W x 12 x 12; exterior envelope is illustrative.
-   const W=s.w+3,D=16,H=19,mat=s.material==='316L'||s.material==='304'?stainless:white;
-   // Front faces + side walls and top blower/plenum cover.
-   add(W,.6,D,0,0,0,mat);add(W,.65,D,0,H,0,mat);
-   add(.65,H,D,-W/2, H/2,0,mat);add(.65,H,D,W/2,H/2,0,mat);
-   add(W,H*.65,.6,0,H*.325,-D/2,mat);
-   add(W,3,D,0,H+1.5,0,mat);
-   // Front door frame and clear window, facing positive Z.
-   const z=D/2+.1;add(W,.85,.6,0,H-.4,z,mat);add(W,.85,.6,0,.45,z,mat);
-   for(const x of [-W/2+.45,W/2-.45])add(.85,H-1.4,.6,x,H/2,z,mat);
-   add(W-2.2,H-2.4,.18,0,H/2,z+.1,glass);
-   add(.35,3,.45,s.door==='LH'?W/2-1.8:-W/2+1.8,H/2,z+.6,black);
-   // Lower staging deck, filter and upper prefilter.
-   add(W-1.3,.35,D-1.3,0,1,0,mat);
-   add(W-1.3,.5,D-1.3,0,H-2,0,black);
-   add(Math.min(10,W-3),.18,9,0,H+3.1,0,black);
-   if(s.shelf)add(W-2,.3,D-2,0,7,0,stainless);
-   if(s.tray){add(W-2,.22,D-2,0,1.35,0,stainless);for(const x of [-W/2+1,W/2-1])add(.22,.6,D-2,x,1.65,0,stainless)}
-   if(s.gauge!=='NONE'){const g=new THREE.Mesh(new THREE.CylinderGeometry(.8,.8,.3,24),black);g.rotation.x=Math.PI/2;g.position.set(W/2-2,H+1.4,D/2+.15);parts.add(g)}
-   if(s.mount==='UNDER'){add(W+2,.55,D+3,0,-3,0,stainless);for(const x of [-W/2,W/2])add(.7,3,.7,x,-1.6,-D/2+.7,stainless)}
-   // Exhaust indication, visually approximate, not a validated airflow route.
-   if(s.air!=='RECIRC'){const zz=s.air==='REAR'?-D/2-.45:D/2+.45;for(let i=-2;i<=2;i++)add(.7,.16,.2,i*1.3,2.5,zz,black)}
-   const x=-W/2-4,dimFront=D/2+4,back=-D/2-4;
-   line([-W/2,H,back],[W/2,H,back]);line([-W/2,H,-D/2],[-W/2,H,back]);line([W/2,H,-D/2],[W/2,H,back]);label('W '+s.w+'″',[0,H+2,back]);
-   line([W/2+3,H,-D/2],[W/2+3,H,D/2]);line([W/2,H,-D/2],[W/2+3,H,-D/2]);line([W/2,H,D/2],[W/2+3,H,D/2]);label('D 12″',[W/2+5,H,0]);
-   line([x,0,dimFront],[x,H,dimFront]);line([-W/2,0,D/2],[x,0,dimFront]);line([-W/2,H,D/2],[x,H,dimFront]);label('H 12″',[x-2,H/2,dimFront]);
+  const {GLTFLoader}=await import('https://esm.sh/three@0.160.1/examples/jsm/loaders/GLTFLoader.js');
+  const loader=new GLTFLoader();
+  const gltf=await loader.loadAsync('/products/csc/CSC_Assembly.glb');
+  const model=gltf.scene;
+  const box=new THREE.Box3().setFromObject(model),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());
+  model.position.sub(center);
+  // Keep CAD geometry proportional: configuration choices never stretch precision components.
+  parts.add(model);
+  const shelfMaterial=new THREE.MeshStandardMaterial({color:0xaab5be,metalness:.7,roughness:.3});
+  const mount=new THREE.Group();parts.add(mount);
+  const addShelf=(w,h,d,x,y,z)=>{const mesh=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),shelfMaterial);mesh.position.set(x,y,z);mount.add(mesh)};
+  const dims=new THREE.Vector3();
+  const rebuildDims=()=>{
+   dimensions.clear();
+   const b=new THREE.Box3().setFromObject(model);b.getSize(dims);
+   const min=b.min,max=b.max,offset=Math.max(1,Math.max(dims.x,dims.z)*.13);
+   // Overall CAD envelope dimensions. Exact interior dimensions remain in selector.
+   const yTop=max.y+offset*.6,rear=min.z-offset,right=max.x+offset,front=max.z+offset;
+   line([min.x,yTop,rear],[max.x,yTop,rear]);
+   line([min.x,max.y,min.z],[min.x,yTop,rear]);line([max.x,max.y,min.z],[max.x,yTop,rear]);
+   label('W',[0,yTop+offset*.5,rear]);
+   line([right,max.y,min.z],[right,max.y,max.z]);line([max.x,max.y,min.z],[right,max.y,min.z]);line([max.x,max.y,max.z],[right,max.y,max.z]);
+   label('D',[right+offset*.6,max.y,0]);
+   line([min.x-offset,min.y,front],[min.x-offset,max.y,front]);
+   line([min.x,min.y,max.z],[min.x-offset,min.y,front]);line([min.x,max.y,max.z],[min.x-offset,max.y,front]);
+   label('H',[min.x-offset*1.5,0,front]);
    dimensions.visible=toggle.checked;
-   camera.position.set(W*.95,H*1.1,D*2.3+13);controls.target.set(0,H*.53,0);controls.update();
+  };
+  draw=s=>{
+   // This GLB represents a fixed CAD assembly. Do not pretend selected sizes change the geometry.
+   mount.clear();
+   if(s.mount==='UNDER'){
+    const pad=Math.max(.5,size.x*.05),y=-size.y/2-Math.max(1,size.y*.18);
+    addShelf(size.x+pad*2,Math.max(.25,size.y*.025),size.z+pad*2,0,y,0);
+    for(const x of [-size.x/2,size.x/2])addShelf(Math.max(.3,pad*.5),Math.abs(y+size.y/2),Math.max(.3,pad*.5),x,(y-size.y/2)/2,-size.z/2+pad);
+   }
+   rebuildDims();
+   const span=Math.max(size.x,size.y,size.z);
+   controls.minDistance=span*.8;controls.maxDistance=span*8;
+   camera.position.set(span*1.45,span*1.05,span*1.75);controls.target.set(0,0,0);camera.near=Math.max(.01,span*.001);camera.far=span*20;camera.updateProjectionMatrix();controls.update();
+   $('csc-model-note').textContent='CAD reference assembly shown. Selected sizes, finishes, airflow and door options are recorded for quotation; the CAD geometry does not resize or change with these selections.';
   };
   const resize=()=>{const w=Math.max(1,host.clientWidth),h=Math.max(310,Math.min(500,w*.7));renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix()};new ResizeObserver(resize).observe(host);
   update();resize();let visible=true;new IntersectionObserver(e=>visible=e[0]?.isIntersecting??true).observe(host);
