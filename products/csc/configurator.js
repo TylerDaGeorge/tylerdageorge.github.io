@@ -50,14 +50,7 @@
     box(t,zoneH,D,-W/2+t/2,zoneH/2,0,mat,true);
     box(t,zoneH,D,W/2-t/2,zoneH/2,0,mat,true);
     box(W,zoneH,t,0,zoneH/2,zRear+t/2,mat,true);
-    // Return-air chutes running vertically along both side walls.
-    for(const x of [-W/2+.55,W/2-.55]){
-      box(.13,zoneH-.7,D-1.1,x,zoneH/2,0,mat);
-      for(let k=0;k<10;k++){
-        const zz=zRear+1+(k+.5)*(D-2)/10;
-        box(.18,.09,.65,x,1.1,zz,perforation);
-      }
-    }
+    // Solid interior side walls: return air enters only through the perforated floor.
     // Perforated floor: a thin deck with inset circular dark perforations.
     box(W-1.2,.16,D-1.2,0,.45,0,mat);
     const pitch=1.05,holesX=Math.floor((W-2.7)/pitch),holesZ=Math.floor((D-2.7)/pitch);
@@ -70,11 +63,7 @@
     box(W,.22,D,0,zoneH+.08,0,mat,true);
     box(W,6.1,D,0,zoneH+3.25,0,mat,true);
     box(W,.22,D,0,zoneH+6.35,0,mat,true);
-    // Top inlet prefilter and concentric blower grille.
-    box(Math.min(10,W-3),.10,Math.min(10,D-3),0,zoneH+6.52,0,dark);
-    const ring=new THREE.Mesh(new THREE.TorusGeometry(Math.min(3.3,(W-4)/3,(D-4)/3),.10,8,48),dark);
-    ring.rotation.x=Math.PI/2;ring.position.set(0,zoneH+6.62,0);parts.add(ring);
-    for(let k=0;k<7;k++)box(Math.min(6,W-5),.08,.09,0,zoneH+6.66,-2.4+k*.8,screwMat);
+    // Recirculating air inlet is internal and concealed beneath the solid top cover.
     // Front face door frame and recessed clear glazing.
     const doorZ=zFront+.16,frame=.66;
     box(W,frame,.34,0,zoneH-frame/2,doorZ,mat,true);
@@ -115,7 +104,7 @@
     }
     controls.target.copy(focus);
     camera.near=.1;camera.far=span*20;camera.updateProjectionMatrix();controls.update();
-    $('csc-model-note').textContent='High-detail conceptual CSC model. Enclosure, door, plenum, perforated floor, and optional shelf respond to the selected size. Appearance is illustrative; final engineered geometry and performance require validation.';
+    $('csc-model-note').textContent='Conceptual recirculating CSC model. The exterior is solid; return-air perforations are shown only on the internal floor. Enclosure and options respond to the selected dimensions. Final engineered geometry and performance require validation.';
   };
   draw=rebuild;
   const resize=()=>{const w=Math.max(1,host.clientWidth),h=Math.max(310,Math.min(500,w*.7));renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix()};new ResizeObserver(resize).observe(host);
