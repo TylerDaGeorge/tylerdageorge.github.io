@@ -52,10 +52,10 @@
    if(s.mount==='UNDER'){add(W+2,.55,D+3,0,-3,0,stainless);for(const x of [-W/2,W/2])add(.7,3,.7,x,-1.6,-D/2+.7,stainless)}
    // Exhaust indication, visually approximate, not a validated airflow route.
    if(s.air!=='RECIRC'){const zz=s.air==='REAR'?-D/2-.45:D/2+.45;for(let i=-2;i<=2;i++)add(.7,.16,.2,i*1.3,2.5,zz,black)}
-   const x=-W/2-4,z=D/2+4,back=-D/2-4;
+   const x=-W/2-4,dimFront=D/2+4,back=-D/2-4;
    line([-W/2,H,back],[W/2,H,back]);line([-W/2,H,-D/2],[-W/2,H,back]);line([W/2,H,-D/2],[W/2,H,back]);label('W '+s.w+'″',[0,H+2,back]);
    line([W/2+3,H,-D/2],[W/2+3,H,D/2]);line([W/2,H,-D/2],[W/2+3,H,-D/2]);line([W/2,H,D/2],[W/2+3,H,D/2]);label('D 12″',[W/2+5,H,0]);
-   line([x,0,z],[x,H,z]);line([-W/2,0,D/2],[x,0,z]);line([-W/2,H,D/2],[x,H,z]);label('H 12″',[x-2,H/2,z]);
+   line([x,0,dimFront],[x,H,dimFront]);line([-W/2,0,D/2],[x,0,dimFront]);line([-W/2,H,D/2],[x,H,dimFront]);label('H 12″',[x-2,H/2,dimFront]);
    dimensions.visible=toggle.checked;
    camera.position.set(W*.95,H*1.1,D*2.3+13);controls.target.set(0,H*.53,0);controls.update();
   };
