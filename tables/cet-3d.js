@@ -3,8 +3,8 @@
 (async()=>{
  const host=document.getElementById('cet-3d');if(!host)return;
  try{
- const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js');
- const {OrbitControls}=await import('https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/controls/OrbitControls.js');
+ const THREE=await import('https://esm.sh/three@0.160.1');
+ const {OrbitControls}=await import('https://esm.sh/three@0.160.1/examples/jsm/controls/OrbitControls.js');
  const scene=new THREE.Scene();scene.background=new THREE.Color(0xf5f7fa);
  const camera=new THREE.PerspectiveCamera(35,1,.1,500);
  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;
