@@ -13,18 +13,39 @@
  const light=new THREE.DirectionalLight(0xffffff,2);light.position.set(40,75,50);scene.add(light);
  const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minDistance=35;controls.maxDistance=260;
  const assembly=new THREE.Group();scene.add(assembly);
- // Compact screen-space dimensions stay readable while the model rotates.
+ // World-space engineering dimensions rotate with the table.
+ const dimensions=new THREE.Group();scene.add(dimensions);
+ const dimLineMat=new THREE.LineBasicMaterial({color:0x2563eb,depthTest:false});
  const dimensionToggle=document.getElementById('cet-show-dimensions');
- const dimensionDisplay=document.getElementById('cet-dimension-readout');
- const updateDimensions=(W,D,H)=>{
-  if(!dimensionDisplay)return;
-  dimensionDisplay.querySelector('[data-dim="w"]').textContent=W+'″';
-  dimensionDisplay.querySelector('[data-dim="d"]').textContent=D+'″';
-  dimensionDisplay.querySelector('[data-dim="h"]').textContent=H+'″';
+ if(dimensionToggle)dimensionToggle.addEventListener('change',()=>{dimensions.visible=dimensionToggle.checked});
+ const line=(a,b)=>{const geometry=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(...a),new THREE.Vector3(...b)]);const mesh=new THREE.Line(geometry,dimLineMat);mesh.renderOrder=50;dimensions.add(mesh)};
+ const label=(value,p)=>{const canvas=document.createElement('canvas');canvas.width=256;canvas.height=80;const ctx=canvas.getContext('2d');ctx.fillStyle='rgba(255,255,255,.94)';ctx.fillRect(0,0,256,80);ctx.fillStyle='#1d4ed8';ctx.font='bold 36px Arial';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(value,128,40);const tex=new THREE.CanvasTexture(canvas);tex.colorSpace=THREE.SRGBColorSpace;const sprite=new THREE.Sprite(new THREE.SpriteMaterial({map:tex,depthTest:false,transparent:true}));sprite.position.set(...p);sprite.scale.set(10,3.125,1);sprite.renderOrder=60;dimensions.add(sprite)};
+ const ticks=(p,axis)=>{const size=.8;const a=[...p],b=[...p];if(axis==='x'){a[2]-=size;b[2]+=size}else if(axis==='z'){a[0]-=size;b[0]+=size}else{a[0]-=size;b[0]+=size}line(a,b)};
+ const rebuildDimensions=(W,D,H)=>{
+  dimensions.clear();
+  // Rear top edge, offset away from the table, for overall width.
+  const rear=-D/2-5, yTop=2;
+  line([-W/2,0,-D/2],[-W/2,yTop,rear]);
+  line([W/2,0,-D/2],[W/2,yTop,rear]);
+  line([-W/2,yTop,rear],[W/2,yTop,rear]);
+  ticks([-W/2,yTop,rear],'x');ticks([W/2,yTop,rear],'x');
+  label('W '+W+'″',[0,yTop+1.8,rear]);
+  // Right-hand side, parallel to depth.
+  const right=W/2+5;
+  line([W/2,0,-D/2],[right,0,-D/2]);
+  line([W/2,0,D/2],[right,0,D/2]);
+  line([right,0,-D/2],[right,0,D/2]);
+  ticks([right,0,-D/2],'z');ticks([right,0,D/2],'z');
+  label('D '+D+'″',[right+1.6,1,0]);
+  // Front-left vertical dimension, from floor to finished top.
+  const left=-W/2-5,front=D/2+1.5;
+  line([-W/2,0,D/2],[left,0,front]);
+  line([-W/2,-H,D/2],[left,-H,front]);
+  line([left,0,front],[left,-H,front]);
+  ticks([left,0,front],'y');ticks([left,-H,front],'y');
+  label('H '+H+'″',[left-1.8,-H/2,front]);
+  dimensions.visible=dimensionToggle?dimensionToggle.checked:true;
  };
- if(dimensionToggle)dimensionToggle.addEventListener('change',()=>{
-  if(dimensionDisplay)dimensionDisplay.hidden=!dimensionToggle.checked;
- });
  const steel=new THREE.MeshStandardMaterial({color:0xc6cdd2,metalness:.68,roughness:.29,side:THREE.DoubleSide});
  const dark=new THREE.MeshStandardMaterial({color:0x747e87,metalness:.5,roughness:.4});
  const add=(w,h,d,x,y,z,mat=steel)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);o.position.set(x,y,z);assembly.add(o);return o};
@@ -68,7 +89,7 @@
    const dots=new THREE.Mesh(new THREE.PlaneGeometry(W-6,D-6),new THREE.MeshBasicMaterial({map:texture,transparent:true,depthWrite:false,side:THREE.DoubleSide}));
    dots.rotation.x=-Math.PI/2;dots.position.y=.012;assembly.add(dots);
   }
-  updateDimensions(W,D,H);
+  rebuildDimensions(W,D,H);
   camera.position.set(W*.9,H*.95,D*1.65+30);controls.target.set(0,-H*.4,0);controls.update();
  }
  const resize=()=>{const w=host.clientWidth,h=Math.max(300,Math.min(530,w*.63));renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix()};
