@@ -30,71 +30,42 @@
   // CAD reference is 24 W x 12 D x 12 H (inches). Web preview uses
   // panel-specific scaling and anchored component repositioning, not engineering CAD.
   // Export coordinates: X width, Y vertical, Z depth; GLB units are meters.
-  const inch=.0254, base={w:24,d:12,h:12};
-  const nodes=[];
+  const base={w:24,d:12,h:12};
+  // Scale the complete CAD assembly so panels that were not caught by name-based
+  // transforms also resize. Counter-scale rigid hardware to retain its shape.
+  const rigid=/blower|motor|capacitor|controller|switch|connector|screw|bolt|nut|washer|hinge|latch|catch|finger.guard|knob|potentiometer|bracket|gauge|minihelic|magnehelic/i;
+  const originals=[];
   model.traverse(node=>{
-   if(node===model || !node.name)return;
-   const name=node.name.toLowerCase();
-   const panel=/panel|bottom|door angle|plenum wrap|gasket|hepa 12|filter upstream|filter downstream/.test(name);
-   const hardware=/screw|nut|hinge|catch|latch|connector|capacitor|controller|switch|breaker/.test(name);
-   const fixed=/blower|finger guard|bracket/.test(name);
-   // Filter unit parent is moved as a unit; its contents are otherwise unchanged.
-   const filterParent=/^filter unit/.test(name);
-   nodes.push({node,name,panel,hardware,fixed,filterParent,pos:node.position.clone(),scale:node.scale.clone()});
+    if(node===model)return;
+    originals.push({node,scale:node.scale.clone(),rigid:node.isMesh&&rigid.test(node.name)});
   });
-  const modelCenter=center.clone();
-  const shellScale=(name,sx,sy,sz)=>{
-   if(/side (external|internal) panel|plenum side panel/.test(name))return [1,sy,sz];
-   if(/rear external panel/.test(name))return [sx,sy,1];
-   if(/front panel|door panel|door angle|latch panel/.test(name))return [sx,sy,1];
-   if(/bottom|hepa 12|filter upstream gasket|filter downstream gasket/.test(name))return [sx,1,sz];
-   if(/plenum wrap/.test(name))return [sx,1,sz];
-   return [1,1,1];
-  };
-  const move=(v,delta,extent)=>{
-   // Move edge-attached parts while retaining central components near their CAD positions.
-   const t=Math.min(1,Math.abs(v)/(extent*.5));
-   return Math.sign(v)*delta*.5*t;
-  };
   draw=s=>{
-   const dx=(s.w-base.w)*inch,dy=(s.h-base.h)*inch,dz=(s.d-base.d)*inch;
-   const sx=s.w/base.w,sy=s.h/base.h,sz=s.d/base.d;
-   for(const item of nodes){
-    const {node,name,pos,scale,panel,hardware,fixed,filterParent}=item;
-    node.position.copy(pos);node.scale.copy(scale);
-    if(panel && node.isMesh){
-     const [mx,my,mz]=shellScale(name,sx,sy,sz);
-     node.scale.set(scale.x*mx,scale.y*my,scale.z*mz);
+    const sx=s.w/base.w,sy=s.h/base.h,sz=s.d/base.d;
+    model.scale.set(sx,sy,sz);
+    // Keep mechanical hardware rigid even as its mounting location follows
+    // the changing enclosure envelope. This is a visual approximation.
+    for(const item of originals){
+      item.node.scale.copy(item.scale);
+      if(item.rigid){
+        item.node.scale.x/=sx;
+        item.node.scale.y/=sy;
+        item.node.scale.z/=sz;
+      }
     }
-    if(filterParent){
-     // Upper filtration system follows the height of the chamber.
-     node.position.y=pos.y+dy;
-    }else if(node.parent===model || node.parent===gltf.scene.children[0]){
-     // Hardware and side/front/rear panels move with the corresponding edges.
-     if(/side (external|internal) panel|plenum side panel|hinge|catch|latch panel/.test(name))node.position.x=pos.x+move(pos.x,dx,size.x);
-     if(/rear external panel/.test(name))node.position.z=pos.z+move(pos.z,dz,size.z);
-     if(/front panel|door panel|door angle|hinge|catch/.test(name))node.position.z=pos.z+move(pos.z,dz,size.z);
-     if(hardware){
-      node.position.x=pos.x+move(pos.x,dx,size.x);
-      node.position.z=pos.z+move(pos.z,dz,size.z);
-      node.position.y=pos.y+move(pos.y-center.y,dy,size.y);
-     }
-     if(/front panel|rear external panel|side (external|internal) panel|door panel|door angle/.test(name)){
-      node.position.y=pos.y+dy*.5;
-     }
+    model.updateMatrixWorld(true);
+    const bounds=new THREE.Box3().setFromObject(model);
+    const extent=bounds.getSize(new THREE.Vector3());
+    const focus=bounds.getCenter(new THREE.Vector3());
+    const span=Math.max(extent.x,extent.y,extent.z);
+    controls.minDistance=Math.max(.1,span*.65);controls.maxDistance=span*8;
+    if(!draw.initialized){
+      camera.position.set(focus.x+span*1.45,focus.y+span*1.05,focus.z+span*1.75);
+      draw.initialized=true;
     }
-   }
-   model.updateMatrixWorld(true);
-   const currentBox=new THREE.Box3().setFromObject(model),currentSize=currentBox.getSize(new THREE.Vector3()),currentCenter=currentBox.getCenter(new THREE.Vector3());
-   const span=Math.max(currentSize.x,currentSize.y,currentSize.z);
-   controls.minDistance=span*.8;controls.maxDistance=span*8;
-   // Preserve user orbit while changing options; initial view is set only once.
-   if(!draw.initialized){
-    camera.position.set(currentCenter.x+span*1.45,currentCenter.y+span*1.05,currentCenter.z+span*1.75);
-    controls.target.copy(currentCenter);draw.initialized=true;
-   }else{controls.target.copy(currentCenter)}
-   camera.near=Math.max(.001,span*.001);camera.far=span*20;camera.updateProjectionMatrix();controls.update();
-   $('csc-model-note').textContent='Parametric visualization based on the 24 × 12 × 12 in. SolidWorks reference. Chamber panels adjust to selected internal W × D × H. Hardware and filtration remain illustrative; final geometry and filter sizing require engineering review.';
+    controls.target.copy(focus);
+    camera.near=Math.max(.001,span*.001);camera.far=span*20;
+    camera.updateProjectionMatrix();controls.update();
+    $('csc-model-note').textContent='Interactive size visualization based on the 24 × 12 × 12 in. SolidWorks reference. Enclosure components resize with W × D × H; mechanical hardware is shown at nominal size. Final CAD and component placement require engineering review.';
   };
   const resize=()=>{const w=Math.max(1,host.clientWidth),h=Math.max(310,Math.min(500,w*.7));renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix()};new ResizeObserver(resize).observe(host);
   update();resize();let visible=true;new IntersectionObserver(e=>visible=e[0]?.isIntersecting??true).observe(host);
