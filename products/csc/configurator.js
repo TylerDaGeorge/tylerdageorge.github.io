@@ -20,53 +20,104 @@
   const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minDistance=23;controls.maxDistance=140;
   const parts=new THREE.Group();scene.add(parts);
 
-  const {GLTFLoader}=await import('https://esm.sh/three@0.160.1/examples/jsm/loaders/GLTFLoader.js');
-  const loader=new GLTFLoader();
-  const gltf=await loader.loadAsync('/products/csc/CSC_Assembly.glb');
-  const model=gltf.scene;
-  const box=new THREE.Box3().setFromObject(model),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());
-  model.position.sub(center);
-  parts.add(model);
-  // CAD reference is 24 W x 12 D x 12 H (inches). Web preview uses
-  // panel-specific scaling and anchored component repositioning, not engineering CAD.
-  // Export coordinates: X width, Y vertical, Z depth; GLB units are meters.
-  const base={w:24,d:12,h:12};
-  // Scale the complete CAD assembly so panels that were not caught by name-based
-  // transforms also resize. Counter-scale rigid hardware to retain its shape.
-  const rigid=/blower|motor|capacitor|controller|switch|connector|screw|bolt|nut|washer|hinge|latch|catch|finger.guard|knob|potentiometer|bracket|gauge|minihelic|magnehelic/i;
-  const originals=[];
-  model.traverse(node=>{
-    if(node===model)return;
-    originals.push({node,scale:node.scale.clone(),rigid:node.isMesh&&rigid.test(node.name)});
-  });
-  draw=s=>{
-    const sx=s.w/base.w,sy=s.h/base.h,sz=s.d/base.d;
-    model.scale.set(sx,sy,sz);
-    // Keep mechanical hardware rigid even as its mounting location follows
-    // the changing enclosure envelope. This is a visual approximation.
-    for(const item of originals){
-      item.node.scale.copy(item.scale);
-      if(item.rigid){
-        item.node.scale.x/=sx;
-        item.node.scale.y/=sy;
-        item.node.scale.z/=sz;
+  const metalWhite=new THREE.MeshStandardMaterial({color:0xe7e9eb,metalness:.38,roughness:.36});
+  const stainless=new THREE.MeshStandardMaterial({color:0xb3bec8,metalness:.8,roughness:.25});
+  const dark=new THREE.MeshStandardMaterial({color:0x37434d,metalness:.45,roughness:.44});
+  const seal=new THREE.MeshStandardMaterial({color:0x53636d,roughness:.85});
+  const glass=new THREE.MeshPhysicalMaterial({color:0xb4dce9,transparent:true,opacity:.26,metalness:.05,roughness:.12,depthWrite:false,side:THREE.DoubleSide});
+  const screwMat=new THREE.MeshStandardMaterial({color:0x88939c,metalness:.85,roughness:.28});
+  const perforation=new THREE.MeshStandardMaterial({color:0x65717a,metalness:.45,roughness:.65});
+  const edge=new THREE.LineBasicMaterial({color:0x88939b,transparent:true,opacity:.38});
+  const box=(w,h,d,x,y,z,mat,outline=false)=>{
+    const mesh=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);mesh.position.set(x,y,z);parts.add(mesh);
+    if(outline){const e=new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry,24),edge);mesh.add(e)}
+    return mesh;
+  };
+  const cylinder=(radius,depth,x,y,z,mat,rotationX=0)=>{
+    const mesh=new THREE.Mesh(new THREE.CylinderGeometry(radius,radius,depth,24),mat);
+    mesh.rotation.x=rotationX;mesh.position.set(x,y,z);parts.add(mesh);return mesh;
+  };
+  const screw=(x,y,z)=>cylinder(.075,.055,x,y,z,screwMat,Math.PI/2);
+  const rebuild=s=>{
+    parts.clear();
+    const W=s.w+2.5,D=s.d+3.4,H=s.h+7.0,zoneH=s.h;
+    const painted=s.material==='PAINTED';
+    const mat=painted?metalWhite:stainless;
+    const zFront=D/2,zRear=-D/2;
+    const t=.16;
+    // Clean staging enclosure: tray floor, outer side skins and solid rear.
+    box(W,t,D,0,.08,0,mat,true);
+    box(t,zoneH,D,-W/2+t/2,zoneH/2,0,mat,true);
+    box(t,zoneH,D,W/2-t/2,zoneH/2,0,mat,true);
+    box(W,zoneH,t,0,zoneH/2,zRear+t/2,mat,true);
+    // Return-air chutes running vertically along both side walls.
+    for(const x of [-W/2+.55,W/2-.55]){
+      box(.13,zoneH-.7,D-1.1,x,zoneH/2,0,mat);
+      for(let k=0;k<10;k++){
+        const zz=zRear+1+(k+.5)*(D-2)/10;
+        box(.18,.09,.65,x,1.1,zz,perforation);
       }
     }
-    model.updateMatrixWorld(true);
-    const bounds=new THREE.Box3().setFromObject(model);
-    const extent=bounds.getSize(new THREE.Vector3());
-    const focus=bounds.getCenter(new THREE.Vector3());
-    const span=Math.max(extent.x,extent.y,extent.z);
-    controls.minDistance=Math.max(.1,span*.65);controls.maxDistance=span*8;
-    if(!draw.initialized){
-      camera.position.set(focus.x+span*1.45,focus.y+span*1.05,focus.z+span*1.75);
-      draw.initialized=true;
+    // Perforated floor: a thin deck with inset circular dark perforations.
+    box(W-1.2,.16,D-1.2,0,.45,0,mat);
+    const pitch=1.05,holesX=Math.floor((W-2.7)/pitch),holesZ=Math.floor((D-2.7)/pitch);
+    const dot=new THREE.CylinderGeometry(.095,.095,.012,8);
+    for(let i=0;i<holesX;i++)for(let j=0;j<holesZ;j++){
+      const mesh=new THREE.Mesh(dot,perforation);mesh.position.set((i-(holesX-1)/2)*pitch,.543,(j-(holesZ-1)/2)*pitch);parts.add(mesh);
+    }
+    // Overhead HEPA cartridge and dedicated upper plenum / blower housing.
+    box(W-.9,.46,D-.9,0,zoneH-.45,0,seal);
+    box(W,.22,D,0,zoneH+.08,0,mat,true);
+    box(W,6.1,D,0,zoneH+3.25,0,mat,true);
+    box(W,.22,D,0,zoneH+6.35,0,mat,true);
+    // Top inlet prefilter and concentric blower grille.
+    box(Math.min(10,W-3),.10,Math.min(10,D-3),0,zoneH+6.52,0,dark);
+    const ring=new THREE.Mesh(new THREE.TorusGeometry(Math.min(3.3,(W-4)/3,(D-4)/3),.10,8,48),dark);
+    ring.rotation.x=Math.PI/2;ring.position.set(0,zoneH+6.62,0);parts.add(ring);
+    for(let k=0;k<7;k++)box(Math.min(6,W-5),.08,.09,0,zoneH+6.66,-2.4+k*.8,screwMat);
+    // Front face door frame and recessed clear glazing.
+    const doorZ=zFront+.16,frame=.66;
+    box(W,frame,.34,0,zoneH-frame/2,doorZ,mat,true);
+    box(W,frame,.34,0,frame/2,doorZ,mat,true);
+    for(const x of [-W/2+frame/2,W/2-frame/2])box(frame,zoneH-frame*2,.34,x,zoneH/2,doorZ,mat,true);
+    box(W-frame*2,zoneH-frame*2,.10,0,zoneH/2,doorZ+.02,glass);
+    // Hinge barrel and latching handle reverse with selected swing.
+    const hingeX=s.door==='LH'?-W/2+.2:W/2-.2;
+    const handleX=-hingeX+Math.sign(hingeX)*.25;
+    for(const yy of [2.3,zoneH-2.3]){
+      cylinder(.23,1.05,hingeX,yy,doorZ+.25,screwMat);
+    }
+    box(.34,2.6,.5,handleX,zoneH/2,doorZ+.65,dark,true);
+    // Optional removable shelf with subtle side brackets.
+    if(s.shelf){
+      box(W-2,.20,D-1.5,0,zoneH*.53,0,stainless,true);
+      for(const x of [-W/2+.85,W/2-.85])box(.55,.25,D-2,x,zoneH*.53-.15,0,dark);
+    }
+    // Optional pressure gauge on upper front fascia.
+    if(s.gauge!=='NONE'){
+      const gauge=cylinder(s.gauge==='MAGNEHELIC'?1.0:.72,.25,W/2-2.1,zoneH+3.15,doorZ+.08,dark,Math.PI/2);
+      const face=cylinder(s.gauge==='MAGNEHELIC'?.78:.52,.27,W/2-2.1,zoneH+3.15,doorZ+.24,metalWhite,Math.PI/2);
+      box(.08,.58,.05,W/2-2.1,zoneH+3.15,doorZ+.41,dark);
+    }
+    // Panel fasteners and removable top access screws.
+    for(const x of [-W/2+.4,W/2-.4]){
+      for(const y of [1.2,zoneH-1.2,zoneH+1.0,zoneH+5.65])screw(x,y,doorZ+.27);
+      for(const z of [zRear+.7,zFront-.7])screw(x,zoneH+6.53,z);
+    }
+    // Floor feet.
+    for(const x of [-W/2+1,W/2-1])for(const z of [zRear+1,zFront-1])box(.8,.35,.8,x,-.22,z,dark);
+    const bounds=new THREE.Box3().setFromObject(parts),size=bounds.getSize(new THREE.Vector3()),focus=bounds.getCenter(new THREE.Vector3());
+    const span=Math.max(size.x,size.y,size.z);
+    controls.minDistance=span*.65;controls.maxDistance=span*7;
+    if(!rebuild.initialized){
+      camera.position.set(span*1.13,span*.88,span*1.55);
+      rebuild.initialized=true;
     }
     controls.target.copy(focus);
-    camera.near=Math.max(.001,span*.001);camera.far=span*20;
-    camera.updateProjectionMatrix();controls.update();
-    $('csc-model-note').textContent='Interactive size visualization based on the 24 × 12 × 12 in. SolidWorks reference. Enclosure components resize with W × D × H; mechanical hardware is shown at nominal size. Final CAD and component placement require engineering review.';
+    camera.near=.1;camera.far=span*20;camera.updateProjectionMatrix();controls.update();
+    $('csc-model-note').textContent='High-detail conceptual CSC model. Enclosure, door, plenum, perforated floor, and optional shelf respond to the selected size. Appearance is illustrative; final engineered geometry and performance require validation.';
   };
+  draw=rebuild;
   const resize=()=>{const w=Math.max(1,host.clientWidth),h=Math.max(310,Math.min(500,w*.7));renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix()};new ResizeObserver(resize).observe(host);
   update();resize();let visible=true;new IntersectionObserver(e=>visible=e[0]?.isIntersecting??true).observe(host);
   function animate(){requestAnimationFrame(animate);if(visible){controls.update();renderer.render(scene,camera)}}animate();
