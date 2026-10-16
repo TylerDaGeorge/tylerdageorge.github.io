@@ -115,3 +115,14 @@ if (cetQuoteParams.get('product') === 'cet') {
   if (skuInput) skuInput.value = cetQuoteParams.get('sku') || '';
   if (optionsInput) optionsInput.value = ['tabletop','material','width','depth','height','quantity'].map(k => cetQuoteParams.get(k) ? k + ': ' + cetQuoteParams.get(k) : '').filter(Boolean).join(' | ');
 }
+
+
+const cscQuoteParams=new URLSearchParams(window.location.search);
+if(cscQuoteParams.get('product')==='csc'&&cscQuoteParams.has('sku')){
+ const sku=document.querySelector('#requested-sku'),options=document.querySelector('#requested-options');
+ if(sku)sku.value=cscQuoteParams.get('sku')||'';
+ if(options)options.value=['width','depth','height','airflow','mount','material','door','shelf','tray','gauge','quantity'].map(k=>cscQuoteParams.has(k)?k+': '+cscQuoteParams.get(k):'').join(' | ');
+ const chamber=document.querySelector('#chamber-size');if(chamber)chamber.value=['width','depth','height'].map(k=>cscQuoteParams.get(k)||'').join(' × ')+' in. (internal)';
+ const qty=document.querySelector('#quantity');if(qty)qty.value=cscQuoteParams.get('quantity')||'1';
+ const details=document.querySelector('#requirements');if(details)details.value='CSC configured options: '+(options?.value||'')+'\nPlease confirm mounting compatibility, final dimensions and performance.';
+}
