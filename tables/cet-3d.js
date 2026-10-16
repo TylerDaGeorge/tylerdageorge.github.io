@@ -13,13 +13,18 @@
  const light=new THREE.DirectionalLight(0xffffff,2);light.position.set(40,75,50);scene.add(light);
  const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minDistance=35;controls.maxDistance=260;
  const assembly=new THREE.Group();scene.add(assembly);
- const dimensions=new THREE.Group();scene.add(dimensions);
- const dimMaterial=new THREE.LineBasicMaterial({color:0x2563eb,depthTest:false,transparent:true,opacity:.95});
- const makeLine=(a,b)=>{const g=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(...a),new THREE.Vector3(...b)]);const l=new THREE.Line(g,dimMaterial);l.renderOrder=50;dimensions.add(l)};
- const makeLabel=(value,pos)=>{const c=document.createElement('canvas');c.width=256;c.height=80;const ctx=c.getContext('2d');ctx.fillStyle='rgba(255,255,255,.94)';ctx.fillRect(0,0,256,80);ctx.strokeStyle='#2563eb';ctx.lineWidth=3;ctx.strokeRect(2,2,252,76);ctx.font='bold 37px Arial';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#1d4ed8';ctx.fillText(value,128,42);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;const o=new THREE.Sprite(new THREE.SpriteMaterial({map:t,depthTest:false,transparent:true}));o.position.set(...pos);o.scale.set(11,3.44,1);o.renderOrder=60;dimensions.add(o)};
- const dimension=(a,b,label,labelPos)=>{makeLine(a,b);makeLabel(label,labelPos);};
+ // Compact screen-space dimensions stay readable while the model rotates.
  const dimensionToggle=document.getElementById('cet-show-dimensions');
- if(dimensionToggle)dimensionToggle.addEventListener('change',()=>{dimensions.visible=dimensionToggle.checked});
+ const dimensionDisplay=document.getElementById('cet-dimension-readout');
+ const updateDimensions=(W,D,H)=>{
+  if(!dimensionDisplay)return;
+  dimensionDisplay.querySelector('[data-dim="w"]').textContent=W+'″';
+  dimensionDisplay.querySelector('[data-dim="d"]').textContent=D+'″';
+  dimensionDisplay.querySelector('[data-dim="h"]').textContent=H+'″';
+ };
+ if(dimensionToggle)dimensionToggle.addEventListener('change',()=>{
+  if(dimensionDisplay)dimensionDisplay.hidden=!dimensionToggle.checked;
+ });
  const steel=new THREE.MeshStandardMaterial({color:0xc6cdd2,metalness:.68,roughness:.29,side:THREE.DoubleSide});
  const dark=new THREE.MeshStandardMaterial({color:0x747e87,metalness:.5,roughness:.4});
  const add=(w,h,d,x,y,z,mat=steel)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);o.position.set(x,y,z);assembly.add(o);return o};
@@ -63,22 +68,7 @@
    const dots=new THREE.Mesh(new THREE.PlaneGeometry(W-6,D-6),new THREE.MeshBasicMaterial({map:texture,transparent:true,depthWrite:false,side:THREE.DoubleSide}));
    dots.rotation.x=-Math.PI/2;dots.position.y=.012;assembly.add(dots);
   }
-  dimensions.clear();
-  const xEdge=-W/2-7,zEdge=D/2+7,yDim=-H-3;
-  // Overall width, measured between outer tabletop edges.
-  makeLine([-W/2,0,zEdge],[-W/2,yDim,zEdge]);
-  makeLine([W/2,0,zEdge],[W/2,yDim,zEdge]);
-  dimension([-W/2,yDim,zEdge],[W/2,yDim,zEdge],'W '+W+'″',[0,yDim,zEdge+2]);
-  // Overall depth, measured between front and rear tabletop edges.
-  const xDim=W/2+8;
-  makeLine([W/2,0,-D/2],[xDim,0,-D/2]);
-  makeLine([W/2,0,D/2],[xDim,0,D/2]);
-  dimension([xDim,0,-D/2],[xDim,0,D/2],'D '+D+'″',[xDim+2,0,0]);
-  // Overall height from floor to finished top.
-  makeLine([-W/2,0,-D/2],[xEdge,0,-D/2]);
-  makeLine([-W/2,-H,-D/2],[xEdge,-H,-D/2]);
-  dimension([xEdge,0,-D/2],[xEdge,-H,-D/2],'H '+H+'″',[xEdge-2,-H/2,-D/2]);
-  dimensions.visible=dimensionToggle?dimensionToggle.checked:true;
+  updateDimensions(W,D,H);
   camera.position.set(W*.9,H*.95,D*1.65+30);controls.target.set(0,-H*.4,0);controls.update();
  }
  const resize=()=>{const w=host.clientWidth,h=Math.max(300,Math.min(530,w*.63));renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix()};
