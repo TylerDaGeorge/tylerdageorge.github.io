@@ -1,1 +1,6 @@
-name = "eden-stripe-checkout"\nmain = "src/index.js"\ncompatibility_date = "2026-10-01"\n\n[vars]\nCHECKOUT_ENABLED = "false"\n
+name = "eden-stripe-checkout"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+CHECKOUT_ENABLED = "false"
