@@ -37,7 +37,6 @@ export default {
     add('line_items[0][price_data][unit_amount]',unit*100);
     add('line_items[0][price_data][product_data][name]','Clean Environment Table');
     add('line_items[0][price_data][product_data][description]',sku);
-    add('line_items[0][price_data][product_data][tax_code]','txcd_99999999');
     add('line_items[0][quantity]',qty);
     add('client_reference_id',crypto.randomUUID());
     add('metadata[sku]',sku);add('metadata[quantity]',qty);add('metadata[product]','CET');
