@@ -21,13 +21,14 @@ function updateBuy(){
 buyButton?.addEventListener('click',async()=>{
  const s=get();const token=window.prompt('Stripe TEST Checkout token (no real charges):');if(!token)return;buyButton.disabled=true;buyStatus.textContent='Preparing TEST checkout…';
  try{
-  const response=await fetch(CHECKOUT_API.replace(/\\/$/,'')+'/checkout',{method:'POST',headers:{'content-type':'application/json','x-eden-test-token':token},body:JSON.stringify({product:'cet',type:s.type,material:s.material,width:Number(s.width),depth:Number(s.depth),height:Number(s.height),quantity:s.quantity})});
+  const response=await fetch(CHECKOUT_API.replace(/\/$/,'')+'/checkout',{method:'POST',headers:{'content-type':'application/json','x-eden-test-token':token},body:JSON.stringify({product:'cet',type:s.type,material:s.material,width:Number(s.width),depth:Number(s.depth),height:Number(s.height),quantity:s.quantity})});
   const result=await response.json();
   if(!response.ok||!result.url||!result.url.startsWith('https://checkout.stripe.com/'))throw Error(result.error||'Checkout unavailable');
   window.location.assign(result.url);
  }catch(error){buyStatus.textContent=error.message||'Checkout unavailable. Please request a quote.';updateBuy();}
 });
-if(TEST_MODE){buyButton.textContent='Test Buy with Stripe';buyStatus.textContent='Sandbox only — test card payments, no real charges.';}\nfields.forEach(id=>{byId(id).addEventListener('change',update);byId(id).addEventListener('input',update)});fetch('/tables/cet-prices.json').then(r=>{if(!r.ok)throw Error('Price catalog unavailable');return r.json()}).then(x=>{if(Object.keys(x.prices||{}).length!==144)throw Error('Incomplete catalog');catalog=x;update()}).catch(()=>{catalog=null;update()});update();
+if(TEST_MODE){buyButton.textContent='Test Buy with Stripe';buyStatus.textContent='Sandbox only — test card payments, no real charges.';}
+fields.forEach(id=>{byId(id).addEventListener('change',update);byId(id).addEventListener('input',update)});fetch('/tables/cet-prices.json').then(r=>{if(!r.ok)throw Error('Price catalog unavailable');return r.json()}).then(x=>{if(Object.keys(x.prices||{}).length!==144)throw Error('Incomplete catalog');catalog=x;update()}).catch(()=>{catalog=null;update()});update();
 byId('cet-copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(get().sku);byId('cet-copy-status').textContent='SKU copied.';}catch{byId('cet-copy-status').textContent='Select the SKU above to copy it.';}});
 byId('cet-download').addEventListener('click',()=>{
  const s=get(),v=getPrice(s);const existing=document.querySelector('.cet-print-sheet');if(existing)existing.remove();
