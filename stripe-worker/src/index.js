@@ -1,6 +1,6 @@
 const ORIGIN = 'https://edenindustrialsystems.com';
 const json = (body,status=200,headers={}) => new Response(JSON.stringify(body),{status,headers:{'content-type':'application/json','cache-control':'no-store',...headers}});
-const cors = {'access-control-allow-origin':ORIGIN,'access-control-allow-methods':'POST, OPTIONS','access-control-allow-headers':'content-type'};
+const cors = {'access-control-allow-origin':ORIGIN,'access-control-allow-methods':'POST, OPTIONS','access-control-allow-headers':'content-type, x-eden-test-token'};
 const stripe = async (env,path,params) => {
  const r=await fetch('https://api.stripe.com/v1/'+path,{method:'POST',headers:{authorization:'Bearer '+env.STRIPE_SECRET_KEY,'content-type':'application/x-www-form-urlencoded'},body:params});
  const data=await r.json();if(!r.ok)throw new Error(data.error?.message||'Stripe request failed');return data;
@@ -13,6 +13,13 @@ export default {
   if(url.pathname==='/checkout'&&request.method==='POST'){
    if(request.headers.get('origin')!==ORIGIN)return json({error:'Invalid origin'},403,cors);
    if(env.CHECKOUT_ENABLED!=='true')return json({error:'Checkout is not enabled yet. Please request a quote.'},503,cors);
+   // Restricted test access: requires a separately configured encrypted token.
+   const supplied=request.headers.get('x-eden-test-token')||'';
+   const configured=env.TEST_CHECKOUT_TOKEN;
+   if(typeof configured!=='string'||configured.length<32)return json({error:'Test checkout access is not configured.'},503,cors);
+   const enc=new TextEncoder();
+   const suppliedBytes=enc.encode(supplied),configuredBytes=enc.encode(configured);
+   if(suppliedBytes.length!==configuredBytes.length||!crypto.subtle.timingSafeEqual(suppliedBytes,configuredBytes))return json({error:'Unauthorized test checkout.'},403,cors);
    // This deployment is test-only. Never accept a live Stripe key for Checkout.
    if(typeof env.STRIPE_SECRET_KEY!=='string'||!env.STRIPE_SECRET_KEY.startsWith('sk_test_'))return json({error:'Test checkout is unavailable.'},503,cors);
    try{
