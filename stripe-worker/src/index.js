@@ -13,6 +13,8 @@ export default {
   if(url.pathname==='/checkout'&&request.method==='POST'){
    if(request.headers.get('origin')!==ORIGIN)return json({error:'Invalid origin'},403,cors);
    if(env.CHECKOUT_ENABLED!=='true')return json({error:'Checkout is not enabled yet. Please request a quote.'},503,cors);
+   // This deployment is test-only. Never accept a live Stripe key for Checkout.
+   if(typeof env.STRIPE_SECRET_KEY!=='string'||!env.STRIPE_SECRET_KEY.startsWith('sk_test_'))return json({error:'Test checkout is unavailable.'},503,cors);
    try{
     const input=await request.json(),qty=input.quantity;
     if(input.product!=='cet'||input.type!=='ST'||!['SST','SSTL'].includes(input.material)||
@@ -42,6 +44,7 @@ export default {
     add('metadata[sku]',sku);add('metadata[quantity]',qty);add('metadata[product]','CET');
     add('payment_intent_data[metadata][sku]',sku);
     const session=await stripe(env,'checkout/sessions',p);
+    if(session.livemode!==false)throw new Error('Unexpected live-mode Checkout session');
     return json({url:session.url},200,cors);
    }catch(e){console.error('Checkout error',e);return json({error:'Unable to create checkout. Please request a quote.'},502,cors)}
   }
