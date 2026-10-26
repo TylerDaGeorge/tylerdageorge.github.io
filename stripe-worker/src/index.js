@@ -68,8 +68,21 @@ export default {
    const signatures=signature.split(',').filter(s=>s.startsWith('v1=')).map(s=>s.slice(3));
    if(!signatures.some(s=>s.length===expected.length&&s===expected))return new Response('Invalid signature',{status:400});
    const event=JSON.parse(body);
-   // No fulfillment until a durable, idempotent order store is configured.
-   console.log('Verified Stripe event',event.id,event.type);
+   if(event.type==='checkout.session.completed'){
+    const session=event.data?.object;
+    if(!env.DB)return json({error:'Order database unavailable'},503);
+    if(!session||session.livemode!==false||session.payment_status!=='paid'||session.metadata?.product!=='CET')
+      return json({received:true,ignored:true});
+    const sku=session.metadata.sku,quantity=Number(session.metadata.quantity);
+    if(typeof sku!=='string'||!/^CET-ST-(SST|SSTL)-(36|48|60|72|84|96)Wx(24|30|36)Dx(30|36)H$/.test(sku)||
+      !Number.isSafeInteger(quantity)||quantity<1||quantity>5||!Number.isSafeInteger(session.amount_total))
+      return json({error:'Invalid paid order data'},422);
+    try{
+     await env.DB.prepare('INSERT INTO orders (stripe_session_id,stripe_event_id,stripe_payment_intent_id,sku,quantity,amount_total,currency,payment_status,fulfillment_status) VALUES (?,?,?,?,?,?,?,?,?) ON CONFLICT(stripe_session_id) DO NOTHING')
+      .bind(session.id,event.id,session.payment_intent||null,sku,quantity,session.amount_total,session.currency||'usd',session.payment_status,'pending').run();
+     console.log('Recorded paid CET order',session.id,sku);
+    }catch(e){console.error('Order persistence failed',e?.message);return json({error:'Order persistence unavailable'},503);}
+   }
    return json({received:true});
   }
   return json({error:'Not found'},404);
