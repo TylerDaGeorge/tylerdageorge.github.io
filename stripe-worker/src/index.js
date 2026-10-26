@@ -1,6 +1,6 @@
 const ORIGIN = 'https://edenindustrialsystems.com';
 const json = (body,status=200,headers={}) => new Response(JSON.stringify(body),{status,headers:{'content-type':'application/json','cache-control':'no-store',...headers}});
-const cors = {'access-control-allow-origin':ORIGIN,'access-control-allow-methods':'POST, OPTIONS','access-control-allow-headers':'content-type, x-eden-test-token'};
+const cors = {'access-control-allow-origin':ORIGIN,'access-control-allow-methods':'POST, OPTIONS','access-control-allow-headers':'content-type, x-eden-test-token, x-eden-admin-token'};
 const stripe = async (env,path,params) => {
  const r=await fetch('https://api.stripe.com/v1/'+path,{method:'POST',headers:{authorization:'Bearer '+env.STRIPE_SECRET_KEY,'content-type':'application/x-www-form-urlencoded'},body:params});
  const data=await r.json();if(!r.ok){const err=data.error||{};console.error('Stripe API rejected Checkout',{status:r.status,type:err.type,code:err.code,param:err.param,message:err.message});throw new Error('Stripe API rejected Checkout');}return data;
@@ -10,6 +10,33 @@ export default {
   const url=new URL(request.url);
   if(request.method==='OPTIONS')return new Response(null,{status:204,headers:cors});
   if(url.pathname==='/health')return json({status:'ok',checkout_enabled:env.CHECKOUT_ENABLED==='true'});
+  // Owner-only order management. Never expose the admin secret in static site code.
+  if(url.pathname==='/admin/orders'||/^\/admin\/orders\/\d+\/status$/.test(url.pathname)){
+   if(request.headers.get('origin')!==ORIGIN)return json({error:'Forbidden'},403,cors);
+   const configured=env.ADMIN_ORDER_TOKEN,supplied=request.headers.get('x-eden-admin-token')||'';
+   if(typeof configured!=='string'||configured.length<32)return json({error:'Admin access is not configured'},503,cors);
+   const enc=new TextEncoder(),a=enc.encode(supplied),b=enc.encode(configured);
+   if(a.length!==b.length||!crypto.subtle.timingSafeEqual(a,b))return json({error:'Unauthorized'},401,cors);
+   if(!env.DB)return json({error:'Database unavailable'},503,cors);
+   if(url.pathname==='/admin/orders'&&request.method==='GET'){
+    const result=await env.DB.prepare('SELECT id,sku,quantity,amount_total,currency,payment_status,fulfillment_status,created_at,updated_at FROM orders ORDER BY id DESC LIMIT 100').all();
+    return json({orders:result.results||[]},200,cors);
+   }
+   const match=url.pathname.match(/^\/admin\/orders\/(\d+)\/status$/);
+   if(match&&request.method==='PATCH'){
+    let input;
+    try{input=await request.json();}catch{return json({error:'Invalid JSON'},400,cors);}
+    const allowed=['pending','in_production','ready_to_ship','shipped','completed'];
+    if(!allowed.includes(input?.status))return json({error:'Invalid status'},400,cors);
+    const id=Number(match[1]);
+    if(!Number.isSafeInteger(id)||id<1)return json({error:'Invalid order ID'},400,cors);
+    const result=await env.DB.prepare("UPDATE orders SET fulfillment_status=?,updated_at=CURRENT_TIMESTAMP WHERE id=? AND payment_status='paid' RETURNING id,fulfillment_status,updated_at").bind(input.status,id).first();
+    if(!result)return json({error:'Order not found'},404,cors);
+    console.log('Order fulfillment updated',id,input.status);
+    return json({order:result},200,cors);
+   }
+   return json({error:'Method not allowed'},405,cors);
+  }
   if(url.pathname==='/checkout'&&request.method==='POST'){
    if(request.headers.get('origin')!==ORIGIN)return json({error:'Invalid origin'},403,cors);
    if(env.CHECKOUT_ENABLED!=='true')return json({error:'Checkout is not enabled yet. Please request a quote.'},503,cors);
