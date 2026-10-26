@@ -3,7 +3,7 @@ const json = (body,status=200,headers={}) => new Response(JSON.stringify(body),{
 const cors = {'access-control-allow-origin':ORIGIN,'access-control-allow-methods':'POST, OPTIONS','access-control-allow-headers':'content-type, x-eden-test-token'};
 const stripe = async (env,path,params) => {
  const r=await fetch('https://api.stripe.com/v1/'+path,{method:'POST',headers:{authorization:'Bearer '+env.STRIPE_SECRET_KEY,'content-type':'application/x-www-form-urlencoded'},body:params});
- const data=await r.json();if(!r.ok)throw new Error(data.error?.message||'Stripe request failed');return data;
+ const data=await r.json();if(!r.ok){const err=data.error||{};console.error('Stripe API rejected Checkout',{status:r.status,type:err.type,code:err.code,param:err.param,message:err.message});throw new Error('Stripe API rejected Checkout');}return data;
 };
 export default {
  async fetch(request,env){
