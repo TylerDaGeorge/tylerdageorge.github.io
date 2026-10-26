@@ -1,0 +1,11 @@
+{
+  "name": "eden-stripe-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "stripe": "^17.7.0"
+  }
+}
