@@ -24,7 +24,7 @@ function updateBuy(){
 buyButton?.addEventListener('click',async()=>{
  const s=get();const freight=freightQuote();if(freight?.status!=='reference'){buyStatus.textContent='Enter a supported delivery ZIP or request a freight quote.';return;}const token=window.prompt('Stripe TEST Checkout token (no real charges):');if(!token)return;buyButton.disabled=true;buyStatus.textContent='Preparing TEST checkout…';
  try{
-  const response=await fetch(CHECKOUT_API.replace(/\/$/,'')+'/checkout',{method:'POST',headers:{'content-type':'application/json','x-eden-test-token':token},body:JSON.stringify({product:'cet',type:s.type,material:s.material,width:Number(s.width),depth:Number(s.depth),height:Number(s.height),quantity:s.quantity,shipping_zip:freight.zip,delivery_liftgate:freight.liftgate>0})});
+  const response=await fetch(CHECKOUT_API.replace(/\/$/,'')+'/checkout',{method:'POST',headers:{'content-type':'application/json','x-eden-test-token':token},body:JSON.stringify({product:'cet',type:s.type,material:s.material,width:Number(s.width),depth:Number(s.depth),height:Number(s.height),quantity:s.quantity,shipping_zip:(byId('cet-ship-zip')?.value||'').trim(),delivery_liftgate:byId('cet-delivery-liftgate').checked})});
   const result=await response.json();
   if(!response.ok||!result.url||!result.url.startsWith('https://checkout.stripe.com/'))throw Error(result.error||'Checkout unavailable');
   window.location.assign(result.url);
