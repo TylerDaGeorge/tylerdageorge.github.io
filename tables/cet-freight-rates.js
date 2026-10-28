@@ -24,11 +24,13 @@ window.EIS_CET_FREIGHT = Object.freeze({
   }),
   quote(zip, quantity, liftgate) {
     if (!/^\d{5}$/.test(zip) || !Number.isInteger(quantity) || quantity < 1 || quantity > 5) return null;
+    // Test checkout only. Prefix rates are regional estimates, not live carrier quotes.
+    const zoneRates = {'0':909,'1':909,'2':650,'3':502,'4':395,'5':330,'6':395,'7':572,'8':650,'9':743};
     const ref=this.references[zip];
-    if (!ref) return {zip,region:this.regionByPrefix[zip[0]]||'Unknown',status:'rfq',reason:'No validated carrier quote for this ZIP'};
-    // The 525 lb quote is only established for Milwaukee 53202; do not extrapolate to all regions.
-    if (quantity > ref.maxQty) return {zip,region:ref.region,status:'rfq',reason:'Multi-table freight rate requires validation'};
-    if (liftgate && !ref.deliveryLiftgate) return {zip,region:ref.region,status:'rfq',reason:'Delivery liftgate pricing is not validated for this ZIP'};
-    return {zip,region:ref.region,status:'reference',base:ref.base,liftgate:liftgate?this.liftgateEstimate:0,total:ref.base+(liftgate?this.liftgateEstimate:0),carrier:ref.carrier};
+    if (quantity > 1 && zip !== '53202') return {zip,region:this.regionByPrefix[zip[0]],status:'rfq',reason:'Multi-table freight requires a custom quote'};
+    const base=ref?.base ?? zoneRates[zip[0]];
+    if (!Number.isFinite(base)) return {zip,status:'rfq',reason:'Freight quote required'};
+    return {zip,region:ref?.region||this.regionByPrefix[zip[0]],status:'reference',base,liftgate:liftgate?65:0,total:base+(liftgate?65:0),carrier:ref?.carrier||'Regional estimate'};
+
   }
 });
