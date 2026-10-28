@@ -7,27 +7,31 @@ const CHECKOUT_API = 'https://eden-stripe-checkout.sales-30d.workers.dev';
 const TEST_MODE = new URLSearchParams(location.search).get('checkout_test') === '1';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
 let catalog=null;
-const getPrice=s=>{if(s.type==='PT')return null;const tiers=catalog?.prices?.[s.sku];if(!tiers)return null;const unit=tiers[s.quantity===1?0:s.quantity===2?1:s.quantity===3?2:s.quantity===4?3:4];return Number.isFinite(unit)?{unit,total:unit*s.quantity}:null;};
+const freightQuote=()=>window.EIS_CET_FREIGHT?.quote((byId('cet-ship-zip')?.value||'').trim(),get().quantity,byId('cet-delivery-liftgate').checked)||null;
+function updateFreight(){const s=get(),v=getPrice(s),q=freightQuote(),status=byId('cet-freight-status'),out=byId('cet-cost-breakdown');if(!status||!out)return;status.textContent=q?.status==='reference'?'Reference freight for ZIP '+q.zip+' ('+q.region+'). Final carrier quote must be confirmed.':q?.reason||'Enter a valid five-digit ZIP code for a freight estimate.';out.replaceChildren();if(v&&s.quantity<=5){const lines=[['Tables ('+s.quantity+' × '+money(v.unit)+')',v.total],['LTL freight',q?.status==='reference'?q.base:null],['Delivery liftgate',q?.status==='reference'?q.liftgate:null],['Total before tax',q?.status==='reference'?v.total+q.total:null]];for(const [name,amount] of lines){const p=document.createElement('p');p.textContent=name+': '+(amount===null||amount===undefined?'Quote required':money(amount));out.append(p);}}}
+
+const getPrice=s=>{if(s.type==='PT')return null;const tiers=catalog?.prices?.[s.sku];if(!tiers)return null;if(s.quantity>5)return null;const unit=tiers[s.quantity-1];return Number.isFinite(unit)?{unit,total:unit*s.quantity}:null;};
 const query=s=>{const p=new URLSearchParams({product:'cet',sku:s.sku,tabletop:s.type,material:s.material,width:s.width,depth:s.depth,height:s.height,quantity:String(s.quantity)});const v=getPrice(s);if(v){p.set('unit_price',String(v.unit));p.set('estimated_total',String(v.total));}return '/request-a-quote/?'+p;};
-const update=()=>{const s=get(),v=getPrice(s);byId('cet-price-value').textContent=s.type==='PT'?'Request a Quote — perforated top':v?money(v.unit)+' per table':'Price unavailable — request a quote';byId('cet-order-total').textContent=s.type==='PT'?'Perforated tops are priced individually. Submit your configuration for a quote.':v?'Estimated table total: '+money(v.total):'Request a quote for pricing';byId('cet-bulk-note').hidden=s.type==='PT'||s.quantity<=5;byId('cet-sku').textContent=s.sku;byId('cet-quote-link').href=query(s);byId('cet-custom-link').href=query(s);updateBuy();const img=byId('cet-preview');img.src=s.type==='PT'?'/assets/Table%203.PNG':'/assets/Table%201.PNG';img.alt=s.type==='PT'?'Illustrative perforated Clean Environment Table':'Illustrative standard solid-top Clean Environment Table';};
+const update=()=>{const s=get(),v=getPrice(s);updateFreight();byId('cet-price-value').textContent=s.type==='PT'?'Request a Quote — perforated top':v?money(v.unit)+' per table':'Price unavailable — request a quote';byId('cet-order-total').textContent=s.type==='PT'?'Perforated tops are priced individually. Submit your configuration for a quote.':v?'Estimated table total: '+money(v.total):'Request a quote for pricing';byId('cet-bulk-note').hidden=s.type==='PT'||s.quantity<=5;byId('cet-sku').textContent=s.sku;byId('cet-quote-link').href=query(s);byId('cet-custom-link').href=query(s);updateBuy();const img=byId('cet-preview');img.src=s.type==='PT'?'/assets/Table%203.PNG':'/assets/Table%201.PNG';img.alt=s.type==='PT'?'Illustrative perforated Clean Environment Table':'Illustrative standard solid-top Clean Environment Table';};
 const buyButton=document.getElementById('cet-buy');
 const buyStatus=document.getElementById('cet-buy-status');
 function updateBuy(){
  const s=get(),v=getPrice(s);
- const eligible=Boolean(TEST_MODE&&CHECKOUT_API&&s.type==='ST'&&Number.isInteger(s.quantity)&&s.quantity>=1&&s.quantity<=5&&v);
+ const eligible=Boolean(TEST_MODE&&CHECKOUT_API&&freightQuote()?.status==='reference'&&s.type==='ST'&&Number.isInteger(s.quantity)&&s.quantity>=1&&s.quantity<=5&&v);
  buyButton.disabled=!eligible;
  buyButton.title=eligible?'TEST MODE — no real payment will be taken':'Online checkout is not yet available. Request a quote.';
 }
 buyButton?.addEventListener('click',async()=>{
- const s=get();const token=window.prompt('Stripe TEST Checkout token (no real charges):');if(!token)return;buyButton.disabled=true;buyStatus.textContent='Preparing TEST checkout…';
+ const s=get();const freight=freightQuote();if(freight?.status!=='reference'){buyStatus.textContent='Enter a supported delivery ZIP or request a freight quote.';return;}const token=window.prompt('Stripe TEST Checkout token (no real charges):');if(!token)return;buyButton.disabled=true;buyStatus.textContent='Preparing TEST checkout…';
  try{
-  const response=await fetch(CHECKOUT_API.replace(/\/$/,'')+'/checkout',{method:'POST',headers:{'content-type':'application/json','x-eden-test-token':token},body:JSON.stringify({product:'cet',type:s.type,material:s.material,width:Number(s.width),depth:Number(s.depth),height:Number(s.height),quantity:s.quantity})});
+  const response=await fetch(CHECKOUT_API.replace(/\/$/,'')+'/checkout',{method:'POST',headers:{'content-type':'application/json','x-eden-test-token':token},body:JSON.stringify({product:'cet',type:s.type,material:s.material,width:Number(s.width),depth:Number(s.depth),height:Number(s.height),quantity:s.quantity,shipping_zip:freight.zip,delivery_liftgate:freight.liftgate>0})});
   const result=await response.json();
   if(!response.ok||!result.url||!result.url.startsWith('https://checkout.stripe.com/'))throw Error(result.error||'Checkout unavailable');
   window.location.assign(result.url);
  }catch(error){buyStatus.textContent=error.message||'Checkout unavailable. Please request a quote.';updateBuy();}
 });
 if(TEST_MODE){buyButton.textContent='Test Buy with Stripe';buyStatus.textContent='Sandbox only — test card payments, no real charges.';}
+['cet-ship-zip','cet-delivery-liftgate'].forEach(id=>{byId(id).addEventListener('input',update);byId(id).addEventListener('change',update)});
 fields.forEach(id=>{byId(id).addEventListener('change',update);byId(id).addEventListener('input',update)});fetch('/tables/cet-prices.json').then(r=>{if(!r.ok)throw Error('Price catalog unavailable');return r.json()}).then(x=>{if(Object.keys(x.prices||{}).length!==144)throw Error('Incomplete catalog');catalog=x;update()}).catch(()=>{catalog=null;update()});update();
 byId('cet-copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(get().sku);byId('cet-copy-status').textContent='SKU copied.';}catch{byId('cet-copy-status').textContent='Select the SKU above to copy it.';}});
 byId('cet-download').addEventListener('click',()=>{
