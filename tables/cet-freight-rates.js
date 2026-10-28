@@ -6,14 +6,14 @@ window.EIS_CET_FREIGHT = Object.freeze({
   maxOnlineQuantity: 5,
   liftgateEstimate: 65,
   references: Object.freeze({
-    '53201': {region:'Upper Midwest',city:'Milwaukee, WI',base:330,carrier:'Dohrn',verifiedWeightLb:160},
-    '53202': {region:'Upper Midwest',city:'Milwaukee, WI',base:330,carrier:'Dohrn',verifiedWeightLb:525},
-    '53703': {region:'Upper Midwest',city:'Madison, WI',base:330,carrier:'Dohrn',verifiedWeightLb:150},
-    '60601': {region:'Great Lakes',city:'Chicago, IL',base:395,carrier:'Dohrn',verifiedWeightLb:200},
-    '30301': {region:'Southeast',city:'Atlanta, GA',base:502,carrier:'Dohrn',verifiedWeightLb:150},
-    '75201': {region:'South Central',city:'Dallas, TX',base:572,carrier:'Dohrn',verifiedWeightLb:150},
-    '90012': {region:'West Coast',city:'Los Angeles, CA',base:743,carrier:'Dohrn',verifiedWeightLb:150},
-    '10001': {region:'Northeast',city:'New York, NY',base:909,carrier:'Dohrn',verifiedWeightLb:150}
+    '53201': {region:'Upper Midwest',city:'Milwaukee, WI',base:330,carrier:'Dohrn',verifiedWeightLb:160,maxQty:1,deliveryLiftgate:true},
+    '53202': {region:'Upper Midwest',city:'Milwaukee, WI',base:330,carrier:'Dohrn',verifiedWeightLb:525,maxQty:5,deliveryLiftgate:true},
+    '53703': {region:'Upper Midwest',city:'Madison, WI',base:330,carrier:'Dohrn',verifiedWeightLb:150,maxQty:1,deliveryLiftgate:true},
+    '60601': {region:'Great Lakes',city:'Chicago, IL',base:395,carrier:'Dohrn',verifiedWeightLb:200,maxQty:1,deliveryLiftgate:true},
+    '30301': {region:'Southeast',city:'Atlanta, GA',base:502,carrier:'Dohrn',verifiedWeightLb:150,maxQty:1,deliveryLiftgate:false},
+    '75201': {region:'South Central',city:'Dallas, TX',base:572,carrier:'Dohrn',verifiedWeightLb:150,maxQty:1,deliveryLiftgate:false},
+    '90012': {region:'West Coast',city:'Los Angeles, CA',base:743,carrier:'Saia',verifiedWeightLb:150,maxQty:1,deliveryLiftgate:false},
+    '10001': {region:'Northeast',city:'New York, NY',base:909,carrier:'Dohrn',verifiedWeightLb:150,maxQty:1,deliveryLiftgate:false}
   }),
   // ZIP-first-digit bands are *indicative* only, not geographic or carrier-rate guarantees.
   regionByPrefix: Object.freeze({
@@ -27,7 +27,8 @@ window.EIS_CET_FREIGHT = Object.freeze({
     const ref=this.references[zip];
     if (!ref) return {zip,region:this.regionByPrefix[zip[0]]||'Unknown',status:'rfq',reason:'No validated carrier quote for this ZIP'};
     // The 525 lb quote is only established for Milwaukee 53202; do not extrapolate to all regions.
-    if (quantity > 1 && zip !== '53202') return {zip,region:ref.region,status:'rfq',reason:'Multi-table freight rate requires validation'};
+    if (quantity > ref.maxQty) return {zip,region:ref.region,status:'rfq',reason:'Multi-table freight rate requires validation'};
+    if (liftgate && !ref.deliveryLiftgate) return {zip,region:ref.region,status:'rfq',reason:'Delivery liftgate pricing is not validated for this ZIP'};
     return {zip,region:ref.region,status:'reference',base:ref.base,liftgate:liftgate?this.liftgateEstimate:0,total:ref.base+(liftgate?this.liftgateEstimate:0),carrier:ref.carrier};
   }
 });
