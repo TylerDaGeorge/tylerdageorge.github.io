@@ -23,7 +23,7 @@ window.EIS_CET_FREIGHT = Object.freeze({
     '8':'Mountain West','9':'West Coast / Pacific'
   }),
   quote(zip, quantity, liftgate) {
-    if (!/^\\d{5}$/.test(zip) || !Number.isInteger(quantity) || quantity < 1 || quantity > 5) return null;
+    if (!/^\d{5}$/.test(zip) || !Number.isInteger(quantity) || quantity < 1 || quantity > 5) return null;
     const ref=this.references[zip];
     if (!ref) return {zip,region:this.regionByPrefix[zip[0]]||'Unknown',status:'rfq',reason:'No validated carrier quote for this ZIP'};
     // The 525 lb quote is only established for Milwaukee 53202; do not extrapolate to all regions.
