@@ -1,0 +1,23 @@
+/* Homepage hero composition correction: immersive, full-bleed right image. */
+@media(min-width:851px){
+.eis-hero{display:grid;grid-template-columns:minmax(0,43%) minmax(0,57%);min-height:clamp(490px,42vw,640px);align-items:stretch;gap:0;background:#f8fbfe}
+.eis-hero-copy{align-self:center;padding:clamp(2.5rem,4vw,5rem) clamp(1.5rem,3.4vw,4.5rem) clamp(2.5rem,4vw,5rem) max(28px,calc((100vw - 1360px)/2))}
+.eis-hero h1{font-size:clamp(2.65rem,3.6vw,4.3rem);line-height:1.08;max-width:610px;letter-spacing:-.047em;margin:1rem 0 1.25rem}
+.eis-hero .lead{font-size:clamp(.98rem,1.15vw,1.12rem);line-height:1.65;max-width:540px}
+.eis-hero .actions{gap:.8rem;flex-wrap:wrap}
+.eis-hero-visual{position:relative;display:block;min-height:100%;padding:0;border:0;background:#e4eff7;box-shadow:none;overflow:hidden}
+.eis-hero-visual picture{display:block;position:absolute;inset:0}
+.eis-hero-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:54% center;mix-blend-mode:normal}
+.eis-hero-visual span{position:absolute;right:1.25rem;bottom:.9rem;z-index:1;padding:.35rem .6rem;border-radius:2px;background:#ffffffd9;color:#52677a;font-size:.7rem}
+}
+@media(min-width:851px) and (max-width:1100px){.eis-hero{grid-template-columns:minmax(0,47%) minmax(0,53%)}.eis-hero h1{font-size:clamp(2.5rem,3.6vw,3.6rem)}}
+@media(max-width:850px){
+.eis-hero{display:flex;flex-direction:column;min-height:0;padding:0;gap:0;background:#f8fbfe}
+.eis-hero-copy{padding:3rem 24px 2rem}
+.eis-hero h1{font-size:clamp(2.5rem,7vw,3.8rem);line-height:1.09;max-width:650px}
+.eis-hero-visual{display:block;position:relative;min-height:0;padding:0;border:0;box-shadow:none;background:#e6f0f8}
+.eis-hero-visual picture{display:block;width:100%;aspect-ratio:16/10}
+.eis-hero-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:57% center;mix-blend-mode:normal}
+.eis-hero-visual span{display:block;padding:.5rem 1rem;text-align:right;background:#e6f0f8}
+}
+@media(max-width:480px){.eis-hero-copy{padding:2.5rem 20px 1.8rem}.eis-hero h1{font-size:clamp(2.3rem,9vw,2.85rem)}.eis-hero-visual picture{aspect-ratio:5/4}.eis-hero-visual img{object-position:60% center}}
