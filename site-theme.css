@@ -1,0 +1,26 @@
+/* Phase 4: shared visual system and usability refinements.
+   Loaded after the legacy stylesheet; preserves existing scripts and forms. */
+:root{--ink:#0c2545;--ink-soft:#40536b;--muted:#63788d;--line:#dce6ef;--line-dark:#45617d;--wash:#f3f7fb;--steel:#e7eff7;--dark:#0b2340;--dark-2:#071a30;--green:#0759ad;--green-dark:#083b73;--air:#78baff;--radius:6px;--section:clamp(3.5rem,7vw,6rem)}
+body{color:var(--ink)}.site-header{border-bottom:1px solid #e4ebf2}.site-header nav>a:not(.button){color:#304964}.site-header nav>a:not(.button):hover{color:#0759ad}
+.button{border-radius:5px;box-shadow:0 4px 12px #0759ad16}.button.secondary{box-shadow:none}.eyebrow{color:#0759ad}.lead{color:#40536b}
+.section h2{letter-spacing:-.035em}.muted{background:#f3f7fb}.dark{background:#0b2340}.dark .eyebrow{color:#8cc5ff}.dark p{color:#d5e1ec}
+.cta{background:linear-gradient(115deg,#eaf3fb,#dcecf9)}.cta .eyebrow{color:#0759ad}.cta h2{color:#0c2545}
+footer{background:#071a30;color:#d8e4ef}footer small{color:#a9bbca}
+input:focus,textarea:focus,select:focus,a:focus-visible,button:focus-visible{outline-color:#328ce0}
+.form-layout.eis-inquiry-layout,.quote.eis-inquiry-layout{max-width:none;margin:0;grid-template-columns:minmax(0,.72fr) minmax(0,1.35fr);gap:clamp(2rem,5vw,5rem)}
+.form-layout.eis-inquiry-layout form,.quote.eis-inquiry-layout form{display:block;min-width:0}
+.form-layout.eis-inquiry-layout form>.field{margin-bottom:1.1rem}
+.quote.eis-inquiry-layout fieldset{padding:0 0 1.5rem;margin-bottom:1.5rem;border-top:0;border-bottom:1px solid #dce6ef}
+.quote.eis-inquiry-layout fieldset:last-of-type{border-bottom:0}
+.quote.eis-inquiry-layout legend{font-size:1.35rem;padding:0;margin:0 0 1rem}
+.quote.eis-inquiry-layout .button{margin-top:0}
+.eis-inquiry-layout .eis-inquiry-sidebar label,.eis-inquiry-layout .eis-inquiry-sidebar h2{color:#fff}
+.eis-inquiry-layout .field{min-width:0}
+.eis-inquiry-layout .field input[readonly]{background:#f2f6fa;color:#455d73}
+.eis-inquiry-layout .field input[readonly]:placeholder-shown{opacity:.9}
+.eis-inquiry-layout .form-grid{gap:1rem}
+.eis-inquiry-layout .eis-form-actions{margin-top:1rem}
+body:has(.eis-hero) .eis-hero{min-width:0}body:has(.eis-hero) .eis-hero-copy,body:has(.eis-hero) .eis-hero-visual{min-width:0}
+@media(max-width:900px){.form-layout.eis-inquiry-layout,.quote.eis-inquiry-layout{grid-template-columns:1fr}}
+@media(max-width:600px){.eis-inquiry-layout .form-grid{grid-template-columns:1fr}.eis-inquiry-layout .eis-form-actions .button{width:100%}footer{grid-template-columns:1fr}footer small{grid-column:1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.gallery-arrow,.site-header nav>a::after{transition:none!important}}
