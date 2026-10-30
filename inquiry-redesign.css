@@ -1,0 +1,18 @@
+/* Shared quote and contact presentation. Keeps existing Formspree submissions. */
+body:has(.eis-inquiry-hero){--green:#0759ad;--green-dark:#083b73;--ink:#0c2545;--ink-soft:#40536b;--wash:#f3f7fb;--dark:#0b2340}
+body:has(.eis-inquiry-hero) .site-header{max-width:100%;box-shadow:0 1px 12px #0c254510}
+.eis-inquiry-hero{background:linear-gradient(115deg,#f7fbff,#e9f2fb);padding:clamp(3.5rem,6vw,6rem) max(28px,calc((100% - 1280px)/2));border-bottom:1px solid #dce6ef}
+.eis-inquiry-hero h1{font-size:clamp(2.7rem,4.8vw,4.8rem);max-width:900px}.eis-inquiry-hero .lead{max-width:780px}
+.eis-inquiry-layout{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.35fr);gap:clamp(2rem,5vw,5rem);align-items:start}
+.eis-inquiry-sidebar{background:#0b2340;color:#fff;padding:clamp(1.5rem,3vw,2.5rem);border-radius:6px;position:sticky;top:1rem}
+.eis-inquiry-sidebar h2{font-size:clamp(1.6rem,2.3vw,2.5rem)}.eis-inquiry-sidebar p{color:#d1dfed}.eis-inquiry-sidebar a{color:#fff}.eis-inquiry-sidebar .eyebrow{color:#8fc2ff}
+.eis-inquiry-sidebar .eis-step{padding:1rem 0;border-top:1px solid #4b6380}.eis-step strong{display:block}.eis-step span{color:#d1dfed;font-size:.9rem}
+.eis-inquiry-layout form{background:#fff;border:1px solid #dce6ef;box-shadow:0 12px 35px #122c4510;padding:clamp(1.3rem,3vw,2.5rem);border-radius:6px;min-width:0}
+.eis-inquiry-layout fieldset{border:0;border-bottom:1px solid #dce6ef;margin:0 0 2rem;padding:0 0 2rem;min-width:0}.eis-inquiry-layout fieldset:last-of-type{border-bottom:0}.eis-inquiry-layout legend{font-size:1.35rem;font-weight:800;margin-bottom:1rem;color:#0c2545}
+.eis-inquiry-layout input:not([type=checkbox]),.eis-inquiry-layout textarea,.eis-inquiry-layout select{max-width:100%}
+.eis-inquiry-layout .form-help,.eis-inquiry-layout .eis-help{color:#60758a;font-size:.86rem}
+.eis-inquiry-layout .eis-form-actions{padding-top:.8rem}.eis-inquiry-layout .eis-form-actions .button{min-height:52px}
+.eis-inquiry-layout .eis-form-actions p{font-size:.82rem;color:#63778b;margin-top:1rem}
+.eis-inquiry-layout .eis-conditional[hidden]{display:none}
+.eis-inquiry-layout .eis-inquiry-sidebar .button.secondary{border-color:#fff;color:#fff!important}
+@media(max-width:900px){.eis-inquiry-layout{grid-template-columns:1fr}.eis-inquiry-sidebar{position:static}.eis-inquiry-hero{padding-top:3rem;padding-bottom:3rem}}
