@@ -16,3 +16,17 @@ body:has(.eis-inquiry-hero) .site-header{max-width:100%;box-shadow:0 1px 12px #0
 .eis-inquiry-layout .eis-conditional[hidden]{display:none}
 .eis-inquiry-layout .eis-inquiry-sidebar .button.secondary{border-color:#fff;color:#fff!important}
 @media(max-width:900px){.eis-inquiry-layout{grid-template-columns:1fr}.eis-inquiry-sidebar{position:static}.eis-inquiry-hero{padding-top:3rem;padding-bottom:3rem}}
+
+/* Layout corrections for the shared legacy .quote and .form-layout rules. */
+.section.quote.eis-inquiry-layout{max-width:none;margin:0;display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.35fr);gap:clamp(2rem,5vw,5rem)}
+.section.form-layout.eis-inquiry-layout{grid-template-columns:minmax(0,.72fr) minmax(0,1.35fr);gap:clamp(2rem,5vw,5rem)}
+.eis-inquiry-layout form{display:block;min-width:0}
+.eis-inquiry-layout .eis-inquiry-sidebar h2{color:#fff}
+.eis-inquiry-layout form>.field{margin-bottom:1rem}
+.eis-inquiry-layout .form-grid{gap:1rem}
+.eis-inquiry-layout.quote fieldset{padding:0 0 1.5rem;margin:0 0 1.5rem;border-top:0;border-bottom:1px solid #dce6ef}
+.eis-inquiry-layout.quote fieldset:last-of-type{border-bottom:0}
+.eis-inquiry-layout.quote legend{font-size:1.35rem;padding:0;margin:0 0 1rem}
+.eis-inquiry-layout.quote .button{margin-top:0}
+@media(max-width:900px){.section.quote.eis-inquiry-layout,.section.form-layout.eis-inquiry-layout{grid-template-columns:1fr}}
+@media(max-width:600px){.eis-inquiry-layout .form-grid{grid-template-columns:1fr}.eis-inquiry-layout .eis-form-actions .button{width:100%}}
