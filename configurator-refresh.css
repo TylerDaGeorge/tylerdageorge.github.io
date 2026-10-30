@@ -1,0 +1,30 @@
+/* Phase 5: configurator visual hierarchy, no change to pricing or model logic. */
+.cet-builder,.csc-builder{background:linear-gradient(180deg,#f7faff 0,#fff 38%)}
+.eis-config-anchor>h2{margin-bottom:.65rem}
+.eis-config-intro{color:#516981;max-width:760px;margin-bottom:2rem}
+.eis-config-step{font-size:.7rem;letter-spacing:.13em;font-weight:800;text-transform:uppercase;color:#0759ad;margin-bottom:.6rem}
+.eis-config-anchor .cet-builder-grid{gap:clamp(1.5rem,3vw,3rem)}
+.eis-config-anchor .cet-viewer{border:1px solid #d5e2ee;background:#f0f5fa;box-shadow:0 16px 36px #163c5c10;position:sticky;top:20px}
+.eis-config-anchor .cet-controls{background:#fff;border:1px solid #d5e2ee;border-radius:10px;padding:clamp(1.1rem,2.5vw,2rem);box-shadow:0 16px 38px #153b5c10;gap:1.2rem}
+.eis-config-anchor .cet-controls>.field,.eis-config-anchor .cet-dimensions .field{gap:.4rem}
+.eis-config-anchor .cet-controls label{font-size:.85rem;color:#233e59}
+.eis-config-anchor .cet-controls select,.eis-config-anchor .cet-controls input:not([type=checkbox]){min-height:48px;border:1px solid #a9baca;border-radius:6px;background:#fff}
+.eis-config-anchor .cet-controls select:focus,.eis-config-anchor .cet-controls input:focus{border-color:#0759ad}
+.eis-config-anchor .cet-summary{background:#eaf3fc;border:1px solid #d0e2f5;padding:1.3rem;border-radius:8px}
+.eis-config-anchor .cet-summary .eyebrow{margin-bottom:0}
+.eis-config-anchor .cet-summary output{font-size:clamp(1rem,1.6vw,1.3rem);font-weight:800;color:#0b315c}
+.eis-config-anchor .cet-price{background:#f8fafc;border-radius:8px;padding:1rem}
+.eis-config-anchor .cet-price strong{color:#0b315c}
+.eis-config-anchor .cet-freight{border-color:#d5e2ee!important;background:#fbfdff}
+.eis-config-anchor .cet-freight h3{font-size:1.2rem}
+.eis-config-anchor .cet-actions{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.eis-config-anchor .cet-actions>*{width:100%;text-align:center}
+.eis-config-anchor .cet-viewer-note{font-size:.8rem;line-height:1.5;color:#4d6378}
+.eis-config-anchor .cet-disclaimer{color:#60758a;line-height:1.6}
+.eis-config-anchor .cet-purchase{padding:.7rem 0}
+.eis-config-anchor .cet-purchase label{font-weight:800}
+.eis-config-anchor #csc-quote{width:100%;min-height:52px}
+.eis-config-anchor #cet-copy,.eis-config-anchor #csc-copy{justify-self:start}
+@media(max-width:1000px){.eis-config-anchor .cet-viewer{position:static}}
+@media(max-width:620px){.eis-config-anchor .cet-actions{grid-template-columns:1fr}.eis-config-anchor .cet-controls{padding:1rem}.eis-config-anchor .cet-dimensions{grid-template-columns:1fr}.eis-config-anchor .cet-viewer{min-width:0}}
+@media print{.eis-config-anchor .cet-controls,.eis-config-anchor .cet-viewer{box-shadow:none}}
