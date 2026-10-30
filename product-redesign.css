@@ -1,0 +1,12 @@
+/* Product-page visual layer: no changes to configurator logic. */
+body:has(.eis-product-intro){--green:#0759ad;--green-dark:#083b73;--ink:#0c2545;--ink-soft:#40536b;--wash:#f3f7fb;--dark:#0b2340}
+body:has(.eis-product-intro) .site-header{max-width:100%;box-shadow:0 1px 12px #0c254510}
+.eis-product-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);align-items:center;gap:clamp(2rem,5vw,5rem);padding:clamp(3rem,6vw,6rem) max(28px,calc((100% - 1280px)/2));background:linear-gradient(110deg,#f8fbff,#eaf3fa)}
+.eis-product-intro h1{font-size:clamp(2.7rem,4.6vw,4.8rem);line-height:1.07}.eis-product-intro .lead{font-size:1.14rem}.eis-product-intro figure{margin:0;background:#fff;border:1px solid #dbe6ef;padding:1.5rem;box-shadow:0 20px 55px #18334b16}.eis-product-intro figure img{width:100%;height:390px;object-fit:contain}.eis-product-intro figcaption{font-size:.77rem;color:#61758a;text-align:center}
+.eis-product-intro .notice{margin-top:1.5rem;color:#445e72;font-size:.85rem;line-height:1.55}
+.eis-quick-specs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;padding:1.4rem max(28px,calc((100% - 1280px)/2));background:#0b2340;color:#fff}
+.eis-quick-specs div{border-left:2px solid #65aaf6;padding:.5rem 1rem}.eis-quick-specs strong{display:block;font-size:.9rem}.eis-quick-specs span{display:block;font-size:.8rem;color:#d1dfed;margin-top:.3rem}
+.eis-config-anchor{scroll-margin-top:1.5rem}.eis-config-anchor h2{font-size:clamp(2rem,3vw,3rem)}.eis-config-anchor .cet-controls{border:1px solid #d9e4ee;box-shadow:0 12px 35px #122c4510;border-radius:8px}.eis-config-anchor .cet-viewer{background:#f3f7fb;border-radius:8px}
+.eis-spec-links{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.2rem}.eis-spec-links a{font-size:.85rem;font-weight:700;color:#0759ad}
+@media(max-width:850px){.eis-product-intro{grid-template-columns:1fr}.eis-product-intro figure img{height:300px}.eis-quick-specs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.eis-product-intro h1{font-size:2.45rem}.eis-product-intro figure img{height:240px}.eis-quick-specs{grid-template-columns:1fr}}
