@@ -1,0 +1,43 @@
+/* Homepage lower-section refinement: calmer rhythm and tighter editorial hierarchy. */
+.eis-benefits{max-width:none;padding:1rem max(24px,calc((100% - 1320px)/2));background:#fff;border-bottom:1px solid #e0e8ef}
+.eis-benefits div{padding:1rem clamp(.7rem,1.6vw,1.5rem);justify-content:flex-start;gap:.8rem}
+.eis-benefits strong{font-size:1.55rem;font-weight:500;line-height:1;color:#0759ad}
+.eis-benefits span{font-size:.67rem;letter-spacing:.06em;line-height:1.5;max-width:210px}
+.eis-products{padding-top:clamp(3.25rem,5vw,5rem);padding-bottom:clamp(3.5rem,5vw,5rem)}
+.eis-products .eis-section-heading{align-items:end;margin-bottom:1.65rem;gap:2rem}
+.eis-products .eis-section-heading h2{font-size:clamp(2.3rem,3.6vw,3.65rem);line-height:1.1;max-width:700px;margin:.6rem 0 0}
+.eis-products .eis-section-heading>p{max-width:330px;font-size:.97rem;line-height:1.65}
+.eis-product-grid{gap:1.2rem}
+.eis-product-card{display:flex;flex-direction:column;border:1px solid #dde6ee;background:#fff}
+.eis-product-image{height:clamp(220px,22vw,320px);padding:1.5rem;background:linear-gradient(145deg,#f4f7fa,#eaf0f6)}
+.eis-product-image img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.eis-card-body{padding:1.4rem clamp(1.25rem,2vw,1.9rem) 1.8rem;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.eis-card-body .eyebrow{margin:0 0 .6rem}
+.eis-card-body h3{font-size:clamp(1.4rem,2vw,1.8rem);line-height:1.18;margin:0 0 .7rem}
+.eis-card-body p:not(.eyebrow){font-size:.92rem;line-height:1.65;margin:0 0 1.4rem}
+.eis-card-body .button{margin-top:auto}
+.eis-disclaimer{font-size:.76rem;margin-top:1.2rem}
+.eis-dark-band{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2rem,5vw,5rem);align-items:center;padding-top:clamp(3.5rem,5.5vw,5.5rem);padding-bottom:clamp(3.5rem,5.5vw,5.5rem)}
+.eis-dark-band h2{font-size:clamp(2.2rem,3.2vw,3.3rem);line-height:1.1;max-width:600px;margin:.8rem 0 1.2rem}
+.eis-dark-band>div>p:not(.eyebrow){font-size:.99rem;line-height:1.7;max-width:580px;margin-bottom:1.5rem}
+.eis-process{gap:0}
+.eis-process div{display:grid;grid-template-columns:38px 1fr;column-gap:.7rem;align-items:baseline;padding:1.15rem 0}
+.eis-process div:first-child{border-top:1px solid #34506c}
+.eis-process span{grid-row:span 2;font-size:.95rem;margin:0}
+.eis-process strong{font-size:1.05rem}
+.eis-process p{grid-column:2;margin:.3rem 0 0;font-size:.86rem}
+.eis-applications{padding-top:clamp(3.5rem,5vw,5rem);padding-bottom:clamp(3.5rem,5vw,5rem)}
+.eis-applications h2{font-size:clamp(2.25rem,3.3vw,3.4rem);max-width:800px;line-height:1.13;margin:.7rem 0 1.8rem}
+.eis-app-grid{gap:1rem}
+.eis-app-grid article{padding:1.35rem;background:#fff;border:1px solid #dce5ed;border-top:3px solid #0759ad}
+.eis-app-grid h3{font-size:1.04rem;line-height:1.35;margin:0 0 .65rem}
+.eis-app-grid p{font-size:.88rem;line-height:1.65;margin:0}
+.cta{padding:clamp(3.8rem,6vw,6rem) 24px;background:linear-gradient(115deg,#eaf3fa,#e5f0f9);text-align:center}
+.cta h2{font-size:clamp(2.2rem,3.5vw,3.5rem);line-height:1.12;max-width:780px;margin:.7rem auto 1rem}
+.cta>p:not(.eyebrow){max-width:570px;margin:0 auto 1.4rem;font-size:1rem;line-height:1.65}
+.cta .actions{justify-content:center}
+footer{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:3rem;row-gap:2rem;align-items:start;padding:3rem max(24px,calc((100% - 1320px)/2))}
+footer p{margin:0;line-height:1.8}footer nav{display:flex;flex-wrap:wrap;gap:.85rem 1.5rem;justify-content:flex-end}
+footer nav a{white-space:nowrap}footer small{grid-column:1/-1;margin:0}
+@media(max-width:900px){.eis-dark-band{grid-template-columns:1fr}.eis-products .eis-section-heading{align-items:start}.eis-app-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.eis-benefits{grid-template-columns:repeat(2,minmax(0,1fr));padding:.6rem 18px}.eis-benefits div{padding:.9rem .5rem;border-right:0;border-bottom:1px solid #e1e9f1}.eis-benefits div:nth-child(odd){border-right:1px solid #e1e9f1}.eis-benefits strong{font-size:1.35rem}.eis-benefits span{font-size:.62rem}.eis-products .eis-section-heading{display:block}.eis-products .eis-section-heading>p{margin-top:1rem}.eis-product-grid,.eis-app-grid{grid-template-columns:1fr}.eis-product-image{height:250px}.eis-dark-band{padding:3rem 22px}.eis-applications h2{font-size:2.25rem}.cta{padding:3.5rem 22px}.cta .actions{display:flex;flex-direction:column;align-items:stretch;max-width:330px;margin:auto}footer{grid-template-columns:1fr;padding:2.5rem 22px}footer nav{justify-content:flex-start}footer small{grid-column:1}}
