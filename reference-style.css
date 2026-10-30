@@ -1,0 +1,51 @@
+/* Reference-aligned art direction: editorial cleanroom equipment catalog.
+   Product assets stay as current CAD imagery until approved replacements exist. */
+:root{--green:#0b58aa;--green-dark:#083e7c;--ink:#0b2445;--ink-soft:#435a73;--wash:#f5f8fb;--dark:#0b1724;--dark-2:#07121f;--section:clamp(3.5rem,6vw,6rem)}
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.58}
+h1,h2,h3{letter-spacing:-.045em}h1{font-weight:800}
+.site-header{height:72px;max-width:none;padding-inline:clamp(20px,4vw,70px);border-bottom:1px solid #e4eaf0}
+.brand img{width:154px}.site-header nav{gap:clamp(.9rem,2vw,2rem)}
+.site-header nav>a:not(.button){font-size:.84rem;font-weight:700}
+.button{border-radius:3px;font-size:.88rem;padding:.84rem 1.3rem;box-shadow:none}
+.button.small{border-radius:3px}.eyebrow{font-size:.69rem;letter-spacing:.17em}
+.section{padding-top:clamp(3.5rem,6vw,5.5rem);padding-bottom:clamp(3.5rem,6vw,5.5rem)}
+/* Homepage: reference left panel, big product visual, compact feature strip */
+.eis-hero{position:relative;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);min-height:600px;gap:0;padding:0;background:linear-gradient(105deg,#fff 0%,#f2f7fb 58%,#e5eef6 100%)}
+.eis-hero-copy{padding:clamp(3.5rem,6vw,6.5rem) 3rem clamp(3.5rem,6vw,6.5rem) max(28px,calc((100vw - 1280px)/2));z-index:1}
+.eis-hero h1{font-size:clamp(2.8rem,4.5vw,5rem);line-height:1.03;max-width:700px;margin-bottom:1.5rem}
+.eis-hero .lead{font-size:clamp(1rem,1.4vw,1.18rem);max-width:570px;line-height:1.6}
+.eis-hero-visual{min-width:0;display:flex;flex-direction:column;justify-content:center;align-items:center;border:0;box-shadow:none;background:radial-gradient(ellipse at 60% 52%,#fff 0%,#eaf2f9 67%,#dbe7f0 100%);padding:clamp(1rem,3vw,3rem)}
+.eis-hero-visual img{width:100%;height:clamp(370px,37vw,550px);object-fit:contain;mix-blend-mode:multiply}
+.eis-hero-visual span{font-size:.72rem;letter-spacing:.02em}
+.eis-note{font-size:.8rem}
+.eis-benefits{max-width:none;padding:1.3rem max(28px,calc((100% - 1280px)/2));background:#fff;border-bottom:1px solid #dfe7ee}
+.eis-benefits div{justify-content:center;gap:.85rem}.eis-benefits strong{font-size:1.5rem;font-weight:500;color:#0b58aa}
+.eis-benefits span{max-width:190px;text-transform:uppercase;letter-spacing:.07em;font-size:.7rem;line-height:1.5}
+.eis-products{background:#fff}.eis-section-heading{margin-bottom:2rem}
+.eis-product-grid{gap:1.4rem}.eis-product-card{border:1px solid #e0e7ee;box-shadow:none;border-radius:2px;overflow:hidden}
+.eis-product-image{height:clamp(250px,25vw,380px);padding:clamp(1rem,3vw,2.5rem);background:linear-gradient(135deg,#f8fafc,#eaf0f6)}
+.eis-product-image img{mix-blend-mode:multiply}.eis-card-body{padding:1.5rem 1.7rem 1.9rem}
+.eis-card-body h3{font-size:1.55rem}.eis-card-body p:not(.eyebrow){font-size:.92rem;line-height:1.55}
+.eis-card-body .button{margin-top:.3rem}
+.eis-dark-band{background:linear-gradient(120deg,#081624,#102c48);gap:4rem}
+.eis-dark-band h2{max-width:650px}.eis-process div{border-color:#34506c}
+.eis-applications{background:#f4f8fc}.eis-app-grid article{background:#fff;border:1px solid #e1e9f1;border-top:3px solid #0b58aa}
+.eis-app-grid article h3{font-size:1.05rem}
+/* Product pages: compact editorial header like the concept, not oversized cards. */
+.eis-product-intro{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);min-height:540px;gap:clamp(2rem,4vw,4rem);background:linear-gradient(115deg,#fff,#edf4fa);padding-block:clamp(3rem,5vw,5.5rem)}
+.eis-product-intro h1{font-size:clamp(2.6rem,4vw,4.5rem);line-height:1.07}
+.eis-product-intro .lead{font-size:1.08rem;line-height:1.65}
+.eis-product-intro figure{background:transparent;box-shadow:none;border:0;padding:0}
+.eis-product-intro figure img{height:clamp(320px,31vw,490px);mix-blend-mode:multiply}
+.eis-product-intro figcaption{margin-top:.5rem}
+.eis-quick-specs{background:#0b2445;gap:0}
+.eis-quick-specs div{padding:1rem 1.4rem;border-left:1px solid #47617a}
+.eis-quick-specs div:first-child{border-left:0}
+.eis-quick-specs strong{font-size:.87rem}.eis-quick-specs span{font-size:.77rem}
+.eis-config-anchor{background:#f7fafc}
+.eis-config-anchor .cet-controls{border-radius:3px;box-shadow:0 12px 28px #102c4810}
+.eis-config-anchor .cet-viewer{border-radius:3px}
+.eis-config-anchor .cet-summary{border-radius:3px}
+@media(max-width:1000px){.eis-hero{grid-template-columns:1fr 1fr}.eis-hero-copy{padding:3.5rem 2rem 3.5rem 28px}.eis-hero h1{font-size:clamp(2.6rem,4.5vw,4rem)}}
+@media(max-width:850px){.eis-hero,.eis-product-intro{grid-template-columns:1fr}.eis-hero-copy{padding:3.5rem 28px 1rem}.eis-hero-visual{padding:1rem 28px 2rem}.eis-hero-visual img{height:340px}.eis-benefits{grid-template-columns:repeat(2,1fr)}.eis-product-intro{min-height:0}.eis-product-intro figure img{height:300px}}
+@media(max-width:600px){.eis-hero h1{font-size:2.75rem}.eis-benefits{grid-template-columns:repeat(2,1fr);padding:1rem 18px}.eis-benefits div{padding:.8rem;justify-content:flex-start}.eis-benefits span{font-size:.65rem}.eis-product-grid{grid-template-columns:1fr}.eis-product-image{height:260px}.eis-product-intro h1{font-size:2.65rem}.eis-quick-specs{grid-template-columns:repeat(2,1fr)}.eis-quick-specs div:nth-child(odd){border-left:0}}
