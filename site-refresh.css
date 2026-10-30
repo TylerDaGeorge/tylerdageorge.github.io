@@ -1,0 +1,17 @@
+/* Phase 4: shared visual language, accessibility and mobile refinement. */
+:root{--ink:#0c2545;--ink-soft:#40536b;--muted:#60758a;--line:#dce6ef;--line-dark:#45617d;--wash:#f3f7fb;--steel:#e9f1f7;--dark:#0b2340;--dark-2:#071a30;--green:#0759ad;--green-dark:#083b73;--air:#75b9ee;--radius:6px}
+body{overflow-wrap:break-word}
+.site-header{max-width:none;width:100%;box-shadow:0 1px 12px #0c254510}
+.site-header nav>a:not(.button){font-size:.9rem}
+.button{border-radius:5px}
+.button:focus-visible,.site-header a:focus-visible{outline:3px solid #64adf1;outline-offset:3px}
+.eyebrow{color:#0759ad}
+.dark .eyebrow{color:#8fc2ff}
+.cta{background:#eaf3fb}
+.page-hero{background:linear-gradient(115deg,#f8fbff,#eaf3fa)}
+.product-cards article{border-top-color:#0759ad}
+input,select,textarea{border-color:#9baebd;border-radius:5px}
+footer{background:#071a30}
+footer a:hover{text-decoration:underline}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.site-header nav>a:not(.button)::after{transition:none}.button:hover{transform:none}}
+@media(max-width:760px){.site-header{box-shadow:0 1px 10px #0c254518}.site-header nav.open{background:#fff}.site-header nav.open a{min-height:44px;display:flex;align-items:center}}
