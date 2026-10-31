@@ -1,0 +1,6 @@
+/* Progressive disclosure for CET delivery form. */
+.cet-catalog #cet-checkout-details[hidden]{display:none!important}
+.cet-catalog .cet-checkout-trigger{padding:1rem 0;border-top:1px solid #dbe5ee;margin-top:.4rem}
+.cet-catalog .cet-checkout-trigger .button{width:100%;min-height:52px;text-align:center}
+.cet-catalog .cet-checkout-trigger p{font-size:.8rem;line-height:1.5;color:#64778a;margin:.65rem 0 0}
+.cet-catalog #cet-checkout-details{margin-top:.75rem!important}
