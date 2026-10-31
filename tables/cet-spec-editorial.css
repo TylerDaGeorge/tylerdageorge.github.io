@@ -1,0 +1,24 @@
+/* Editorial CET technical specification panel */
+.cet-catalog .cet-spec-editorial{padding-block:clamp(3rem,5vw,5.5rem);background:#fff}
+.cet-catalog .cet-spec-heading{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:2.25rem}
+.cet-catalog .cet-spec-heading>div{max-width:740px}
+.cet-catalog .cet-spec-heading h2{font-size:clamp(2.4rem,3.6vw,3.9rem);line-height:1.08;letter-spacing:-.045em;margin:.6rem 0 1rem}
+.cet-catalog .cet-spec-lead{font-size:1.04rem;color:#506781;line-height:1.7;margin:0}
+.cet-catalog .cet-spec-heading>.button{flex-shrink:0}
+.cet-catalog .cet-spec-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(290px,.8fr);gap:clamp(1.3rem,3vw,3rem);align-items:stretch}
+.cet-catalog .cet-spec-main{background:#f7f9fc;border:1px solid #dce6ef;padding:clamp(1.5rem,3vw,2.5rem)}
+.cet-catalog .cet-spec-main h3{font-size:1.4rem;margin:0 0 1.2rem;color:#102b4e}
+.cet-catalog .cet-spec-rows{margin:0}
+.cet-catalog .cet-spec-rows>div{display:grid;grid-template-columns:minmax(125px,.45fr) minmax(0,1fr);gap:1rem;padding:1rem 0;border-top:1px solid #d6e1eb}
+.cet-catalog .cet-spec-rows dt{font-weight:750;color:#1a3556}
+.cet-catalog .cet-spec-rows dd{margin:0;color:#324d67;font-weight:600}
+.cet-catalog .cet-spec-rows dd small{display:block;font-size:.78rem;color:#667c91;font-weight:400;margin-top:.25rem}
+.cet-catalog .cet-spec-aside{display:flex;flex-direction:column;align-items:start;justify-content:center;padding:clamp(1.6rem,3vw,3rem);background:#102b4e;color:#fff}
+.cet-catalog .cet-spec-aside .eyebrow{color:#8bc2ff}
+.cet-catalog .cet-spec-aside-icon{font-size:2.6rem;line-height:1;color:#78b8fb;margin-bottom:1.5rem}
+.cet-catalog .cet-spec-aside h3{font-size:clamp(1.7rem,2.4vw,2.6rem);line-height:1.13;letter-spacing:-.03em;color:#fff;margin:.5rem 0 1rem}
+.cet-catalog .cet-spec-aside p:not(.eyebrow){color:#d4e3f1;line-height:1.7;margin:0 0 1.7rem}
+.cet-catalog .cet-spec-aside .button{background:#fff;color:#102b4e;border-color:#fff}
+.cet-catalog .cet-spec-editorial .spec-note{font-size:.8rem;line-height:1.6;color:#61758a;margin:1.4rem 0 0}
+@media(max-width:850px){.cet-catalog .cet-spec-layout{grid-template-columns:1fr}.cet-catalog .cet-spec-heading{align-items:start;flex-direction:column}}
+@media(max-width:520px){.cet-catalog .cet-spec-rows>div{grid-template-columns:1fr;gap:.3rem}.cet-catalog .cet-spec-aside .button{width:100%;text-align:center}}
