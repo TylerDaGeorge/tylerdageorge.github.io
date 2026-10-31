@@ -1,0 +1,43 @@
+/* CET product catalog redesign: visual-only; preserve all configurator hooks. */
+body:has(.cet-catalog){--cet-blue:#0759ad;--cet-navy:#102b4e}
+.cet-catalog .eis-product-intro{min-height:520px;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(1.5rem,4vw,4rem);padding-block:clamp(3rem,5vw,5.5rem);background:linear-gradient(110deg,#fff 0%,#f7faff 45%,#e9f2f9 100%)}
+.cet-catalog .eis-product-intro>div:first-child{max-width:600px}
+.cet-catalog .eis-product-intro h1{font-size:clamp(2.7rem,4vw,4.65rem);line-height:1.06;letter-spacing:-.055em;margin:.75rem 0 1.25rem}
+.cet-catalog .eis-product-intro .lead{max-width:530px;font-size:clamp(1rem,1.2vw,1.14rem);line-height:1.65;color:#4d647b}
+.cet-catalog .eis-product-intro .actions{margin-top:1.7rem;gap:.75rem;flex-wrap:wrap}
+.cet-catalog .eis-product-intro figure{background:linear-gradient(145deg,#f6f9fc,#e5edf5);border:1px solid #dce6ef;border-radius:3px;box-shadow:none;padding:clamp(1.3rem,3vw,3rem)}
+.cet-catalog .eis-product-intro figure img{height:clamp(320px,33vw,475px);width:100%;object-fit:contain;mix-blend-mode:multiply}
+.cet-catalog .eis-product-intro figcaption{margin-top:.5rem}
+.cet-catalog .eis-spec-links{margin-top:1.4rem;gap:1rem 1.5rem}
+.cet-catalog .eis-spec-links a{font-size:.83rem}
+.cet-catalog .eis-quick-specs{gap:0;background:#102b4e;padding-block:1.2rem}
+.cet-catalog .eis-quick-specs div{padding:.65rem clamp(.8rem,2vw,1.7rem);border-left:1px solid #46637d}
+.cet-catalog .eis-quick-specs div:first-child{border-left:0}
+.cet-catalog .eis-quick-specs strong{font-size:.9rem;line-height:1.3}
+.cet-catalog .eis-quick-specs span{font-size:.76rem;line-height:1.45}
+.cet-catalog .cet-builder{padding-top:clamp(3.5rem,5vw,5rem);padding-bottom:clamp(3.5rem,5vw,5rem);background:#f6f9fc}
+.cet-catalog .cet-builder>h2{font-size:clamp(2.4rem,3.7vw,3.7rem);line-height:1.08;letter-spacing:-.045em}
+.cet-catalog .cet-builder-grid{grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);gap:clamp(1.2rem,2.5vw,2.7rem)}
+.cet-catalog .cet-viewer{border-radius:3px;box-shadow:none;background:#eaf1f7}
+.cet-catalog #cet-3d{min-height:430px!important}
+.cet-catalog .cet-controls{border-radius:3px;box-shadow:0 8px 25px #1234530b;gap:1.1rem}
+.cet-catalog .cet-controls .field label{font-weight:700}
+.cet-catalog .cet-controls select,.cet-catalog .cet-controls input:not([type=checkbox]){border-radius:3px}
+.cet-catalog .cet-summary,.cet-catalog .cet-price,.cet-catalog .cet-freight{border-radius:3px!important}
+.cet-catalog .cet-actions{gap:.65rem}
+.cet-catalog .cet-actions .button{min-height:48px}
+.cet-catalog .cet-viewer-note{background:#f6f9fc;border-top:1px solid #dce7f0}
+.cet-catalog .cet-support{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:2.5rem;align-items:center;background:#eaf3fb}
+.cet-catalog .cet-support h2{font-size:clamp(2rem,3vw,3.1rem);line-height:1.12;margin:.6rem 0 1rem}
+.cet-catalog .cet-support p:not(.eyebrow){max-width:680px;color:#476078;line-height:1.7}
+.cet-catalog .cet-support .button{justify-self:end}
+.cet-catalog .cet-spec-section{background:#fff}
+.cet-catalog .cet-spec-section>h2{font-size:clamp(2.2rem,3.5vw,3.4rem);line-height:1.12;margin:.65rem 0 1.8rem}
+.cet-catalog .cet-spec-section .features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.cet-catalog .cet-spec-section .features article{background:#f7fafc;border:1px solid #dce7ef;border-top:3px solid #0759ad;border-radius:2px;padding:1.5rem;box-shadow:none}
+.cet-catalog .cet-spec-section .features h3{font-size:1.08rem;margin:0 0 .55rem}
+.cet-catalog .cet-spec-section .features p{font-size:.91rem;line-height:1.6;margin:0;color:#4d647b}
+.cet-catalog .cet-spec-section .spec-note{font-size:.8rem;color:#61758a;margin-top:1.4rem}
+@media(max-width:1000px){.cet-catalog .cet-builder-grid{grid-template-columns:1fr}.cet-catalog .cet-viewer{position:static}.cet-catalog #cet-3d{min-height:350px!important}}
+@media(max-width:850px){.cet-catalog .eis-product-intro{grid-template-columns:1fr;min-height:0}.cet-catalog .eis-product-intro figure img{height:340px}.cet-catalog .cet-spec-section .features{grid-template-columns:repeat(2,minmax(0,1fr))}.cet-catalog .cet-support{grid-template-columns:1fr;gap:1rem}.cet-catalog .cet-support .button{justify-self:start}}
+@media(max-width:600px){.cet-catalog .eis-product-intro h1{font-size:2.65rem}.cet-catalog .eis-product-intro figure img{height:260px}.cet-catalog .eis-quick-specs{grid-template-columns:repeat(2,minmax(0,1fr))}.cet-catalog .eis-quick-specs div:nth-child(odd){border-left:0}.cet-catalog .cet-spec-section .features{grid-template-columns:1fr}.cet-catalog .cet-support .button{width:100%;text-align:center}.cet-catalog #cet-3d{min-height:290px!important}}
