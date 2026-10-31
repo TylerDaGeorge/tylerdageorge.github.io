@@ -1,0 +1,31 @@
+/* Approved CET visual concept refinement. No changes to pricing or order logic. */
+.cet-catalog .cet-showcase-hero{min-height:300px;padding-block:clamp(2.5rem,4vw,4rem);background:linear-gradient(90deg,#fff 0%,#f8fbfd 60%,#e9f1f7 100%)}
+.cet-catalog .cet-showcase-hero h1{font-size:clamp(2.5rem,4vw,4.25rem);max-width:770px}
+.cet-catalog .cet-showcase-hero-image{opacity:.22;inset:0 0 0 57%;background-size:min(47vw,680px) auto}
+.cet-catalog .cet-collection{padding-block:clamp(2.2rem,3.4vw,3.4rem)}
+.cet-catalog .cet-style-cards{gap:1.25rem}
+.cet-catalog .cet-style-card{display:grid;grid-template-columns:49% 51%;align-items:center;border:1px solid #dbe6f0;border-radius:8px;overflow:hidden;background:linear-gradient(120deg,#f5f8fb,#fff);min-height:220px}
+.cet-catalog .cet-style-image{border:0;border-radius:0;aspect-ratio:auto;height:100%;min-height:210px;padding:1rem;background:transparent}
+.cet-catalog .cet-style-copy{padding:1.3rem 1.4rem 1.3rem .3rem}
+.cet-catalog .cet-style-copy h3{font-size:1.24rem}
+.cet-catalog .cet-style-copy p{font-size:.91rem;line-height:1.55}
+.cet-catalog .cet-builder{padding-block:clamp(2.5rem,4vw,4rem)}
+.cet-catalog .cet-builder>h2{font-size:clamp(2.25rem,3vw,3.2rem);margin-bottom:.35rem}
+.cet-catalog .eis-config-intro{margin-bottom:1.25rem}
+.cet-catalog .cet-showcase-builder{gap:0;grid-template-columns:minmax(360px,.95fr) minmax(0,1.05fr);align-items:start;border:1px solid #d7e3ed;border-radius:8px;overflow:hidden;background:#fff}
+.cet-catalog .cet-showcase-builder>.cet-controls{border:0;border-radius:0;box-shadow:none;padding:clamp(1.1rem,2vw,2rem)}
+.cet-catalog .cet-showcase-builder>.cet-viewer{border:0;border-left:1px solid #d7e3ed;border-radius:0;box-shadow:none;top:0;background:linear-gradient(135deg,#f9fbfd,#eaf1f7)}
+.cet-catalog .cet-showcase-builder #cet-3d{min-height:460px!important}
+.cet-catalog .cet-showcase-builder .cet-viewer-note{background:#f6f9fc}
+.cet-catalog .cet-showcase-builder .cet-summary{padding:1rem}
+.cet-catalog .cet-showcase-builder .cet-price{border:1px solid #d7e3ed;padding:.85rem 1rem}
+.cet-catalog .cet-showcase-builder .cet-freight{margin-top:1.25rem!important}
+.cet-catalog .cet-support{grid-template-columns:1fr auto;gap:2rem;align-items:center;padding-block:clamp(2.5rem,4vw,4rem)}
+.cet-catalog .cet-support h2{font-size:clamp(1.9rem,2.6vw,2.8rem)}
+.cet-catalog .cet-spec-section{padding-block:clamp(2.5rem,4vw,4rem)}
+.cet-catalog .cet-spec-section>h2{font-size:clamp(2rem,2.9vw,3rem)}
+.cet-catalog .cet-spec-section .features{grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
+.cet-catalog .cet-spec-section .features article{padding:1.1rem 1.25rem;border-top:2px solid #0759ad}
+@media(max-width:1100px){.cet-catalog .cet-style-card{grid-template-columns:1fr}.cet-catalog .cet-style-image{height:220px}.cet-catalog .cet-style-copy{padding:1rem 1.3rem 1.4rem}}
+@media(max-width:900px){.cet-catalog .cet-showcase-builder{grid-template-columns:1fr}.cet-catalog .cet-showcase-builder>.cet-viewer{border-left:0;border-bottom:1px solid #d7e3ed;grid-row:1}.cet-catalog .cet-showcase-builder>.cet-controls{grid-row:2}.cet-catalog .cet-showcase-builder #cet-3d{min-height:350px!important}.cet-catalog .cet-spec-section .features{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.cet-catalog .cet-style-cards{grid-template-columns:1fr}.cet-catalog .cet-showcase-hero-image{opacity:.12;inset:0;background-size:110% auto}.cet-catalog .cet-spec-section .features{grid-template-columns:1fr}.cet-catalog .cet-support{grid-template-columns:1fr}.cet-catalog .cet-showcase-builder #cet-3d{min-height:290px!important}}
